@@ -1,0 +1,23 @@
+@mixin media-tablet {
+  @media (min-width: $tablet) {
+      @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: $desktop) {
+      @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: $desktop-wide) {
+      @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @content;
+  }
+}

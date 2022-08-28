@@ -27,3 +27,15 @@ img {
 a {
   text-decoration: none;
 }
+
+.hidden {
+  position: absolute;
+  width: 0.1px !important;
+  height: 0.1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  z-index: -1;
+  transition: all 0.3s;
+}
