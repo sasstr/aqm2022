@@ -1,0 +1,7 @@
+.navigation__list {
+  @include list-style-reset;
+}
+
+.navigation__link {
+  color: $_white;
+}

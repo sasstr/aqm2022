@@ -1,0 +1,7 @@
+.lang {
+  @include list-style-reset;
+}
+
+.lang__link {
+  color: $_white;
+}
