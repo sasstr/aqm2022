@@ -1,10 +1,10 @@
 .projects {
-  padding: 0 16px;
+  padding: 53px 16px 90px;
 }
 
 .projects__title {
   margin: 0;
-  padding: 0;
+  padding: 0 0 12px;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -14,21 +14,19 @@
 }
 
 .projects__container {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .projects__button {
-  width: 200px;
-  height: 50px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 200px;
+  height: 50px;
   padding: 12px 36px;
-  gap: 10px;
 
   background: $_button_dark;
   border-radius: 64px;
@@ -38,6 +36,5 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-
   color: $_white;
 }

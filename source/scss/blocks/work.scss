@@ -1,0 +1,73 @@
+.work {
+  background-color: $_main_dark;
+}
+
+.work__container {
+  position: relative;
+  padding: 23px 16px 54px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 265px;
+    background-image: (url(../img/stroke_mob_work.svg));
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 344px 264px;
+  }
+}
+
+.work__slogan {
+  margin: 0;
+  padding: 0 0 70px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 55px;
+  line-height: 58px;
+  color: $_main_light;
+}
+
+.work__text {
+  margin: 0;
+  padding: 0 0 28px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $_main_light;
+}
+
+.work__title {
+  margin: 0;
+  padding: 0 0 7px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 52px;
+  color: $_main_light;
+}
+
+.work__list {
+  @include list-style-reset;
+}
+
+.work__item {
+  padding: 20px 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: $_main_light;
+  border-bottom: 1px solid $_font_grass;
+}
+
+.work__item:last-child {
+  border-bottom: none;
+}
