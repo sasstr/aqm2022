@@ -1,0 +1,26 @@
+.about-us {
+  padding: 105px 16px 198px;
+  background-color: $_main_dark;
+}
+
+.about-us__title {
+  padding: 0 0 40px;
+  margin: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 52px;
+  color: $_main_light;
+}
+
+.about-us__content {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: $_main_light;
+}

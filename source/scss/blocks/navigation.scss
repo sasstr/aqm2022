@@ -1,7 +1,30 @@
+.navigation {
+  z-index: 5;
+}
+
 .navigation__list {
+  display: none;
+  //display: flex;
+  flex-direction: column;
+  gap: 19px;
   @include list-style-reset;
+  background-color: $_main_dark;
+  width: 360px;
+  padding-bottom: 179px;
+}
+
+.navigation__item {
+  padding: 10px;
 }
 
 .navigation__link {
-  color: $_white;
+  display: inline-block;
+  min-height: 35px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 70px;
+  color: $_font_grass;
+  cursor: pointer;
 }

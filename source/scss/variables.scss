@@ -13,6 +13,12 @@ $_main_dark: #003137;
 $_secondary_black: #151919;
 $_secondary_dark: #254634;
 $_button_dark: #E0804E;
+$_font_grass: #5D9F93;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+// Fonts
+$_f__common_name: "Akkurat LL";
+$_f__default: "Arial", sans-serif;
+$_f__common: $_f__common_name, $_f__default;

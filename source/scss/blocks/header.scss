@@ -4,7 +4,23 @@
 
 .header__wrapper {
   display: flex;
+  justify-content: space-between;
   width: 360px;
   height: 80px;
   margin: 0 auto;
+  padding: 30px 16px;
+}
+
+.header__logo {
+  min-width: 124px;
+  min-height: 15px;
+}
+
+.header__toggle {
+  width: 35px;
+  height: 22px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
