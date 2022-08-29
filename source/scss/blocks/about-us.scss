@@ -1,6 +1,21 @@
 .about-us {
+  position: relative;
   padding: 105px 16px 198px;
   background-color: $_main_dark;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 360px;
+      height: 582px;
+      //z-index: 5;
+      background-image: (url(../img/stroke_mob_about-us.svg));
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 345px 582px;
+    }
 }
 
 .about-us__title {

@@ -1,15 +1,18 @@
-// .main {
-//   background-color: $_main_dark;
-// }
-
 .main__wrapper {
   margin: 0 auto;
-  width: 360px;
+  width: $mobile;
+}
+
+.main__conteiner {
+  background-color: $_main_dark;
+}
+
+.main__image {
+  display: block;
 }
 
 .main__banner {
   position: relative;
-  height: 241px;
 }
 
 .main__play-sing {

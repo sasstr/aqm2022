@@ -9,7 +9,7 @@
   gap: 19px;
   @include list-style-reset;
   background-color: $_main_dark;
-  width: 360px;
+  width: $mobile;
   padding-bottom: 179px;
 }
 
