@@ -2,8 +2,15 @@
   background-color:$_main_dark;
 }
 
-.biome__container {
-  padding: 48px 16px 88px;
+.biome__container--up {
+  position: relative;
+  min-height: 470px;
+  padding: 48px 16px 290px;
+}
+
+.biome__container--down {
+  min-height: 572px;
+  padding: 135px 16px 195px;
 }
 
 .biome__title {
@@ -20,14 +27,21 @@
 .biome__wrapper {
   background-color: $_secondary_light;
   //opacity: 0.3;
+  //backdrop-filter: blur(55px);
   //filter: blur(55px);
 }
 
 .biome__image {
   display: block;
+  position: absolute;
+  bottom: -85px;
+  left: 0;
+  right: 0;
 }
 
 .biome__text {
+  margin: 0;
+  padding: 0 0 57px;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 300;

@@ -1,0 +1,47 @@
+.achievement {
+  background-color: $_white;
+}
+
+.achievement__container {
+  padding: 47px 16px 56px;
+  background-image: url('../img/bcg-achievements.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.achievement__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.achievement__item-wrapper {
+  display: flex;
+}
+
+.achievement__item-wrapper:nth-child(even) {
+  margin-left: auto;
+}
+
+.achievement__amount {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 90px;
+  line-height: 108px;
+  color: $_secondary_dark;
+  }
+
+.achievement__text {
+  //width: 95px;
+  padding-top: 17px;
+  margin-left: 10px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $_secondary_dark;
+}

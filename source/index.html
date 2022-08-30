@@ -153,86 +153,124 @@
         </div>
       </section>
       <section class="biome">
-        <div class="main__wrapper biome__container">
-          <div class="biome__wrapper">
+        <div class="biome__wrapper">
+          <div class="main__wrapper biome__container--up">
             <h2 class="biome__title">Biomes, the future of entertainment and sustainable building</h2>
-            <img class="biome__image" src="./img/biom.jpg" alt="Biomes">
+            <img class="biome__image" src="./img/biom.jpg" alt="Biomes" width="328" height="315">
           </div>
+        </div>
+        <div class="main__wrapper biome__container--down">
           <div>
           <p class="biome__text">Aquamarine’s ‘Biome’ concept offers a new take on entertainment destination design that enhances guest experiences and offers a more sustainable future for the industry.</p>
           <a class="biome__button" href="#">Learn more</a>
           </div>
         </div>
       </section>
-      <section>
-        <h2>Our achievements</h2>
-        <dl>
-          <dt>385</dt>
-          <dd>meters3 of aquariums made</dd>
-          <dt>250</dt>
-          <dd>projects</dd>
-          <dt>500K</dt>
-          <dd>meters2</dd>
-          <dt>115</dt>
-          <dd>meters of tunnels built</dd>
-          <dt>300</dt>
-          <dd>exhibitions made</dd>
-        </dl>
-      </section>
-      <section>
-        <h2>Partners and clients</h2>
-        <p>We work with people and companies sharing our values and aiming to improve the world, environment and society we live in.</p>
-        <div>
-          <img src="./img/partner_logo_1.png" alt="logo_1">
-          <img src="./img/partner_logo_2.png" alt="logo_2">
-          <img src="./img/partner_logo_3.png" alt="logo_3">
+      <section class="achievement">
+        <div class="main__wrapper achievement__container">
+          <h2 class="visually-hidden">Our achievements</h2>
+          <dl class="achievement__list">
+            <div class="achievement__item-wrapper">
+              <dt class="achievement__amount">385</dt>
+              <dd class="achievement__text">meters3<br> of aquariums <br>made</dd>
+            </div>
+            <div class="achievement__item-wrapper">
+              <dt class="achievement__amount">250</dt>
+              <dd class="achievement__text">projects</dd>
+            </div>
+            <div class="achievement__item-wrapper">
+            <dt class="achievement__amount">500K</dt>
+            <dd class="achievement__text">meters2</dd>
+            </div>
+            <div class="achievement__item-wrapper">
+            <dt class="achievement__amount">115</dt>
+            <dd class="achievement__text">meters<br> of tunnels <br>built</dd>
+            </div>
+            <div class="achievement__item-wrapper">
+            <dt class="achievement__amount">300</dt>
+            <dd class="achievement__text">exhibitions <br>made</dd>
+            </div>
+          </dl>
         </div>
       </section>
-      <section>
-        <h2>Magazines</h2>
-        <div>
-          <span>Seek Insight</span>
-          <span>Download</span>
-        </div>
-        <div>
-          <span>Biomes, the future of entertainment</span>
-          <span>Download</span>
+      <section class="client">
+        <div class="main__wrapper client__container">
+          <h2 class="client__title">Partners and clients</h2>
+          <p class="client__text">We work with people and companies sharing our values and aiming to improve the world, environment and society we live in.</p>
+          <div class="client__image-wrapper">
+            <img class="client__image" src="./img/partner_logo_1.png" alt="logo_1">
+            <img class="client__image" src="./img/partner_logo_2.png" alt="logo_2">
+            <img class="client__image" src="./img/partner_logo_3.png" alt="logo_3">
+            <img class="client__image" src="./img/partner_logo_1.png" alt="logo_1">
+            <img class="client__image" src="./img/partner_logo_2.png" alt="logo_2">
+            <img class="client__image" src="./img/partner_logo_3.png" alt="logo_3">
+            <img class="client__image" src="./img/partner_logo_1.png" alt="logo_1">
+            <img class="client__image" src="./img/partner_logo_2.png" alt="logo_2">
+            <img class="client__image" src="./img/partner_logo_3.png" alt="logo_3">
+          </div>
         </div>
       </section>
-      <section>
-        <h2>Contact us</h2>
-        <div>
-          <h3>Contact</h3>
-          <ul>
-            <li>P. +64 9 972 2344</li>
-            <li>info@aqm.nz</li>
+      <section class="magazine">
+        <div class="main__wrapper magazine__container">
+          <h2 class="magazine__title">Magazines</h2>
+          <ul class="magazine__list">
+            <li class="magazine__item">
+              <span class="magazine__item-name">Seek Insight</span>
+              <span class="magazine__download">Download</span>
+            </li>
+            <li class="magazine__item">
+              <span class="magazine__item-name">Biomes, the future of entertainment</span>
+              <span class="magazine__download">Download</span>
+            </li>
           </ul>
         </div>
-        <div>
-          <h3>Social</h3>
-          <p>
-            <ul>
-              <li><a href="https://www.facebook.com/aquamarineprojects">Facebook</a></li>
-              <li><a href="https://www.instagram.com/aquamarineprojects/">Instagram</a></li>
-              <li><a href="https://www.youtube.com/channel/UCFh5dyLcBnb8-mzJ4pYPV9g">YouTube</a></li>
-            </ul>
-          </p>
-        </div>
-        <form action="" method="post">
-          <p>Ready to discuss your vision?
-            We’re ready to make it happen.</p>
-            <label for="contact-name">Name</label>
-            <input type="text" placeholder="Name" required pattern="^[a-zA-Z\s]+$">
-            <label for="contact-phone">Phone</label>
-            <input id="contact-phone" type="text" class="contact-form__input" placeholder="Phone" pattern="^[0-9]+$">
-            <label for="contact-email">Email</label>
-            <input id="contact-email" type="email" placeholder="Email">
-            <label for="contact-textarea">Request</label>
-            <textarea name="contact-textarea" cols="7" rows="1"></textarea>
-            <button type="submit">Submit</button>
-        </form>
       </section>
+      <section class="contacts">
+        <div class="main__wrapper contacts__container">
+          <h2 class="contacts__title">Contact us</h2>
+          <div class="contacts__box">
+            <div class="contacts__wrapper address">
+              <h3 class="address__title">Contact</h3>
+              <ul class="address__list">
+                <li class="address__item">
+                  <a class="address__link" href="tel:+6499722344">P. +64 9 972 2344</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="mailto:info@aqm.nz">info@aqm.nz</a>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__social social">
+              <h3 class="social__title">Social</h3>
 
+                <ul class="social__list">
+                  <li class="social__item">
+                    <a class="social__link" href="https://www.facebook.com/aquamarineprojects">Facebook</a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link" href="https://www.instagram.com/aquamarineprojects/">Instagram</a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link" href="https://www.youtube.com/channel/UCFh5dyLcBnb8-mzJ4pYPV9g">YouTube</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <form class="contacts__form form" action="#" method="post">
+            <p class="form__reason">Ready to discuss your vision?
+              We’re ready to make it happen.</p>
+              <label class="form__label" for="contact-name">Name</label>
+              <input class="form__input" type="text" placeholder="Name" required pattern="^[a-zA-Z\s]+$">
+              <label class="form__label" for="contact-phone">Phone</label>
+              <input class="form__input" id="contact-phone" type="text" placeholder="Phone" pattern="^[0-9]+$">
+              <label class="form__label" for="contact-email">Email</label>
+              <input class="form__input" id="contact-email" type="email" placeholder="Email">
+              <label class="form__label" for="contact-textarea">Request</label>
+              <textarea class="form__textarea" name="contact-textarea" cols="7" rows="1"></textarea>
+              <button class="form__btn-submit" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
 
   </main>
   <footer>

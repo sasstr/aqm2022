@@ -1,0 +1,21 @@
+.contacts {
+  background-color: $_main_dark;
+}
+
+.contacts__container {
+  padding: 50px 16px 52px;
+}
+
+.contacts__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__title {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 69px;
+  color: $_main_light;
+}

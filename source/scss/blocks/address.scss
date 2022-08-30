@@ -1,0 +1,22 @@
+.address__title {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  color: $_main_light;
+}
+
+.address__list {
+  @include list-style-reset;
+}
+
+.address__link {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 135%;
+  color: $_main_light;
+}

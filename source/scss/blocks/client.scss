@@ -1,0 +1,42 @@
+.client {
+  background-color: $_secondary_dark;
+}
+
+.client__container {
+  padding: 82px 16px 106px;
+}
+
+.client__title {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 69px;
+  color: $_main_light;
+}
+
+.client__text {
+  margin: 0 0 82px;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $_main_light;
+}
+
+.client__image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.client__image {
+  width: 75px;
+  height: 75px;
+  display: block;
+}
