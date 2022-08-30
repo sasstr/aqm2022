@@ -154,12 +154,12 @@
       </section>
       <section class="biome">
         <div class="biome__wrapper">
-          <div class="main__wrapper biome__container--up">
+          <div class="main__wrapper biome__container biome__container--up">
             <h2 class="biome__title">Biomes, the future of entertainment and sustainable building</h2>
             <img class="biome__image" src="./img/biom.jpg" alt="Biomes" width="328" height="315">
           </div>
         </div>
-        <div class="main__wrapper biome__container--down">
+        <div class="main__wrapper biome__container biome__container--down">
           <div>
           <p class="biome__text">Aquamarine’s ‘Biome’ concept offers a new take on entertainment destination design that enhances guest experiences and offers a more sustainable future for the industry.</p>
           <a class="biome__button" href="#">Learn more</a>
@@ -259,40 +259,61 @@
           <form class="contacts__form form" action="#" method="post">
             <p class="form__reason">Ready to discuss your vision?
               We’re ready to make it happen.</p>
-              <label class="form__label" for="contact-name">Name</label>
-              <input class="form__input" type="text" placeholder="Name" required pattern="^[a-zA-Z\s]+$">
-              <label class="form__label" for="contact-phone">Phone</label>
+            <div class="form__wrapper">
+              <label class="visually-hidden" for="contact-name">Name</label>
+              <input class="form__input" id="contact-name" type="text" placeholder="Name" required pattern="^[a-zA-Z\s]+$">
+            </div>
+            <div class="form__wrapper">
+              <label class="visually-hidden" for="contact-phone">Phone</label>
               <input class="form__input" id="contact-phone" type="text" placeholder="Phone" pattern="^[0-9]+$">
-              <label class="form__label" for="contact-email">Email</label>
+            </div>
+            <div class="form__wrapper">
+              <label class="visually-hidden" for="contact-email">Email</label>
               <input class="form__input" id="contact-email" type="email" placeholder="Email">
-              <label class="form__label" for="contact-textarea">Request</label>
-              <textarea class="form__textarea" name="contact-textarea" cols="7" rows="1"></textarea>
-              <button class="form__btn-submit" type="submit">Submit</button>
+            </div>
+            <div class="form__wrapper">
+              <label class="visually-hidden" for="contact-textarea">Request</label>
+              <textarea class="form__textarea" id="contact-textarea" name="contact-textarea" cols="7" rows="1" placeholder="Request"></textarea>
+            </div>
+            <button class="form__btn-submit" type="submit">Submit</button>
           </form>
         </div>
       </section>
 
   </main>
-  <footer>
-    <div class="footer__logo">
-      <img src="./img/aqm_logo_footer.svg" alt="Logo Aquamarine">
-      <span>© 2022 Aquamarine. All Rights Reserved</span>
-    </div>
-    <div>
-      <h3>Contact</h3>
-      <ul>
-        <li>P. +64 9 972 2344</li>
-        <li>info@aqm.nz</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Social</h3>
-      <ul>
-        <li><a href="https://www.facebook.com/aquamarineprojects">Facebook</a></li>
-        <li><a href="https://www.instagram.com/aquamarineprojects/">Instagram</a></li>
-        <li><a href="https://www.youtube.com/channel/UCFh5dyLcBnb8-mzJ4pYPV9g">YouTube</a></li>
-      </ul>
-    </div>
+  <footer class="footer">
+    <div class="main__wrapper footer__container">
+        <div class="footer__logo">
+          <img src="./img/aqm_logo_footer.svg" alt="Logo Aquamarine" width="67" height="23">
+        </div>
+        <span class="footer__copyright">© 2022 Aquamarine. All Rights Reserved</span>
+        <div class="footer__address address">
+          <h3 class="address__title">Contact</h3>
+          <ul class="address__list">
+            <li class="address__item">
+              <a class="address__link" href="tel:+6499722344">P. +64 9 972 2344</a>
+            </li>
+            <li class="address__item">
+              <a class="address__link" href="mailto:info@aqm.nz">info@aqm.nz</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__social social">
+          <h3 class="social__title">Social</h3>
+
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="https://www.facebook.com/aquamarineprojects">Facebook</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.instagram.com/aquamarineprojects/">Instagram</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.youtube.com/channel/UCFh5dyLcBnb8-mzJ4pYPV9g">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
   </footer>
 </body>

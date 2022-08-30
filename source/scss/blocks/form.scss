@@ -1,8 +1,20 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 .form__reason {
+  margin: 0;
+  padding: 0;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   color: $_main_light;
+}
+
+.form__input {
+  min-height: 40px;
 }
