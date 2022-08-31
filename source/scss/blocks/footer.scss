@@ -3,10 +3,17 @@
 }
 
 .footer__container {
-  padding: 32px 16px 27px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  padding: 32px 96px 50px 16px;
 }
 
 .footer__copyright {
+  position: absolute;
+  bottom: 17px;
+  left: 16px;
   display: block;
   font-family: $_f__common;
   font-style: normal;
@@ -14,4 +21,9 @@
   font-size: 14px;
   line-height: 17px;
   color: $_main_light;
+}
+
+.footer__logo {
+  width: 100%;
+  margin-right: auto;
 }
