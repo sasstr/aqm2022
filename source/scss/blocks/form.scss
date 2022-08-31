@@ -1,7 +1,23 @@
 .form {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 18px;
+  padding: 0 0 39px 35px;
+  margin: 0 0 0 16px;
+}
+
+.form::before {
+  position: absolute;
+  content: "";
+  top: -25px;
+  left: -15px;
+  width: 343px;
+  height: 451px;
+  background-image: url(../img/stroke_mob_form.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 343px 451px;
 }
 
 .form__reason {
@@ -16,5 +32,49 @@
 }
 
 .form__input {
-  min-height: 40px;
+  width: 100%;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  color: $_main_light;
+  background-color: $_main_dark;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid $_font_grass;
+}
+
+.form__textarea {
+  max-height: 420px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 69px;
+  color: $_main_light;
+  background-color: $_main_dark;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid $_font_grass;
+  resize: vertical
+}
+
+.form__btn-submit {
+  width: 175px;
+  padding: 12px 36px;
+
+  background: $_button_dark;
+  border-radius: 64px;
+  border: none;
+
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $_white;
 }

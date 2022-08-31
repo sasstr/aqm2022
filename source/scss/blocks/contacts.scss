@@ -3,12 +3,13 @@
 }
 
 .contacts__container {
-  padding: 50px 16px 52px;
+  padding: 50px 16px 0;
 }
 
 .contacts__box {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 59px;
 }
 
 .contacts__title {
