@@ -49,10 +49,24 @@
 }
 
 .magazine__link {
+  position: relative;
+  padding-right: 18px;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: $_button_dark;
+
+  &::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 2px;
+    width: 13px;
+    height: 15px;
+    background-image: url('../img/download_sign.svg');
+    background-repeat: no-repeat;
+    background-size: 13px 15px;
+  }
 }
