@@ -5,19 +5,25 @@
   gap: 18px;
   padding: 0 0 39px 35px;
   margin: 0 0 0 16px;
+  z-index: 5;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -58px;
+    left: -15px;
+    width: 343px;
+    height: 451px;
+    background-image: url(../img/stroke_mob_form.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 343px 451px;
+    z-index: 1;
+  }
 }
 
-.form::before {
-  position: absolute;
-  content: "";
-  top: -25px;
-  left: -15px;
-  width: 343px;
-  height: 451px;
-  background-image: url(../img/stroke_mob_form.svg);
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 343px 451px;
+.form__wrapper {
+  z-index: 5;
 }
 
 .form__reason {
@@ -48,19 +54,20 @@
 }
 
 .form__textarea {
+  padding: 0;
   max-height: 420px;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 69px;
+  line-height: 40px;
   color: $_main_light;
   background-color: $_main_dark;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid $_font_grass;
-  resize: vertical
+  resize: vertical;
 }
 
 .form__btn-submit {
@@ -77,4 +84,6 @@
   font-size: 16px;
   line-height: 24px;
   color: $_white;
+  cursor: pointer;
+  z-index: 5;
 }
