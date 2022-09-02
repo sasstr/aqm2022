@@ -7,18 +7,18 @@
       position: absolute;
       content: '';
       top: 0;
-      left: 0;
-      width: 360px;
+      right: 16px;
+      width: 560px;
       height: 582px;
-      background-image: (url(../img/stroke_mob_about-us.svg));
+      background-image: (url(../img/aqm_logo_full.svg));
       background-repeat: no-repeat;
-      background-position: top left;
-      background-size: 345px 582px;
+      background-position: bottom right;
+      background-size: 560px 750px;
     }
 }
 
 .about-us__title {
-  padding: 0 0 40px;
+  padding: 0 40px 40px 0;
   margin: 0;
   font-family: $_f__common;
   font-style: normal;

@@ -1,9 +1,10 @@
 .main__wrapper {
   margin: 0 auto;
   min-width: $mobile;
+  max-width: 560px;
 }
 
-.main__conteiner {
+.main__container {
   background-color: $_main_dark;
 }
 
