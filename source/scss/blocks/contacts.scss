@@ -1,5 +1,21 @@
 .contacts {
+  position: relative;
+  overflow: hidden;
   background-color: $_main_dark;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 225px;
+    left: -5px;
+    width: 150vw;
+    height: 150vw;
+    background-image: url('../img/aqm_logo_full.svg');
+    background-position: top left;
+    background-size: cover;
+    z-index: 1;
+    transform: rotate(180deg);
+  }
 }
 
 .contacts__container {
