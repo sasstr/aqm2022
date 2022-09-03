@@ -1,15 +1,15 @@
 .navigation {
-  z-index: 5;
+  z-index: 15;
 }
 
 .navigation__list {
-  display: none;
-  //display: flex;
+  display: flex;
   flex-direction: column;
   gap: 19px;
   @include list-style-reset;
   background-color: $_main_dark;
-  width: $mobile;
+  min-width: $mobile;
+  max-width: 560px;
   padding-bottom: 179px;
 }
 

@@ -35,35 +35,38 @@
           <a class="lang__link" href="#">中文</a>
         </li>
       </ul>
-      <nav class="header__navigation navigation">
+      <nav class="header__navigation navigation hidden">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a class="navigation__link" href="#">Works</a>
+            <a class="navigation__link" href="./works.html">Works</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="#">About us</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">Services</a>
+            <a class="navigation__link" href="./services.html">Services</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">Articles</a>
+            <a class="navigation__link" href="./articles.html">Articles</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="#">Bioms</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">Contacts</a>
+            <a class="navigation__link" href="./contacts.html">Contacts</a>
           </li>
         </ul>
 
       </nav>
-      <button class="header__toggle">
-        <svg width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <button class="header__toggle" aria-label="open/close menu button">
+        <svg class="burger-menu" width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="1" x2="35" y2="1" stroke="white" stroke-width="2"/>
           <line y1="11" x2="35" y2="11" stroke="white" stroke-width="2"/>
           <line y1="21" x2="35" y2="21" stroke="white" stroke-width="2"/>
         </svg>
+        <svg class="burger-menu-close hidden" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L32 32M32 1L1 32" stroke="white" stroke-width="2"/>
+          </svg>
       </button>
     </div>
   </header>
@@ -339,5 +342,6 @@
       </div>
 
   </footer>
+  <script src="./js/script.min.js"></script>
 </body>
 </html>
