@@ -33,14 +33,14 @@
   &::before {
     position: absolute;
     content: '';
-    top: 0;
-    left: 0;
-    width: 360px;
-    height: 440px;
+    left: -550px;
+    bottom: -50px;
+    width: 1120px;
+    height: 1120px;
     background-image: (url(../img/aqm_logo_full.svg));
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 360px 440px;
+    transform: rotate(180deg);
   }
 }
 
