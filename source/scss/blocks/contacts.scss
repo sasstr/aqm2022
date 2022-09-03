@@ -12,8 +12,8 @@
     content: "";
     top: 250px;
     left: max(53vw - 295px, 10px);
-    width: 140vw;
-    height: 140vw;
+    width: min(140vw, 700px);
+    height: min(140vw, 700px);
     background-image: url('../img/aqm_logo_full.svg');
     background-position: -9px -9px;
     background-size: cover;
