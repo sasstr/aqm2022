@@ -5,18 +5,6 @@
 .construction__container {
   position: relative;
   padding: 12px 16px 50px;
-  &::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 360px;
-    height: 440px;
-    background-image: (url(../img/stroke_mob_construction.svg));
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 360px 440px;
-  }
 }
 
 .construction__slogan {
@@ -32,6 +20,7 @@
 }
 
 .construction__text {
+  position: relative;
   margin: 0 0 73px;
   padding: 0;
   font-family: $_f__common;
@@ -40,6 +29,19 @@
   font-size: 16px;
   line-height: 24px;
   color: $_main_dark;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 440px;
+    background-image: (url(../img/aqm_logo_full.svg));
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 360px 440px;
+  }
 }
 
 .construction__title {
