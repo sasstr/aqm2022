@@ -3,21 +3,22 @@
   padding: 105px 4.4% 198px;
   background-color: $_main_dark;
 
-    &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      right: 16px;
-      width: 560px;
-      height: 582px;
-      background-image: (url(../img/aqm_logo_full.svg));
-      background-repeat: no-repeat;
-      background-position: bottom right;
-      background-size: 560px 750px;
-    }
+    // &::before {
+    //   position: absolute;
+    //   content: '';
+    //   top: 0;
+    //   right: 16px;
+    //   width: 560px;
+    //   height: 582px;
+    //   background-image: (url(../img/aqm_logo_full.svg));
+    //   background-repeat: no-repeat;
+    //   background-position: bottom right;
+    //   background-size: 560px 750px;
+    // }
 }
 
 .about-us__title {
+  position: relative;
   padding: 0 40px 40px 0;
   margin: 0;
   font-family: $_f__common;
@@ -37,4 +38,18 @@
   font-size: 16px;
   line-height: 24px;
   color: $_main_light;
+
+  &::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: min(140vw, 700px);
+  height: min(140vw, 700px);
+  background-image: url(./img/aqm_logo_full.svg);
+  background-position: bottom right;
+  background-size: 100% 100%;
+  bottom: -30px;
+  // max-width: 720px;
+  // max-height: 720px;
+  }
 }
