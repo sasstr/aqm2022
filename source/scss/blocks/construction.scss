@@ -1,5 +1,6 @@
 .construction {
   background-color: $_main_light;
+  overflow: hidden;
 }
 
 .construction__container {
@@ -33,10 +34,10 @@
   &::before {
     position: absolute;
     content: '';
-    left: -550px;
-    bottom: -50px;
-    width: 1120px;
-    height: 1120px;
+    left: calc(50% - 600px);
+    bottom: -70px;
+    width: 1200px;
+    height: 1200px;
     background-image: (url(../img/aqm_logo_full.svg));
     background-repeat: no-repeat;
     background-position: top left;
