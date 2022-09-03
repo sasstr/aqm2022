@@ -11,11 +11,11 @@
     position: absolute;
     content: "";
     top: 250px;
-    left: 0;
+    left: max(53vw - 295px, 10px);
     width: 140vw;
     height: 140vw;
     background-image: url('../img/aqm_logo_full.svg');
-    background-position: -5px -5px;
+    background-position: -9px -9px;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
