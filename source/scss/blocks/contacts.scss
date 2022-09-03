@@ -10,13 +10,14 @@
   &::before {
     position: absolute;
     content: "";
-    top: 225px;
-    left: -5px;
-    width: 150vw;
-    height: 150vw;
+    top: 250px;
+    left: 0;
+    width: 140vw;
+    height: 140vw;
     background-image: url('../img/aqm_logo_full.svg');
-    background-position: top left;
+    background-position: -5px -5px;
     background-size: cover;
+    background-repeat: no-repeat;
     z-index: 1;
     transform: rotate(180deg);
   }
