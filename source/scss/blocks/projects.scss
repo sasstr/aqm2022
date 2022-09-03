@@ -1,5 +1,8 @@
 .projects {
+  z-index:100;
+  position:relative;
   padding: 53px 4.4% 90px;
+  background:$_white;
 }
 
 .projects__title {

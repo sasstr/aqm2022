@@ -1,4 +1,6 @@
 .work {
+  z-index:5;
+  position:relative;
   background-color: $_main_dark;
 }
 
@@ -17,18 +19,17 @@
   line-height: 58px;
   color: $_main_light;
 
-
   &::before {
     position: absolute;
     content: '';
-    top: 0;
-    left: 0;
-    width: 360px;
-    height: 265px;
+    bottom: 30px;
+    right: 0px;
+    width: min(120vw,750px);
+    height: min(120vw,750px);
     background-image: (url(../img/aqm_logo_full.svg));
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 344px 264px;
+    background-size: cover;
   }
 }
 
