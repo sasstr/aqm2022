@@ -1,7 +1,12 @@
 .main__wrapper {
   margin: 0 auto;
   min-width: $mobile;
-  max-width: 560px;
+  max-width: $mobile-container-max;
+
+  @include media-tablet  {
+    min-width: $tablet;
+    max-width: $tablet-container-max;
+  }
 }
 
 .main__container {
@@ -10,7 +15,7 @@
 
 .main__image {
   display: block;
-  aspect-ratio: 560 / 375;
+  aspect-ratio: $mobile-container-max / 375;
 }
 
 .main__banner {

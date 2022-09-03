@@ -7,12 +7,15 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const sync = require("browser-sync").create();
 const htmlmin = require("gulp-htmlmin");
+const babel = require('gulp-babel');
 const rename = require("gulp-rename");
 const terser = require("gulp-terser");
 const squoosh = require("gulp-libsquoosh");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+//const htmlValidator = require('gulp-w3c-html-validator');
+//const preprocess = require('gulp-preprocess');
 
 // Styles
 
@@ -33,11 +36,24 @@ const styles = () => {
 
 exports.styles = styles;
 
+// const validator = {
+//   validateHtml() {
+//     return gulp.src('source/*.html')
+//         .pipe(htmlValidator.analyzer({ ignoreMessages: /^Duplicate ID/ }))
+//         .pipe(htmlValidator.reporter());
+//     },
+//   };
+
 // HTML
 
 const html = () => {
   return gulp.src("source/*.html")
+    //.pipe(preprocess()) // Для gulp-preprocess
+    .pipe(plumber())
+    //.pipe(validator())
+    // .pipe(sourcemaps.init()) // Для gulp-preprocess
     .pipe(htmlmin({ collapseWhitespace: true }))
+    // .pipe(sourcemaps.write()) // Для gulp-preprocess
     .pipe(gulp.dest("build"));
 }
 
@@ -45,6 +61,9 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src("source/js/script.js")
+    .pipe(babel({
+      presets: ["@babel/preset-env"]
+      }))
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))

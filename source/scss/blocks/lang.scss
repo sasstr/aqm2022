@@ -1,8 +1,29 @@
 .lang {
   display: none;
+
+  @include media-tablet  {
+    display: block;
+  }
+}
+
+.lang__list {
+  display: none;
   @include list-style-reset;
 }
 
 .lang__link {
+  position: relative;
   color: $_white;
+}
+
+.lang__link--active::before {
+  position: absolute;
+  content: "";
+  right: -10px;
+  top: 5px;
+  width: 7px;
+  height: 5px;
+  background-image: url('../img/header_lang_menu_icon.svg');
+  background-repeat: no-repeat;
+
 }

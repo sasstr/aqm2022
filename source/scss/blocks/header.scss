@@ -6,15 +6,27 @@
   display: flex;
   justify-content: space-between;
   min-width: $mobile;
-  max-width: 560px;
+  max-width: $mobile-container-max;
   height: 80px;
   margin: 0 auto;
   padding: 30px 16px;
+
+  @include media-tablet  {
+    height: 100px;
+    padding: 41px 32px;
+    min-width: $tablet;
+    max-width: $tablet-container-max;
+  }
 }
 
 .header__logo {
   min-width: 124px;
   min-height: 15px;
+
+  @include media-tablet  {
+    min-width: 135px;
+    min-height: 17px;
+  }
 }
 
 .header__toggle {
@@ -24,4 +36,8 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @include media-tablet  {
+    width: 37px;
+  }
 }

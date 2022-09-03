@@ -4,6 +4,15 @@
   background:$_white;
 }
 
+@include media-tablet  {
+  .projects__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+
 .projects__title {
   margin: 0;
   padding: 0 0 12px;
@@ -20,7 +29,13 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  @include media-tablet  {
+    justify-content: end;
+    margin-top: -70px;
+  }
 }
+
 
 .projects__button {
   display: flex;

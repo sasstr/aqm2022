@@ -1,5 +1,9 @@
 .card {
   padding-bottom: 46px;
+
+  @include media-tablet  {
+    width: 45%;
+  }
 }
 
 .card__image {

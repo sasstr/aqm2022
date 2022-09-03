@@ -15,10 +15,9 @@
       <div class="header__logo">
         <img src="./img/logo.svg" alt="Logo Aquamarine">
       </div>
-      <ul class="header__lang lang">
-        <li>
-          <a class="lang__link" href="#">English</a>
-        </li>
+      <div class="header__lang lang">
+        <a class="lang__link lang__link--active" href="#">English</a>
+        <ul class="lang__list">
         <li>
           <a class="lang__link" href="#">Russian</a>
         </li>
@@ -35,6 +34,8 @@
           <a class="lang__link" href="#">中文</a>
         </li>
       </ul>
+      </div>
+
       <nav class="header__navigation navigation hidden">
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -89,38 +90,40 @@
     </div>
       <section class="main__wrapper projects">
         <h2 class="projects__title">Featured projects</h2>
-        <article class="projects__card card">
-          <a href="#">
-            <img loading="lazy" class="card__image" src="./img/progect_yaranga.jpg" alt="Yaranga Botanical Garden">
-          </a>
-          <a href="#">
-            <h3 class="card__text">Yaranga Botanical Garden</h3>
-          </a>
-        </article>
-        <article class="projects__card card">
-          <a href="#">
-            <img loading="lazy" class="card__image" src="./img/project_psa.jpg" alt="Philosophers Stone Apartments">
-          </a>
-          <a href="#">
-            <h3 class="card__text">Philosophers Stone Apartments</h3>
-          </a>
-        </article>
-        <article class="projects__card card">
-          <a href="#">
-            <img loading="lazy" class="card__image" src="./img/project_go.png" alt="Gujurat Oceanarium">
-          </a>
-          <a href="#">
-            <h3 class="card__text">Gujurat Oceanarium</h3>
-          </a>
-        </article>
-        <article class="projects__card card">
-          <a href="#">
-            <img loading="lazy" class="card__image" src="./img/project_ta.png" alt="Tauranga Aquarium">
-          </a>
-          <a href="#">
-            <h3 class="card__text">Tauranga Aquarium</h3>
-          </a>
-        </article>
+        <div class="projects__box">
+          <article class="projects__card card">
+            <a href="#">
+              <img loading="lazy" class="card__image" src="./img/progect_yaranga.jpg" alt="Yaranga Botanical Garden">
+            </a>
+            <a href="#">
+              <h3 class="card__text">Yaranga Botanical Garden</h3>
+            </a>
+          </article>
+          <article class="projects__card card">
+            <a href="#">
+              <img loading="lazy" class="card__image" src="./img/project_psa.jpg" alt="Philosophers Stone Apartments">
+            </a>
+            <a href="#">
+              <h3 class="card__text">Philosophers Stone Apartments</h3>
+            </a>
+          </article>
+          <article class="projects__card card">
+            <a href="#">
+              <img loading="lazy" class="card__image" src="./img/project_go.png" alt="Gujurat Oceanarium">
+            </a>
+            <a href="#">
+              <h3 class="card__text">Gujurat Oceanarium</h3>
+            </a>
+          </article>
+          <article class="projects__card card">
+            <a href="#">
+              <img loading="lazy" class="card__image" src="./img/project_ta.png" alt="Tauranga Aquarium">
+            </a>
+            <a href="#">
+              <h3 class="card__text">Tauranga Aquarium</h3>
+            </a>
+          </article>
+        </div>
         <div class="projects__container">
           <a class="projects__button" href="#">↳ All projects</a>
         </div>
