@@ -3,24 +3,11 @@
 }
 
 .work__container {
-  position: relative;
   padding: 23px 4.4% 54px;
-
-  &::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 360px;
-    height: 265px;
-    background-image: (url(../img/stroke_mob_work.svg));
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 344px 264px;
-  }
 }
 
 .work__slogan {
+  position: relative;
   margin: 0;
   padding: 0 0 70px;
   font-family: $_f__common;
@@ -29,6 +16,20 @@
   font-size: 55px;
   line-height: 58px;
   color: $_main_light;
+
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 265px;
+    background-image: (url(../img/aqm_logo_full.svg));
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 344px 264px;
+  }
 }
 
 .work__text {
