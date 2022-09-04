@@ -34,7 +34,7 @@ btnHeaderMenu.addEventListener('click', onClickBtnHeaderMenu);
 function defer(){
    if ( window.jQuery){
 
-      $("section, .footer, .main__container").css('opacity','0');
+      $("section, .footer,  .projects__card, .projects__title").not('.main__wrapper.projects').css('opacity','0');
       $(window).scroll(function() {OnWinScroll()});
       OnWinScroll()
 
@@ -48,7 +48,14 @@ defer();
 
 function OnWinScroll()
 {
- $("section, .footer, .main__container").each(function(){if(onmyscreen($(this))) $(this).animate({opacity: 1}, 1000);;})
+ $("section, .footer,  .projects__card, .projects__title").not('main__wrapper.projects').each(function(){if(onmyscreen($(this)))
+  MyShow($(this));})
+}
+function MyShow(el)
+{
+  el.find("> *").css("opacity",0);
+  el.animate({opacity: 1}, 100);
+  el.find("> *").animate({opacity: 1}, 700);
 }
 
 function onmyscreen(el)
