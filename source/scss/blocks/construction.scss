@@ -17,6 +17,7 @@
   font-size: 55px;
   line-height: 58px;
   color: $_main_dark;
+  letter-spacing: -3px;
 
 }
 
@@ -30,6 +31,7 @@
   font-size: 16px;
   line-height: 24px;
   color: $_main_dark;
+  letter-spacing: -0.5px;
 
   &::before {
     position: absolute;
@@ -63,6 +65,7 @@
 .construction__item {
   padding: 17px 0;
   border-bottom: 1px solid #5D9F93;
+  letter-spacing: -0.5px;
 }
 
 .construction__item:last-child {

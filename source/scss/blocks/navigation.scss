@@ -1,16 +1,37 @@
 .navigation {
-  z-index: 15;
+  z-index: 150;
+  width:100%;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: $_main_dark;
+}
+.navigation::before {
+  content:"";
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left:16px;
+  top:76px;
+  background-image: url("data:image/svg+xml, %3Csvg fill='none' stroke='%235D9F93' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0.9 0.9 24.2 24.2'%3E%3Cg stroke-width='0.07' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' vector-effect='non-scaling-stroke' stroke-width='2px'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 760px 760px;
+  transform: rotate(180deg);
 }
 
 .navigation__list {
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  gap: 0px;
   @include list-style-reset;
-  background-color: $_main_dark;
   min-width: $mobile;
   max-width: 560px;
-  padding-bottom: 179px;
+  padding-top:101px;
+  padding-left:65px;
+  letter-spacing:-3px;
 }
 
 .navigation__item {

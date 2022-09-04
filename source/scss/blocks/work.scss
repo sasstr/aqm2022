@@ -19,6 +19,7 @@
   font-size: 55px;
   line-height: 58px;
   color: $_main_light;
+  letter-spacing: -3px;
 
   &::before {
     position: absolute;
@@ -43,6 +44,7 @@
   font-size: 16px;
   line-height: 24px;
   color: $_main_light;
+  letter-spacing: -0.5px;
 }
 
 .work__title {
@@ -54,6 +56,7 @@
   font-size: 28px;
   line-height: 52px;
   color: $_main_light;
+  letter-spacing: -1px;
 }
 
 .work__list {
@@ -69,6 +72,7 @@
   line-height: 24px;
   color: $_main_light;
   border-bottom: 1px solid $_font_grass;
+  letter-spacing: -1px;
 }
 
 .work__item:last-child {
