@@ -58,3 +58,27 @@
   line-height: 24px;
   color: $_white;
 }
+.projects__card:hover .card__image
+{
+  filter: blur(17px);
+}
+
+.projects__card a
+{display:block; overflow:hidden; position:relative;}
+
+.projects__card .projects__button
+{
+ background:transparent;
+ position:absolute;
+ margin:auto;
+ border-color:white;
+ z-index:100;
+ left:50%;
+ right:50%;
+ top:50%;
+ bottom:50%;
+ visibility:hidden;
+}
+.projects__card:hover .projects__button
+{
+visibility:visible;}
