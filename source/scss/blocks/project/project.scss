@@ -5,7 +5,7 @@
 
 .project__title {
   margin: 0;
-  padding: 0;
+  padding: 16px 0 18px;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -13,10 +13,11 @@
   line-height: 69px;
   letter-spacing: -1px;
   color: $_main_light;
+  border-bottom: 2px solid rgba(225, 241, 227, 0.6);
 }
 
 .project__info {
-  margin: 0;
+  margin: 0 0 25px;
   padding: 0;
   color: $_main_light;
   display: flex;
@@ -51,14 +52,39 @@
 }
 
 .project__list-of-works {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   @include list-style-reset;
   margin: 0;
-  padding: 0;
+  padding: 0 0 53px;
   color: $_main_light;
+  border-bottom: 2px solid rgba(225, 241, 227, 0.6);
+}
+
+.project__text-box {
+  padding: 84px 0 86px;
 }
 
 .project__text {
   margin: 0;
   padding: 0;
   color: $_main_light;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 149%;
+}
+
+.project__text--small {
+  padding: 0 35px 33px 0;
+}
+
+.project__text--large {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 140%;
+  letter-spacing: -1px;
+  color: $_white;
 }

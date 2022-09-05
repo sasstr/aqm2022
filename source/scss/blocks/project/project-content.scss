@@ -1,0 +1,46 @@
+.project-content {
+  padding: 40px 16px 0;
+  background-color: $_white;
+  background: linear-gradient(180deg, $_white 43%, rgba(225,241,227,1) 43%);
+}
+
+.project-content__box {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+}
+
+.project-content__link-back {
+  display: block;
+  margin: 33px 0 43px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $_button_dark;
+}
+
+.project-content__link {
+  padding: 0;
+  display: block;
+
+}
+
+.project-content__image {
+  display: block;
+}
+
+.project-content__video {
+  display: block;
+  position: relative;
+}
+
+.project-content__icon-play {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: calc(50% - 23px);
+  left: calc(50% - 23px);
+  cursor: pointer;
+}

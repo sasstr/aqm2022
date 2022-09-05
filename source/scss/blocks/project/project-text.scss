@@ -1,0 +1,19 @@
+.project-text {
+  padding: 40px 16px;
+}
+
+.project-text__content {
+  margin: 0 0 40px;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: -0.5px;
+  color: $_main_dark;
+}
+
+.project-text__image {
+  display: block;
+}

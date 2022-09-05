@@ -1,0 +1,32 @@
+.project-description {
+  padding: 76px 16px 40px;
+  background: $_main_light;
+}
+
+.project-description__text {
+  margin: 0;
+  padding: 0;
+}
+
+.project-description__text--large {
+  padding: 0 0 32px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 128%;
+  letter-spacing: -1px;
+  color: $_main_dark;
+}
+
+.project-description__text {
+  padding: 0 0 36px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: -0.5px;
+  color: $_main_dark;
+
+}
