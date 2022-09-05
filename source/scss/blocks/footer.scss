@@ -52,3 +52,28 @@
   line-height: 135%;
   color: $_main_light;
 }
+
+.footer__social-list {
+  @include list-style-reset;
+}
+
+.footer__social-title {
+  margin: 0 0 5px;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  color: $_main_light;
+}
+
+.footer__social-link {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 135%;
+  color: $_main_light;
+}
