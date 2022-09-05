@@ -1,6 +1,9 @@
 .project {
   background-color: $_main_dark;
-  padding: 16px;
+}
+
+.project__container {
+  padding: 0 16px;
 }
 
 .project__title {
@@ -26,7 +29,7 @@
 }
 
 .project__feature-box {
-  width: 50%;
+  width: 45%;
 }
 
 .project__item-info {
