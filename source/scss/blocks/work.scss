@@ -95,16 +95,24 @@
 }
 
 @include media-tablet {
- .work__container
+ .work__slogan
  {
-  width:630px;
-
+  width:670px;
+  font-size:85px;
+  line-height: 100px;
+  letter-spacing: -3px;
+ }
+ .work__slogan::before {
+    width: 1184px;
+    height: 1184px;
  }
  .work__text
  {
   width:55%;
   margin-left: auto;
   margin-right: 0;
+  font-size:18px;
+  letter-spacing:-0.5px;
 
  }
  .work__list

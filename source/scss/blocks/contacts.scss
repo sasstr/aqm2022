@@ -41,3 +41,14 @@
   color: $_main_light;
   letter-spacing: -3px;
 }
+
+@include media-tablet {
+ .contacts__container::before
+ {
+ width: min(957px, 130vw);
+ height: min(957px, 130vw);
+ left: max(53vw - 485px,10px);
+ width:125vw;
+ height:125vw;
+ }
+}
