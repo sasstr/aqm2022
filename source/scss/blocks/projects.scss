@@ -7,10 +7,9 @@
 @include media-tablet  {
   .projects__box {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    align-items: flex-start;
   }
 }
 
@@ -35,7 +34,7 @@
 
   @include media-tablet  {
     justify-content: end;
-    margin-top: -70px;
+    margin-top: -50px;
   }
 }
 
