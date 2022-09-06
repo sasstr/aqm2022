@@ -2,7 +2,18 @@
   background: #E1F1E3;
 }
 
+.articles__container {
+  padding: 0 16px;
+}
+
 .articles__title {
   margin: 0;
-  padding: 0;
+  padding: 18px 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 69px;
+  letter-spacing: -2px;
+  color: $_main_dark;
 }

@@ -1,5 +1,17 @@
+.article:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.article:last-child {
+  padding-bottom: 60px;
+}
+
+.article__image {
+  display: block;
+}
+
 .article__title {
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
   font-family: $_f__common;
   font-style: normal;
@@ -23,7 +35,7 @@
 }
 
 .article__text {
-  margin: 0;
+  margin: 11px 0 18px;
   padding: 0;
   font-family: $_f__common;
   font-style: normal;
