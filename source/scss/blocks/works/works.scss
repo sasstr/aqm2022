@@ -1,0 +1,19 @@
+.works {
+  background: $_main_light;
+}
+
+.works__container {
+  padding: 81px 16px 0;
+}
+
+.works__title {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 69px;
+  letter-spacing: -2px;
+  color: $_main_dark;
+}
