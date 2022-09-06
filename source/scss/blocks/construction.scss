@@ -71,3 +71,34 @@
 .construction__item:last-child {
   border-bottom: none;
 }
+
+@include media-tablet {
+ .construction__slogan
+ {
+  width:630px;
+  font-size: 85px;
+  line-height: 100px;
+  letter-spacing: -3px;
+ }
+ .construction__text
+ {
+  width:55%;
+  margin-left: auto;
+  margin-right: 0;
+
+ }
+ .construction__text::before {
+    width: min(1020px, 120vw);
+    height: min(1020px, 120vw);
+    transform:none;
+    left:auto;
+    right:0px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+ }
+  .construction__list
+ {
+    columns: 2;
+    }
+}
