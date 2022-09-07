@@ -1,0 +1,45 @@
+.small-work-card:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.small-work-card__desc {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: right;
+  color: $_main_dark;
+}
+
+.small-work-card__subject {
+  margin: 0;
+  padding: 0;
+}
+
+.small-work-card__link {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $_main_dark;
+}
+
+.small-work-card__image {
+  display: block;
+}
+
+.small-work-card__address {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: $_secondary_dark;
+  opacity: 0.7;
+}
