@@ -2,9 +2,14 @@
   margin-bottom: 40px;
 }
 
+.small-work-card__box {
+  display: flex;
+  justify-content: space-between;
+}
+
 .small-work-card__desc {
   margin: 0;
-  padding: 0;
+  padding: 5px 0 0;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
