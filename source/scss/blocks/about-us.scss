@@ -20,6 +20,7 @@
   @include media-tablet  {
     font-size: 75px;
     line-height: 78px;
+    padding-bottom:80px;
   }
 }
 
@@ -37,6 +38,8 @@
   @include media-tablet  {
     font-size: 28px;
     line-height: 128%;
+    padding-left:104px;
+    width:644px;
   }
 
   &::before {
@@ -51,6 +54,12 @@
     background-repeat:no-repeat;
     bottom: -40px;
     background-size: min(200vw, 900px) min(200vw,900px);
+     @include media-tablet  {
+      bottom:-80px;
+      right:-30px;
+      width:877px;
+      height:877px;
+     }
   }
 }
 
