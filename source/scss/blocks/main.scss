@@ -7,6 +7,10 @@
     min-width: $tablet;
     max-width: $tablet-container-max;
   }
+  @include media-desktop  {
+    min-width: $desktop;
+    max-width: $desktop-container-max;
+  }
 }
 
 .main__container {

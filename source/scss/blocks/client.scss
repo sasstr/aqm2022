@@ -31,14 +31,38 @@
 }
 
 .client__image-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 30px;
 }
 
 .client__image {
   width: 75px;
   height: 75px;
   display: block;
+}
+
+
+@include media-tablet {
+
+  .client__container
+  {
+  margin:auto;}
+  .client__title
+  {
+    font-size: 50px;
+    line-height: 69px;
+    letter-spacing: -3px;
+  }
+  .client__text
+  {
+    padding-top:31px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+    width:464px;
+  }
+
 }

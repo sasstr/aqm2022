@@ -22,6 +22,13 @@
     line-height: 78px;
     padding-bottom:80px;
   }
+  @include media-desktop  {
+    font-size: 96px;
+    line-height: 100px;
+    padding-bottom:98px;
+    letter-spacing: -1px;
+
+  }
 }
 
 .about-us__content {
@@ -41,6 +48,11 @@
     padding-left:104px;
     width:644px;
   }
+  @include media-desktop  {
+    font-size: 32px;
+    padding-left:224px;
+    width:896px;
+  }
 
   &::before {
     content: "";
@@ -59,6 +71,14 @@
       right:-30px;
       width:877px;
       height:877px;
+      background-size:cover;
+     }
+     @include media-desktop  {
+      bottom:-80px;
+      right:-30px;
+      width:1329px;
+      height:1329px;
+      background-size:cover;
      }
   }
 }
