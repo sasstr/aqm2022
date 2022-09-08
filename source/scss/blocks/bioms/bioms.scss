@@ -1,0 +1,171 @@
+.bioms__wrapper {
+  background-color: $_main_dark;
+}
+
+.bioms__box {
+  padding: 81px 51px 95px 16px;
+}
+
+.bioms__title {
+  margin: 0 0 32px 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 54px;
+  letter-spacing: -3px;
+  color: $_main_light;
+}
+
+.bioms__text {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  color: $_main_light;
+}
+
+.bioms__image-box {
+  padding: 0 16px;
+  background: linear-gradient(180deg,#e1f1e3 79%,#ffffff 79%);
+}
+
+.bioms__image,
+.bioms__img {
+  display: block;
+}
+
+.bioms__holder {
+  background-color: $_main_light;
+}
+
+.bioms__container--holder {
+  padding: 80px 16px 75px;
+}
+
+.bioms__heading {
+  margin: 0 0 28px;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 36px;
+  letter-spacing: -2px;
+  color: $_main_dark;
+}
+
+.bioms__lead {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: -0.5px;
+  color: $_main_dark;
+}
+
+.bioms__text-box {
+  background-color: $_white;
+}
+
+.bioms__container--text {
+  padding: 36px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.bioms__desc {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: -0.5px;
+  color: $_main_dark;
+}
+
+.bioms__features {
+  background-color: #e1f1e3;
+}
+
+.bioms__container-features {
+  padding: 32px 16px 66px;
+}
+
+.bioms__descr-text {
+  margin: 0 0 12px;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 128%;
+  letter-spacing: -1px;
+  color: $_main_dark;
+}
+
+.bioms__subtitle {
+  margin: 0 0 67px;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 36px;
+  letter-spacing: -2px;
+  color: $_main_dark;
+}
+
+.bioms__feature-text {
+  margin: 0 0 16px;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: -0.5px;
+  color: $_main_dark;
+}
+
+.bioms__item-title {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: -0.5px;
+  color: $_main_dark;
+}
+
+.bioms__list-features {
+  @include list-style-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.bioms__item-text {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  color: $_main_dark;
+}

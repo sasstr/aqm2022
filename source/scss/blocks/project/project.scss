@@ -16,7 +16,7 @@
   line-height: 69px;
   letter-spacing: -1px;
   color: $_main_light;
-  border-bottom: 2px solid rgba(225, 241, 227, 0.6);
+  background-color: $_main_dark;
 }
 
 .project__info {
@@ -26,6 +26,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  border-top: 2px solid rgba(225, 241, 227, 0.6);
 }
 
 .project__feature-box {
