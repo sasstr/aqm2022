@@ -1,0 +1,75 @@
+.about-history {
+  background-color: $_main_dark;
+}
+
+.about-history__container {
+  padding: 63px 16px 73px;
+}
+
+.about-history__title {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 37px;
+  letter-spacing: -2px;
+  color: $_main_light;
+}
+
+.about-history__text {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $_main_light;
+}
+
+.about-history__text--big {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  color: $_white;
+}
+
+.about-history__time {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 69px;
+  letter-spacing: -1px;
+  color: $_main_light;
+}
+
+.about-history__desc {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  color: $_main_light;
+}
+
+.about-history__image {
+  display: block;
+}
+
+.about-history__list--light {
+  background-color: #E1F1E3;
+}
+
+.about-history__desc--light,
+.about-history__time--light {
+  color: $_main_dark;
+}
