@@ -54,11 +54,22 @@
 }
 
 .about-history__list {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 60px;
   margin: 0;
   padding: 0 0 100px;
+}
+
+.about-history__list--line::after {
+  position: absolute;
+  content: '';
+  top: 30px;
+  left: 55px;
+  width: 2px;
+  height: 480px;
+  border-left: 2px solid $_font_grass;
 }
 
 .about-history__list--light {
@@ -71,8 +82,14 @@
   gap: 10px;
 }
 
+.about-history__time--line {
+  background-color: $_main_dark;
+  z-index: 3;
+}
+
 .about-history__time {
   width: 110px;
+  height: 69px;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;

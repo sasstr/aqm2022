@@ -73,9 +73,12 @@
 .global-about-us__image-box {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 20px 20px;
 }
 
 .global-about-us__image {
   display: block;
+  width: 150px;
+  height: 100%;
 }
