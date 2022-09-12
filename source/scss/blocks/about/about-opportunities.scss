@@ -2,9 +2,14 @@
   background: #f3f1d8;
 }
 
+.about-opportunities__container {
+  padding: 44px 16px 51px;
+}
+
 .about-opportunities__title {
+  width: 210px;
   margin: 0;
-  padding: 0;
+  padding: 0 0 21px;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -15,7 +20,8 @@
 }
 
 .about-opportunities__text {
-  margin: 0;
+  width: 266px;
+  margin: 0 0 30px;
   padding: 0;
   font-family: $_f__common;
   font-style: normal;
