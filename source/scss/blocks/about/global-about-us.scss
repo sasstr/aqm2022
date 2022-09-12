@@ -79,6 +79,28 @@
 
 .global-about-us__image {
   display: block;
-  width: 150px;
-  height: 100%;
+}
+
+.global-about-us__image--iaapa {
+  width: 143px;
+  height: 46px;
+}
+
+.global-about-us__image--aia {
+  width: 112px;
+  height: 57px;
+}
+
+.global-about-us__image--las {
+  width: 193px;
+  height: 47px;
+}
+
+.global-about-us__image--gc {
+  width: 72px;
+  height: 72px;
+}
+
+.global-about-us__map-box {
+  display: none;
 }
