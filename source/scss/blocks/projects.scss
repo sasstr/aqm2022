@@ -13,7 +13,6 @@
   }
 }
 
-
 .projects__title {
   margin: 0;
   padding: 0 0 12px;
@@ -38,47 +37,30 @@
   }
 }
 
-
-.projects__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 50px;
-  padding: 12px 36px;
-
-  background: $_button_dark;
-  border-radius: 64px;
-
-  font-family: $_f__common;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: $_white;
-}
-.projects__card:hover .card__image
-{
+.projects__card:hover .card__image {
   filter: blur(17px);
 }
 
-.projects__card a
-{display:block; overflow:hidden; position:relative;}
-
-.projects__card .projects__button
-{
- background:transparent;
- position:absolute;
- border-color:white;
- top:calc(50% - 25px);
- z-index:100;
- cursor:pointer;
- visibility:hidden;
- left: 0;
- right: 0;
- margin-left: auto;
- margin-right: auto;
+.card__link {
+  display:block;
+  overflow:hidden;
+  position:relative;
 }
-.projects__card:hover .projects__button
-{
-visibility:visible;}
+
+.card__button {
+  background:transparent;
+  position:absolute;
+  top:calc(50% - 25px);
+  z-index:100;
+  border: 1px solid $_white;
+  cursor:pointer;
+  visibility:hidden;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects__card:hover .card__button {
+  visibility:visible;
+}

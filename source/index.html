@@ -58,8 +58,10 @@
     </style>
   </head>
   <body>
+
     <div id="loader"><div id="loader-gradient"></div><div id="loader-gradient2"></div></div>
     <link rel="stylesheet" id='csstag' href="./css/style.min.css" media="print" onload="document.querySelector('#loader').style.display='none';this.media='all';">
+
     <header class="header">
       <div class="header__wrapper">
         <div class="header__logo">
@@ -92,7 +94,7 @@
               <a class="navigation__link" href="./works.html">Works</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">About us</a>
+              <a class="navigation__link" href="./about.html">About us</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="./services.html">Services</a>
@@ -101,7 +103,7 @@
               <a class="navigation__link" href="./articles.html">Articles</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Biomes</a>
+              <a class="navigation__link" href="./bioms.html">Biomes</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="./contacts.html">Contacts</a>
@@ -123,6 +125,7 @@
     </header>
 
     <main class="main">
+
       <div class="main__container">
         <div class="main__wrapper">
           <div class="main__banner">
@@ -144,45 +147,44 @@
         <h2 class="projects__title">Featured projects</h2>
         <div class="projects__box">
           <article class="projects__card card">
-            <a href="#">
+            <a class="card__link" href="#">
               <img loading="" class="card__image" src="./img/project_yaranga.jpg" alt="Yaranga Botanical Garden">
-              <button class="projects__button" href="#">&rdsh; View project</button>
+              <button class="card__button button" href="#">&rdsh; View project</button>
             </a>
-            <a href="#">
+            <a class="card__link" href="#">
               <h3 class="card__text ">Yaranga Botanical Garden</h3>
             </a>
           </article>
           <article class="projects__card card">
-            <a href="#">
+            <a class="card__link" href="#">
               <img loading="" class="card__image" src="./img/project_psa.jpg" alt="Philosophers Stone Apartments">
-              <button class="projects__button" href="#">&rdsh; View project</button>
+              <button class="card__button button" href="#">&rdsh; View project</button>
             </a>
-            <a href="#">
+            <a class="card__link" href="#">
               <h3 class="card__text">Philosophers Stone Apartments</h3>
             </a>
           </article>
           <article class="projects__card card">
-            <a href="#">
+            <a class="card__link" href="#">
               <img loading="" class="card__image" src="./img/project_go.png" alt="Gujurat Oceanarium">
-              <button class="projects__button " href="#">&rdsh; View project</button>
+              <button class="card__button button" href="#">&rdsh; View project</button>
             </a>
-            <a href="#">
+            <a class="card__link"href="#">
               <h3 class="card__text">Gujurat Oceanarium</h3>
             </a>
           </article>
           <article class="projects__card card">
-            <a href="#">
+            <a class="card__link" href="#">
               <img loading="" class="card__image" src="./img/project_ta.png" alt="Tauranga Aquarium">
-              <button class="projects__button " href="#">&rdsh; View project</button>
+              <button class="card__button button" href="#">&rdsh; View project</button>
             </a>
-            <a href="#">
+            <a class="card__link" href="#">
               <h3 class="card__text">Tauranga Aquarium</h3>
-              <a class="projects__button " href="#">&rdsh; View project</a>
             </a>
           </article>
         </div>
         <div class="projects__container">
-          <a class="projects__button" href="#">&rdsh; All projects</a>
+          <a class="button" href="#">&rdsh; All projects</a>
         </div>
 
       </section>
@@ -243,7 +245,7 @@
         <div class="main__wrapper biome__container biome__container--down">
           <div>
             <p class="biome__text">Aquamarine’s ‘Biome’ concept offers a new take on entertainment destination design that enhances guest experiences and offers a more sustainable future for the industry.</p>
-            <a class="biome__button" href="#">&rdsh; Learn more</a>
+            <a class="button" href="#">&rdsh; Learn more</a>
           </div>
         </div>
       </section>
@@ -404,6 +406,7 @@
       </div>
 
     </footer>
+
     <script src="./js/script.min.js"></script>
   </body>
 </html>
