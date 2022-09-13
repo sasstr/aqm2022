@@ -5,6 +5,9 @@
   z-index:1000;
   width:100%;
   height:81px;
+  @include media-desktop  {
+   background:transparent;
+  }
 
 }
 
@@ -22,6 +25,12 @@
     padding: 41px 32px;
     min-width: $tablet;
     max-width: $tablet-container-max;
+  }
+  @include media-desktop {
+    height: 100px;
+    padding: 41px 32px;
+    min-width: $desktop;
+    max-width: $desktop-container-max;
   }
 }
 

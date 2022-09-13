@@ -26,7 +26,8 @@
 
 .main__image {
   display: block;
-  aspect-ratio: 1.49;
+  width:100vw;
+  aspect:16 / 9;
 }
 
 .main__banner {
@@ -36,15 +37,34 @@
 
 .main__play-sing {
   position: absolute;
-  top: calc(50% - 23px);
-  left: calc(50% - 23px);
+  top: calc(50% - 22px);
+  left: calc(50% - 22px);
+  width:45px;
+  height:45px;
   cursor: pointer;
+    @include media-tablet {
+      top: calc(50% - 45px);
+      left: calc(50% - 45px);
+      width:90px;
+      height:90px;
+  }
+    @include media-desktop {
+      top: calc(50% - 65px);
+      left: calc(50% - 65px);
+      width:130px;
+      height:130px;
+  }
+      @include media-desktop-wide {
+       display:none;
+  }
+
 }
+
 .main {
   padding-top:81px;
+  @include media-desktop  { padding-top:0px;}
 }
 
 .main__play-sing--project2 {
   display: none;
 }
-

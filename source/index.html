@@ -1,93 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AQM</title>
-  <link rel="preload" href="./fonts/AkkuratLLCyr-Regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/AkkuratLLCyr-Light.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.min.css">
-</head>
-<body>
-  <header class="header">
-    <div class="header__wrapper">
-      <div class="header__logo">
-        <img src="./img/logo.svg" alt="Logo Aquamarine">
-      </div>
-      <div class="header__lang lang">
-        <a class="lang__link lang__link--active" href="#">English</a>
-        <ul class="lang__list">
-        <li>
-          <a class="lang__link" href="#">Russian</a>
-        </li>
-        <li>
-          <a class="lang__link" href="#">Española</a>
-        </li>
-        <li>
-          <a class="lang__link" href="#">한국어</a>
-        </li>
-        <li>
-          <a class="lang__link" href="#">عربى</a>
-        </li>
-        <li>
-          <a class="lang__link" href="#">中文</a>
-        </li>
-      </ul>
-      </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQM</title>
+    <link rel="preload" href="./fonts/AkkuratLLCyr-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/AkkuratLLCyr-Light.woff2" as="font" crossorigin="anonymous">
+    <style>
+      #loader
+      {
+        position:fixed;
+        background: #003137 url("data:image/svg+xml, %3Csvg fill='none' stroke='%235D9F93' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0.9 0.9 24.2 24.2'%3E%3Cg stroke-width='0.07' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' vector-effect='non-scaling-stroke' stroke-width='2px'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");;
+        z-index:5000;
+        width:100%; height:100%;
+        background-size: max(150px, 10%);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      #loader-gradient
+      {
+        height: max(150px, 10%);
+        width: max(150px, 10%);
+        margin:auto;
+        background:#003137;
+        top: calc(50% - max(75px,5%));
+        left: calc(50% - max(75px,5%));
+        position: absolute;
+        animation:firstlogo 2s;
+        animation-fill-mode:forwards;
+      }
+      #loader-gradient2
+      {
+        height: max(150px, 10%);
+        width: max(150px, 10%);
+        margin:auto;
+        background:#003137;
+        top: calc(50% - max(75px,5%) + 3px);
+        left: calc(50% + max(75px,5%) - 3px);
+        position: absolute;
+        animation:secondlogo 1s;
+        animation-delay: 1500ms;
+        animation-fill-mode:forwards;
+      }
+      @keyframes secondlogo  {
+        0% {top:calc(50% - max(75px,5%) + 3px);}
+        100% {top: calc(50% + max(300px,20%) + 3px);}
+      }
+      @keyframes firstlogo  {
+        0% {top: calc(50% - max(75px,5%));}
+        35% {left: calc(50% - max(75px,5%));
+            top: calc(50% - max(150px,10%) - 15px);}
+        100% {left: calc(50% + max(75px,5%));
+            top: calc(50% - max(150px,10%));}
+      }
 
-      <nav class="header__navigation navigation hidden">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="./works.html">Works</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./about.html">About us</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./services.html">Services</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./articles.html">Articles</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./biomes.html">Biomes</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./contacts.html">Contacts</a>
-          </li>
-        </ul>
+    </style>
+  </head>
+  <body>
+    <div id="loader"><div id="loader-gradient"></div><div id="loader-gradient2"></div></div>
+    <link rel="stylesheet" id='csstag' href="./css/style.min.css" media="print" onload="document.querySelector('#loader').style.display='none';this.media='all';">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <img src="./img/logo.svg" alt="Logo Aquamarine">
+        </div>
+        <div class="header__lang lang">
+          <a class="lang__link lang__link--active" href="#">English</a>
+          <ul class="lang__list">
+            <li>
+              <a class="lang__link" href="#">Russian</a>
+            </li>
+            <li>
+              <a class="lang__link" href="#">Española</a>
+            </li>
+            <li>
+              <a class="lang__link" href="#">한국어</a>
+            </li>
+            <li>
+              <a class="lang__link" href="#">عربى</a>
+            </li>
+            <li>
+              <a class="lang__link" href="#">中文</a>
+            </li>
+          </ul>
+        </div>
 
-      </nav>
-      <button class="header__toggle" aria-label="open/close menu button">
-        <svg class="burger-menu" width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line y1="1" x2="35" y2="1" stroke="white" stroke-width="2"/>
-          <line y1="11" x2="35" y2="11" stroke="white" stroke-width="2"/>
-          <line y1="21" x2="35" y2="21" stroke="white" stroke-width="2"/>
-        </svg>
-        <svg class="burger-menu-close hidden" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 1L32 32M32 1L1 32" stroke="white" stroke-width="2"/>
+        <nav class="header__navigation navigation hidden">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="./works.html">Works</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">About us</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./services.html">Services</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./articles.html">Articles</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Biomes</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./contacts.html">Contacts</a>
+            </li>
+          </ul>
+
+        </nav>
+        <button class="header__toggle" aria-label="open/close menu button">
+          <svg class="burger-menu" width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="1" x2="35" y2="1" stroke="white" stroke-width="2"/>
+            <line y1="11" x2="35" y2="11" stroke="white" stroke-width="2"/>
+            <line y1="21" x2="35" y2="21" stroke="white" stroke-width="2"/>
           </svg>
-      </button>
-    </div>
-  </header>
-
-  <main class="main">
-    <div class="main__container">
-      <div class="main__wrapper">
-        <div class="main__banner">
-          <img loading="lazy" class="main__image" src="./img/video_mock.jpg" alt="Video">
-
-          <svg class="main__play-sing" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4993 45C34.9253 45 44.9986 34.9264 44.9986 22.5C44.9986 10.0736 34.9253 0 22.4993 0C10.0733 0 0 10.0736 0 22.5C0 34.9264 10.0733 45 22.4993 45ZM16.9464 31.6081L32.7251 22.498L16.9464 13.3879V31.6081Z" fill="#FAB38E"/>
+          <svg class="burger-menu-close hidden" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L32 32M32 1L1 32" stroke="white" stroke-width="2"/>
           </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <div class="main__wrapper">
+          <div class="main__banner">
+            <img loading="lazy" class="main__image" src="./img/video_mock.jpg" alt="Video">
+
+            <svg class="main__play-sing" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4993 45C34.9253 45 44.9986 34.9264 44.9986 22.5C44.9986 10.0736 34.9253 0 22.4993 0C10.0733 0 0 10.0736 0 22.5C0 34.9264 10.0733 45 22.4993 45ZM16.9464 31.6081L32.7251 22.498L16.9464 13.3879V31.6081Z" fill="#FAB38E"/>
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
-        <section class="about-us">
+      <section class="about-us">
+        <div class='main__wrapper'>
           <h1 class="about-us__title">Aquamarine – <br/>a design ecosystem</h1>
           <p class="about-us__content">Our forte is creating sustainable developments that are unique to location and context. Designed to let us work anywhere and achieve anything, our flexible approach is focused on delivering solutions and outcomes, not pigeon-holing our offering or services. Whatever is needed, we can provide the specialists to make it happen.</p>
-        </section>
+        </div>
+      </section>
       <section class="main__wrapper projects">
         <h2 class="projects__title">Featured projects</h2>
         <div class="projects__box">
@@ -190,8 +242,8 @@
         </div>
         <div class="main__wrapper biome__container biome__container--down">
           <div>
-          <p class="biome__text">Aquamarine’s ‘Biome’ concept offers a new take on entertainment destination design that enhances guest experiences and offers a more sustainable future for the industry.</p>
-          <a class="biome__button" href="#">&rdsh; Learn more</a>
+            <p class="biome__text">Aquamarine’s ‘Biome’ concept offers a new take on entertainment destination design that enhances guest experiences and offers a more sustainable future for the industry.</p>
+            <a class="biome__button" href="#">&rdsh; Learn more</a>
           </div>
         </div>
       </section>
@@ -276,17 +328,17 @@
             <div class="contacts__social social">
               <h3 class="social__title">Social</h3>
 
-                <ul class="social__list">
-                  <li class="social__item">
-                    <a class="social__link" href="https://www.facebook.com/aquamarineprojects">Facebook</a>
-                  </li>
-                  <li class="social__item">
-                    <a class="social__link" href="https://www.instagram.com/aquamarineprojects/">Instagram</a>
-                  </li>
-                  <li class="social__item">
-                    <a class="social__link" href="https://www.youtube.com/channel/UCFh5dyLcBnb8-mzJ4pYPV9g">YouTube</a>
-                  </li>
-                </ul>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="https://www.facebook.com/aquamarineprojects">Facebook</a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="https://www.instagram.com/aquamarineprojects/">Instagram</a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="https://www.youtube.com/channel/UCFh5dyLcBnb8-mzJ4pYPV9g">YouTube</a>
+                </li>
+              </ul>
             </div>
           </div>
           <form class="contacts__form form" action="#" method="post">
@@ -313,10 +365,10 @@
         </div>
       </section>
 
-  </main>
+    </main>
 
-  <footer class="footer">
-    <div class="main__wrapper footer__container">
+    <footer class="footer">
+      <div class="main__wrapper footer__container">
         <div class="footer__logo">
           <a>
             <img loading="lazy" src="./img/aqm_logo_footer.svg" alt="Logo Aquamarine" width="67" height="23">
@@ -351,7 +403,7 @@
         </div>
       </div>
 
-  </footer>
-  <script src="./js/script.min.js"></script>
-</body>
+    </footer>
+    <script src="./js/script.min.js"></script>
+  </body>
 </html>

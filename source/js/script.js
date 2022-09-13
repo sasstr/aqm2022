@@ -42,7 +42,7 @@ function defer(){
 
       $("section, .footer,  .projects__card, .projects__title").not('.main__wrapper.projects').css('opacity','0');
       $(window).scroll(function() {OnWinScroll()});
-      OnWinScroll()
+      OnWinScroll();
    }
    else{window.setTimeout("defer();",100);}
 }

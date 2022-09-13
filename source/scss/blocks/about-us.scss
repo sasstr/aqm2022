@@ -2,6 +2,10 @@
   position: relative;
   padding: 105px 4.4% 198px;
   background-color: $_main_dark;
+  @include media-desktop-wide  {
+    padding-left:108px;
+
+  }
 
 }
 
@@ -22,6 +26,21 @@
     line-height: 78px;
     padding-bottom:80px;
   }
+  @include media-desktop  {
+    font-size: 96px;
+    line-height: 100px;
+    padding-bottom:98px;
+    letter-spacing: -1px;
+
+  }
+  @include media-desktop-wide  {
+    font-size: 96px;
+    line-height: 100px;
+    padding-bottom:98px;
+    padding-left:108px;
+    letter-spacing: -1px;
+
+  }
 }
 
 .about-us__content {
@@ -41,7 +60,16 @@
     padding-left:104px;
     width:644px;
   }
-
+  @include media-desktop  {
+    font-size: 32px;
+    padding-left:224px;
+    width:896px;
+  }
+  @include media-desktop-wide  {
+    font-size: 32px;
+    padding-left:520px;
+    width:1250px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -59,6 +87,18 @@
       right:-30px;
       width:877px;
       height:877px;
+      background-size:cover;
+     }
+     @include media-desktop  {
+      bottom:-80px;
+      right:-30px;
+      width:1329px;
+      height:1329px;
+      background-size:cover;
+     }
+     @include media-desktop-wide  {
+      bottom:-80px;
+      right:-100px;
      }
   }
 }
