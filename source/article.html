@@ -19,7 +19,7 @@
       </div>
       <ul class="header__lang lang">
         <li>
-          <a class="lang__link" href="#">English</a>
+          <a class="lang__link lang__link--active" href="#">English</a>
         </li>
         <li>
           <a class="lang__link" href="#">Russian</a>
@@ -43,7 +43,7 @@
             <a class="navigation__link" href="./works.html">Works</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">About us</a>
+            <a class="navigation__link" href="./about.html">About us</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="./services.html">Services</a>
@@ -72,16 +72,22 @@
 
   <main class="main-article">
     <div class="main-article__box--up">
-      <div class="main-article__container main__wrapper ">
+      <div class="main-article__container main__wrapper">
           <h1 class="main-article__title">It's in the trees</h1>
           <p class="main-article__text">
             In Japan, the practice of shinrin-yoku (forest bathing) is celebrated as an antidote to the modern urban lifestyle and its associated stressors.
           </p>
       </div>
     </div>
-
-    <div class="main-article__image-box">
-      <img class="main-article__image" src="./img/articles_biome.jpg" alt="Come inside a Biome">
+    <div class="main-article__image-box ">
+      <div class="main-article__wrapper">
+        <picture>
+          <source srcset="./img/article-desktop-wide-main-01.jpg 1x"media="(min-width: 1440px)">
+          <source srcset="./img/article-desktop-main-01.jpg 1x"media="(min-width: 1024px)">
+          <source srcset="./img/article-tablet-main-01.jpg 1x"media="(min-width: 768px)">
+          <img  class="main-article__image" src="./img/articles_biome.jpg" alt="Come inside a Biome">
+        </picture>
+      </div>
     </div>
 
     <div class="main__wrapper main-article__container">

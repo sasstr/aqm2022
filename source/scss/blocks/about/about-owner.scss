@@ -1,0 +1,71 @@
+.about-owner {
+  background-color: #bebbad;
+  background-image: url(../img/about_owner_img_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-owner__container {
+  padding: 46px 16px 37px;
+}
+
+.about-owner__title {
+  margin: 0 0 27px;
+  padding: 0;
+  width: 200px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+  letter-spacing: -2px;
+  color: $_main_dark;
+}
+
+.about-owner__text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 0 61px;
+  padding: 0;
+}
+
+.about-owner__text {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: -0.5px;
+  color: $_main_dark;
+}
+
+.about-owner__cite {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-owner__cite-author {
+  margin-bottom: 5px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18px;
+  color: $_main_dark;
+}
+
+.about-owner__cite-position {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $_main_dark;
+}
+
+.about-owner__image {
+  display: block;
+}

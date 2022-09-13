@@ -1,9 +1,14 @@
 // Media
 $mobile: 360px;
-$mobile-container-max: 560px; // максимальная ширина на мобилке
+$mobile-container-max: 560px; // максимальная ширина контейнера на мобилке
+
 $tablet: 768px;
-$tablet-container-max: 920px;
+$tablet-container-max: 920px; // максимальная ширина контейнера на планшете
+
 $desktop: 1024px;
+$desktop-container-max: 1440px; // максимальная ширина контейнера на десктопе
+
+$desktop-wide-container-max: 1600px; // максимальная ширина контейнера на широком десктопе
 $desktop-wide: 1440px;
 
 // Colors
@@ -16,6 +21,8 @@ $_secondary_black: #151919;
 $_secondary_dark: #254634;
 $_secondary_light: #F3F1D8;
 $_button_dark: #E0804E;
+$_button_hover: #FAB38E;
+$_button_click: #deb29a;
 $_font_grass: #5D9F93;
 
 
@@ -24,5 +31,5 @@ $retina-dppx: 1.5dppx;
 
 // Fonts
 $_f__common_name: "Akkurat LL";
-$_f__default: "Arial", sans-serif;
+$_f__default: "Helvetica", "Arial", sans-serif;
 $_f__common: $_f__common_name, $_f__default;

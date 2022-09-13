@@ -3,9 +3,13 @@
 "media",
 "fonts",
 "global",
+"button",  // универсальный класс для кнопок
+// Блок Header
 "blocks/header",
+// Страница index главная
 "blocks/lang",
 "blocks/navigation",
+// Блок с main__wrapper размеры контейнера
 "blocks/main",
 "blocks/about-us",
 "blocks/projects",
@@ -20,17 +24,32 @@
 "blocks/address",
 "blocks/social",
 "blocks/form",
+// Блок Footer
 "blocks/footer",
+// Страница project
 "blocks/project/project",
 "blocks/project/project-slider",
 "blocks/project/project-description",
 "blocks/project/project-text",
 "blocks/project/project-subject",
 "blocks/project/project-content",
+// Страница articles
 "blocks/articles/articles",
+// Страница article
 "blocks/articles/article",
 "blocks/article/main-article",
+// Страница works
 "blocks/works/works",
 "blocks/works/big-work-card",
 "blocks/works/small-work-card",
-"blocks/bioms/bioms";
+// Страница bioms
+"blocks/bioms/bioms",
+// Страница about
+"blocks/about/main-about",
+"blocks/about/articles-about-us",
+"blocks/about/article-about-us",
+"blocks/about/about-work",
+"blocks/about/global-about-us",
+"blocks/about/about-owner",
+"blocks/about/about-history",
+"blocks/about/about-opportunities";

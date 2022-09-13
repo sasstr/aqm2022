@@ -10,7 +10,7 @@
   }
 }
 
-@mixin media-desktop {
+@mixin media-desktop-wide {
   @media (min-width: $desktop-wide) {
       @content;
   }
