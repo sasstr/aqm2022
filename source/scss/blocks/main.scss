@@ -7,6 +7,16 @@
     min-width: $tablet;
     max-width: $tablet-container-max;
   }
+
+  @include media-desktop {
+    min-width: $desktop;
+    max-width: $desktop-container-max;
+  }
+
+  @include media-desktop-wide {
+    min-width: $desktop-wide;
+    max-width: $desktop-wide-container-max;
+  }
 }
 
 .main__container {

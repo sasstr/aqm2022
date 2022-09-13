@@ -1,0 +1,38 @@
+.button {
+  width: 200px;
+  min-height: 50px;
+  padding: 12px 36px;
+  background: $_button_dark;
+  border-radius: 64px;
+  border: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $_white;
+  cursor: pointer;
+}
+
+.projects__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.biome__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__btn-submit {
+  width: 175px;
+  z-index: 5;
+}
+
+.about-opportunities__link {
+  display: block;
+  padding: 13px 55px;
+  width: 210px;
+}
