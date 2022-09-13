@@ -1,0 +1,135 @@
+.about-history {
+  background-color: $_main_dark;
+}
+
+.about-history__container {
+  padding: 63px 16px 73px;
+}
+
+.about-history__title {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 37px;
+  letter-spacing: -2px;
+  color: $_main_light;
+}
+
+.about-history__text {
+  margin: 0;
+  padding: 0 22px 0 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $_main_light;
+}
+
+.about-history__text:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.about-history__text:last-child {
+  margin-bottom: 40px;
+}
+
+.about-history__text--big {
+  margin: 0 0 20px 0;
+  padding: 30px 22px 0 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  color: $_white;
+}
+
+.about-history__image {
+  display: block;
+}
+
+.about-history__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+  padding: 0 0 100px;
+}
+
+.about-history__list--line::after {
+  position: absolute;
+  content: '';
+  top: 30px;
+  left: 55px;
+  width: 2px;
+  height: 480px;
+  border-left: 2px solid $_font_grass;
+}
+
+.about-history__list--light {
+  background-color: $_main_light;
+}
+
+.about-history__item-box {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.about-history__time--line {
+  background-color: $_main_dark;
+  z-index: 3;
+}
+
+.about-history__time {
+  width: 110px;
+  height: 69px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 69px;
+  letter-spacing: -1px;
+  color: $_main_light;
+}
+
+.about-history__desc {
+  width: 208px;
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  color: $_main_light;
+}
+
+.about-history__item-box--light {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-history__desc--light {
+  color: $_main_dark;
+  width: 324px;
+}
+
+.about-history__time--light {
+  width: 210px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 128%;
+  letter-spacing: -1px;
+  color: $_main_dark;
+}

@@ -1,0 +1,35 @@
+.main-about {
+  margin: 0;
+  padding: 80px 0 0;
+  background-color: $_main_dark;
+}
+
+.main-about__container {
+  background-color: $_secondary_light;
+  padding: 0 16px 0;
+}
+
+.main-about__title {
+  margin: 0;
+  padding: 56px 0 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 69px;
+  letter-spacing: -2px;
+  color: $_secondary_dark;
+}
+
+.main-about__text {
+  width: 262px;
+  margin: 0;
+  padding: 0 0 71px 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  color: $_main_dark;
+}

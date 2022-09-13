@@ -8,6 +8,17 @@
   padding: 0;
 }
 
+.project-description__text {
+  padding: 0 0 36px;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: -0.5px;
+  color: $_main_dark;
+}
+
 .project-description__text--large {
   padding: 0 0 32px;
   font-family: $_f__common;
@@ -18,15 +29,12 @@
   letter-spacing: -1px;
   color: $_main_dark;
 }
+.project-description--project2 {
+  background-color: $_main_dark;
+  padding: 72px 16px 79px;
+}
 
-.project-description__text {
-  padding: 0 0 36px;
-  font-family: $_f__common;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 135%;
-  letter-spacing: -0.5px;
-  color: $_main_dark;
-
+.project-description__text-project2,
+.project-description__text--large-project2 {
+  color: $_main_light;
 }

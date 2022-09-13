@@ -4,6 +4,18 @@
 
 .main-article__container {
   padding: 0 16px;
+
+  @include media-tablet {
+    padding: 0 32px;
+  }
+
+  @include media-desktop {
+    padding: 0 20px;
+  }
+
+  @include media-desktop-wide {
+    padding: 0 108px;
+  }
 }
 
 .main-article__box--up {
@@ -14,17 +26,63 @@
   background-color: $_white;
   padding: 24px 0 41px;
   margin: 0;
+
+  @include media-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 34px;
+  }
 }
 
-.main-article__image {
+.main-article__image-box {
   display: block;
   padding: 0 16px;
   background: linear-gradient(180deg,#e1f1e3 67%,#ffffff 67%);
+
+  @include media-tablet {
+    padding: 0 32px;
+    background: linear-gradient(180deg,#e1f1e3 89%,#ffffff 89%);
+  }
+
+  @include media-desktop {
+    padding: 0 20px;
+    background: linear-gradient(180deg,#e1f1e3 67%,#ffffff 67%);
+  }
+
+  @include media-desktop-wide {
+    padding: 0 108px;
+  }
+}
+
+.main-article__image {
+  @include media-desktop-wide {
+    margin: 0 auto;
+    display: block;
+    min-width: 1224px;
+    max-width: 1600px;
+  }
 }
 
 .main-article__title {
   margin: 0;
   padding: 32px 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 69px;
+  letter-spacing: -2px;
+  color: $_main_dark;
+
+  @include media-tablet {
+    font-size: 50px;
+    letter-spacing: -3px;
+  }
+
+  @include media-desktop {
+    font-size: 55px;
+  }
 }
 
 .main-article__text {
@@ -37,6 +95,13 @@
   line-height: 24px;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  @include media-tablet {
+    font-style: normal;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+  }
 }
 
 .main-article__text-down {
@@ -48,10 +113,23 @@
   font-size: 16px;
   line-height: 24px;
   color: $_secondary_black;
+
+  @include media-tablet {
+    width: 45%;
+    margin-bottom: 0;
+  }
+
+  @include media-desktop {
+    font-size: 18px;
+  }
 }
 
 .main-article__text-down--last {
   margin-bottom: 35px;
+
+  @include media-tablet {
+    margin-bottom: 0;
+  }
 }
 
 .main-article__btn-link {
@@ -63,6 +141,16 @@
   font-size: 16px;
   line-height: 24px;
   color: $_button_dark;
+
+  @include media-tablet {
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -1px;
+  }
+
+  @include media-desktop {
+    font-size: 24px;
+  }
 }
 
 .main-article__btn-link-box {
@@ -76,4 +164,8 @@
   left: 0;
   width: 24px;
   height: 10px;
+
+  @include media-tablet {
+    top: 11px;
+  }
 }

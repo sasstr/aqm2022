@@ -7,17 +7,15 @@
     min-width: $tablet;
     max-width: $tablet-container-max;
   }
-  @include media-desktop  {
+
+  @include media-desktop {
     min-width: $desktop;
     max-width: $desktop-container-max;
   }
-}
-.main__container .main__wrapper {
-  @include media-desktop  {
-    width: 100%;
-    aspect: 16 / 9;
-    min-width:100%;
-    max-width:100%;
+
+  @include media-desktop-wide {
+    min-width: $desktop-wide;
+    max-width: $desktop-wide-container-max;
   }
 }
 
@@ -61,9 +59,12 @@
   }
 
 }
-.main
-{
+
+.main {
   padding-top:81px;
   @include media-desktop  { padding-top:0px;}
+}
 
+.main__play-sing--project2 {
+  display: none;
 }

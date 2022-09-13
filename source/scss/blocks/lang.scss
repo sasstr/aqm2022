@@ -1,18 +1,48 @@
+.lang__list,
 .lang {
-  display: none;
-
-  @include media-tablet  {
-    display: block;
-  }
-}
-
-.lang__list {
-  display: none;
   @include list-style-reset;
 }
 
 .lang__link {
   position: relative;
+  min-width: 60px;
+
+  display: none;
+
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: $_white;
+}
+
+.lang__link:hover {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: $_button_hover;
+}
+
+.lang__link--active:hover {
+  display: block;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: $_button_hover;
+}
+
+.lang__link--active {
+  display: block;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
   color: $_white;
 }
 
@@ -20,10 +50,9 @@
   position: absolute;
   content: "";
   right: -10px;
-  top: 5px;
+  top: 7px;
   width: 7px;
   height: 5px;
   background-image: url('../img/header_lang_menu_icon.svg');
   background-repeat: no-repeat;
-
 }
