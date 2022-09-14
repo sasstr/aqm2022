@@ -7,6 +7,18 @@
   min-height: 470px;
   padding: 48px 16px 290px;
   z-index: 5;
+
+  @include media-tablet {
+    min-height: 500px;
+  }
+
+  @include media-desktop {
+    min-height: 600px;
+  }
+
+  @include media-desktop-wide {
+    min-height: 800px;
+  }
 }
 
 .biome__container--down {
@@ -41,7 +53,6 @@
   left: 0;
   right: 0;
   z-index: 1;
-
   background-image: url('../img/biom.jpg');
   background-size:cover;
   background-repeat: no-repeat;
@@ -57,6 +68,27 @@
   left:calc(50% - 164px);
   right: 0;
   z-index: 5;
+
+  @include media-tablet {
+    width: 704px;
+    height: 485px;
+    left:calc(50% - 352px);
+    bottom: -115px;
+  }
+
+  @include media-desktop {
+    width: 984px;
+    height: 587px;
+    left:calc(50% - 492px);
+    bottom: -115px;
+  }
+
+  @include media-desktop-wide {
+    width: 1222px;
+    height: 730px;
+    left:calc(50% - 611px);
+    bottom: -115px;
+  }
 }
 
 .biome__text {
