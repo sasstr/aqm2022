@@ -18,6 +18,16 @@
   }
 }
 
+.articles__box {
+
+  @include media-tablet  {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .articles__title {
   margin: 0;
   padding: 18px 0;
