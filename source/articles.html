@@ -49,7 +49,7 @@
             <a class="navigation__link" href="./services.html">Services</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="#">Articles</a>
+            <a class="navigation__link">Articles</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="./bioms.html">Bioms</a>
@@ -71,26 +71,35 @@
   </header>
 
   <main class="main articles">
+
     <section class="main__wrapper articles__container">
       <h1 class="articles__title">Articles</h1>
+
       <article class="article">
-        <a class="article__link" href="./article.html">
-          <img class="article__image" src="./img/articles_biome.jpg" alt="Come inside a Biome">
+        <a class="article__link article__link--big" href="./article.html">
+          <picture>
+            <source srcset="./img/articles_biome-desktop-wide-1x.jpg 1x" media="(min-width: 1440px)">
+            <source srcset="./img/articles_biome-desktop-1x.jpg 1x" media="(min-width: 1024px)">
+            <source srcset="./img/articles_biome-tablet-1x.jpg 1x" media="(min-width: 768px)">
+            <img class="article__image" src="./img/articles_biome-mob-1x.jpg" alt="Come inside a Biome">
+          </picture>
         </a>
-        <a class="article__link" href="./article.html">
-        <h2 class="article__title">Come inside a Biome</h2>
-        </a>
-        <p class="article__tags">– tag 1, tag 2, tag 3, tag 4, tag 5, tag 6</p>
-        <p class="article__text">The sustainable future of entertainment precincts</p>
-        <a class="article__btn-link" href="#">↳ Read more</a>
+        <div class="article__box article__box--big">
+          <a class="article__link article__link--big" href="./article.html">
+          <h2 class="article__title article__title--big">Come inside a Biome</h2>
+          </a>
+          <p class="article__tags article__tags--big">– tag 1, tag 2, tag 3, tag 4, tag 5, tag 6</p>
+          <p class="article__text article__text--big">The sustainable future of entertainment precincts</p>
+          <a class="article__btn-link article__link--big" href="#">↳ Read more</a>
+        </div>
       </article>
 
       <article class="article">
         <a class="article__link" href="./article.html">
-          <img class="article__image" src="./img/articles_earth_our_planet.jpg" alt="It's in the trees">
+          <h2 class="article__title">It's in the trees</h2>
         </a>
         <a class="article__link" href="./article.html">
-        <h2 class="article__title">It's in the trees</h2>
+          <img class="article__image" src="./img/articles_earth_our_planet.jpg" alt="It's in the trees">
         </a>
         <p class="article__tags">– tag 1, tag 2</p>
         <p class="article__text">What we can learn from the Japanese practice of shinrin-yoku (forest bathing) and why it’s now celebrated as an antidote to the modern urban lifestyle and its associated stressors.</p>
@@ -99,7 +108,7 @@
 
       <article class="article">
         <a class="article__link" href="./article.html">
-        <h2 class="article__title">Earth – Our planet.
+          <h2 class="article__title">Earth – Our planet.
           Our Home.</h2>
         </a>
         <p class="article__tags">– tag 1, tag 2</p>
@@ -109,11 +118,12 @@
 
       <article class="article">
         <a class="article__link" href="./article.html">
-          <img class="article__image" src="./img/articles_projects_problem_solving.jpg" alt="Projects as problem solving">
+          <h2 class="article__title">Projects as problem solving</h2>
         </a>
         <a class="article__link" href="./article.html">
-        <h2 class="article__title">Projects as problem solving</h2>
+          <img class="article__image" src="./img/articles_projects_problem_solving.jpg" alt="Projects as problem solving">
         </a>
+
         <p class="article__tags">– tag 1, tag 2</p>
         <p class="article__text">Let us walk you through our adaptive project journey roadmap that allows us to better discover insights, ideas and opportunities at every turn and fully realise the potential of our clients projects.</p>
         <a class="article__btn-link" href="#">↳ Read more</a>
@@ -121,10 +131,22 @@
 
       <article class="article">
         <a class="article__link" href="./article.html">
-          <img class="article__image" src="./img/articles_nicholas_traviss.jpg" alt="Meet Nicholas Traviss">
+          <h2 class="article__title">Nature’s Biomes – our inspiration</h2>
         </a>
         <a class="article__link" href="./article.html">
-        <h2 class="article__title">Meet Nicholas Traviss</h2>
+          <img class="article__image" src="./img/articles-biomes-mob-1.jpg" alt="Nature’s Biomes – our inspiration">
+        </a>
+        <p class="article__tags">– tag 1, tag 2</p>
+        <p class="article__text">Learn a little about some of Earth’s incredible natural environments and you’ll see why we’ve made sharing this knowledge our life’s work.</p>
+        <a class="article__btn-link" href="#">↳ Read more</a>
+      </article>
+
+      <article class="article">
+        <a class="article__link" href="./article.html">
+          <h2 class="article__title">Meet Nicholas Traviss</h2>
+        </a>
+        <a class="article__link" href="./article.html">
+          <img class="article__image" src="./img/articles_nicholas_traviss.jpg" alt="Meet Nicholas Traviss">
         </a>
         <p class="article__tags">– tag 1, tag 2</p>
         <p class="article__text">Aquamarine’s owner and director, learn about Nicholas’ journey, motivations and vision as he continues to build upon the Aquamarine legacy his father began in 1972.</p>
@@ -133,7 +155,7 @@
 
       <article class="article">
         <a class="article__link" href="./article.html">
-        <h2 class="article__title">Earth – Our planet.
+          <h2 class="article__title">Earth – Our planet.
           Our Home.</h2>
         </a>
         <p class="article__tags">– tag 1, tag 2</p>
@@ -143,10 +165,10 @@
 
       <article class="article">
         <a class="article__link" href="./article.html">
-          <img class="article__image" src="./img/articles_natures_biomes.jpg" alt="Nature’s Biomes – our inspiration">
+          <h2 class="article__title">Nature’s Biomes – our inspiration</h2>
         </a>
         <a class="article__link" href="./article.html">
-        <h2 class="article__title">Nature’s Biomes – our inspiration</h2>
+          <img class="article__image" src="./img/articles_natures_biomes.jpg" alt="Nature’s Biomes – our inspiration">
         </a>
         <p class="article__tags">– tag 1, tag 2</p>
         <p class="article__text">Learn a little about some of Earth’s incredible natural environments and you’ll see why we’ve made sharing this knowledge our life’s work.</p>

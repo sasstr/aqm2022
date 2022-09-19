@@ -17,13 +17,16 @@
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: $_button_hover;
+}
+
 .form__btn-submit {
   width: 175px;
   z-index: 5;
 }
 
 .about-opportunities__link {
-  // display: block;
   padding: 13px 55px;
   width: 210px;
 }

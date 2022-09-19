@@ -1,15 +1,18 @@
 .about-us {
+  background-color: $_main_dark;
+}
+
+.about-us__container {
   position: relative;
-  padding: 105px 4.4% 198px;
+  padding: 105px 16px 198px;
   background-color: $_main_dark;
   @include media-desktop-wide  {
     padding-left:108px;
-
   }
-
 }
 
 .about-us__title {
+  box-sizing: border-box;
   position: relative;
   padding: 0 40px 40px 0;
   margin: 0;

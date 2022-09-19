@@ -4,11 +4,24 @@
 
 .articles__container {
   padding: 0 16px;
+
+  @include media-tablet  {
+    padding: 0 32px;
+  }
+
+  @include media-desktop {
+    padding: 0 20px;
+  }
+
+  @include media-desktop-wide {
+    padding: 0 108px;
+  }
 }
 
 .articles__title {
   margin: 0;
   padding: 18px 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -16,4 +29,17 @@
   line-height: 69px;
   letter-spacing: -2px;
   color: $_main_dark;
+
+  @include media-tablet  {
+    padding: 44px 0;
+
+    font-size: 50px;
+    letter-spacing: -3px;
+  }
+
+  @include media-desktop {
+    padding: 54px 0;
+
+    font-size: 55px;
+  }
 }

@@ -10,6 +10,17 @@
   display: block;
 }
 
+.article__box {
+  display: flex;
+  flex-direction: column;
+
+  @include media-tablet  {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .article__title {
   margin: 10px 0;
   padding: 0;
@@ -20,6 +31,10 @@
   line-height: 128%;
   letter-spacing: -1px;
   color: $_main_dark;
+
+  @include media-tablet  {
+    font-size: 32px;
+  }
 }
 
 .article__tags {
@@ -32,6 +47,11 @@
   line-height: 24px;
   color: $_secondary_dark;
   opacity: 0.7;
+
+  @include media-tablet  {
+    font-size: 16px;
+    padding: 24px 0 0;
+  }
 }
 
 .article__text {
@@ -43,6 +63,12 @@
   font-size: 16px;
   line-height: 24px;
   color: $_secondary_black;
+
+  @include media-tablet  {
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+  }
 }
 
 .article__btn-link {
@@ -52,4 +78,96 @@
   font-size: 16px;
   line-height: 24px;
   color: $_button_dark;
+
+  @include media-tablet  {
+    font-size: 22px;
+    letter-spacing: -1px;
+  }
+
+  @include media-desktop {
+    font-size: 24px;
+  }
+}
+
+// ---------------------------
+// *** Big-article (First) ***
+// ---------------------------
+
+.article__box--big {
+  display: flex;
+  flex-direction: column;
+
+  @include media-tablet  {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.article__title--big {
+  margin: 10px 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 128%;
+  letter-spacing: -1px;
+  color: $_main_dark;
+
+  @include media-tablet  {
+    font-size: 32px;
+  }
+}
+
+.article__tags--big {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: $_secondary_dark;
+  opacity: 0.7;
+
+  @include media-tablet  {
+    font-size: 16px;
+    padding: 24px 0 0;
+  }
+}
+
+.article__text--big {
+  margin: 11px 0 18px;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $_secondary_black;
+
+  @include media-tablet  {
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+  }
+}
+
+.article__link--big {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $_button_dark;
+
+  @include media-tablet  {
+    font-size: 22px;
+    letter-spacing: -1px;
+  }
+
+  @include media-desktop {
+    font-size: 24px;
+  }
 }
