@@ -1,12 +1,12 @@
-.bioms__wrapper {
+.biomes__wrapper {
   background-color: $_main_dark;
 }
 
-.bioms__box {
+.biomes__box {
   padding: 81px 51px 95px 16px;
 }
 
-.bioms__title {
+.biomes__title {
   margin: 0 0 32px 0;
   padding: 0;
   font-family: $_f__common;
@@ -16,9 +16,21 @@
   line-height: 54px;
   letter-spacing: -3px;
   color: $_main_light;
+
+  @include media-tablet  {
+    font-size: 75px;
+    line-height: 81px;
+    letter-spacing: -5px;
+    margin-bottom: 67px;
+  }
+
+  @include media-desktop {
+    font-size: 96px;
+    line-height: 100px;
+  }
 }
 
-.bioms__text {
+.biomes__text {
   margin: 0;
   padding: 0;
   font-family: $_f__common;
@@ -28,27 +40,42 @@
   line-height: 24px;
   letter-spacing: -0.5px;
   color: $_main_light;
+
+  @include media-tablet {
+    width: 544px;
+    margin: 0 auto;
+  }
+
+  @include media-desktop {
+    width: 600px; // Добавить отступы!
+    margin: 0;
+    margin-left: 252px;
+  }
 }
 
-.bioms__image-box {
+.biomes__text:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.biomes__image-box {
   padding: 0 16px;
   background: linear-gradient(180deg,#e1f1e3 79%,#ffffff 79%);
 }
 
-.bioms__image,
-.bioms__img {
+.biomes__image,
+.biomes__img {
   display: block;
 }
 
-.bioms__holder {
+.biomes__holder {
   background-color: $_main_light;
 }
 
-.bioms__container--holder {
+.biomes__container--holder {
   padding: 80px 16px 75px;
 }
 
-.bioms__heading {
+.biomes__heading {
   margin: 0 0 28px;
   padding: 0;
   font-family: $_f__common;
@@ -58,9 +85,19 @@
   line-height: 36px;
   letter-spacing: -2px;
   color: $_main_dark;
+
+  @include media-tablet  {
+    font-size: 50px;
+    line-height: 56px;
+    letter-spacing: -3px;
+  }
+
+  @include media-desktop {
+    line-height: 69px;
+  }
 }
 
-.bioms__lead {
+.biomes__lead {
   margin: 0;
   padding: 0;
   font-family: $_f__common;
@@ -70,20 +107,31 @@
   line-height: 135%;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  @include media-tablet  {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include media-desktop {
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+  }
 }
 
-.bioms__text-box {
+.biomes__text-box {
   background-color: $_white;
 }
 
-.bioms__container--text {
+.biomes__container--text {
   padding: 36px 16px;
   display: flex;
   flex-direction: column;
   gap: 23px;
 }
 
-.bioms__desc {
+.biomes__desc {
   margin: 0;
   padding: 0;
   font-family: $_f__common;
@@ -93,17 +141,22 @@
   line-height: 135%;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  @include media-tablet  {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
-.bioms__features {
+.biomes__features {
   background-color: #e1f1e3;
 }
 
-.bioms__container-features {
+.biomes__container-features {
   padding: 32px 16px 66px;
 }
 
-.bioms__descr-text {
+.biomes__descr-text {
   margin: 0 0 12px;
   padding: 0;
   font-family: $_f__common;
@@ -113,9 +166,17 @@
   line-height: 128%;
   letter-spacing: -1px;
   color: $_main_dark;
+
+  @include media-tablet  {
+    font-size: 28px;
+  }
+
+  @include media-desktop  {
+    font-size: 32px;
+  }
 }
 
-.bioms__subtitle {
+.biomes__subtitle {
   margin: 0 0 67px;
   padding: 0;
   font-family: $_f__common;
@@ -125,9 +186,20 @@
   line-height: 36px;
   letter-spacing: -2px;
   color: $_main_dark;
+
+  @include media-tablet  {
+    font-size: 50px;
+    line-height: 53px;
+    letter-spacing: -3px;
+  }
+
+  @include media-desktop  {
+    font-size: 55px;
+    line-height: 69px;
+  }
 }
 
-.bioms__feature-text {
+.biomes__feature-text {
   margin: 0 0 16px;
   padding: 0;
   font-family: $_f__common;
@@ -137,9 +209,14 @@
   line-height: 135%;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  @include media-tablet  {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
-.bioms__item-title {
+.biomes__item-title {
   margin: 0;
   padding: 0;
   font-family: $_f__common;
@@ -149,16 +226,20 @@
   line-height: 35px;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  @include media-tablet  {
+    font-size: 24px;
+  }
 }
 
-.bioms__list-features {
+.biomes__list-features {
   @include list-style-reset;
   display: flex;
   flex-direction: column;
   gap: 26px;
 }
 
-.bioms__item-text {
+.biomes__item-text {
   margin: 0;
   padding: 0;
   font-family: $_f__common;
@@ -168,4 +249,8 @@
   line-height: 24px;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  @include media-tablet  {
+    font-size: 18px;
+  }
 }
