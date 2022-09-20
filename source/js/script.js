@@ -23,16 +23,29 @@ const onClickBtnHeaderMenu = function (evt) {
   navigation.classList.toggle('hidden');
   if(navigation.classList.contains('hidden')) {
     burgerMenuClose.classList.add('hidden');
-    burgerMenu.classList.remove('hidden');
     $('body').unbind('touchmove');
-    $('body').css('overflow','auto');
+    enableScrolling();
+    $(".header").css("background-color","");
+    burgerMenu.classList.remove('hidden');
+    document.querySelector('.header__logo').classList.remove('hidden');
   } else {
     burgerMenu.classList.add('hidden');
     burgerMenuClose.classList.remove('hidden');
     $('body').bind('touchmove', function(e){e.preventDefault()})
-    $('body').css('overflow','hidden');
+    disableScrolling();
+    $(".header").css("background-color","#003137");
+    document.querySelector('.header__logo').classList.add('hidden');
   }
 };
+function disableScrolling(){
+    var x=window.scrollX;
+    var y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+}
+
+function enableScrolling(){
+    window.onscroll=function(){};
+}
 
 document.addEventListener('keyup', onKeyupEsc);
 btnHeaderMenu.addEventListener('click', onClickBtnHeaderMenu);
