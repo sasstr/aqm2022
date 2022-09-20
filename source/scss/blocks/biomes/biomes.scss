@@ -4,11 +4,20 @@
 
 .biomes__box {
   padding: 81px 51px 95px 16px;
+
+  @include media-tablet  {
+    padding: 100px 32px 169px;
+  }
+
+  @include media-desktop {
+    padding: 100px 20px 155px;
+  }
 }
 
 .biomes__title {
   margin: 0 0 32px 0;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -18,21 +27,31 @@
   color: $_main_light;
 
   @include media-tablet  {
+    margin-bottom: 67px;
+    padding-top: 32px;
+
     font-size: 75px;
     line-height: 81px;
     letter-spacing: -5px;
-    margin-bottom: 67px;
+
   }
 
   @include media-desktop {
+    padding-top: 65px;
+
     font-size: 96px;
     line-height: 100px;
+  }
+
+  @include media-desktop-wide {
+    padding-top: 57px;
   }
 }
 
 .biomes__text {
   margin: 0;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -47,9 +66,13 @@
   }
 
   @include media-desktop {
-    width: 600px; // Добавить отступы!
+    width: 600px;
     margin: 0;
     margin-left: 252px;
+  }
+
+  @include media-desktop-wide {
+    margin-left: 416px;
   }
 }
 
@@ -73,11 +96,20 @@
 
 .biomes__container--holder {
   padding: 80px 16px 75px;
+
+  @include media-tablet  {
+    padding: 91px 32px;
+  }
+
+  @include media-desktop  {
+    padding: 130px 20px 153px;
+  }
 }
 
 .biomes__heading {
   margin: 0 0 28px;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -87,13 +119,23 @@
   color: $_main_dark;
 
   @include media-tablet  {
+    width: 630px;
+    margin-bottom: 59px;
+
     font-size: 50px;
     line-height: 56px;
     letter-spacing: -3px;
   }
 
   @include media-desktop {
+    width: 650px;
+    margin-bottom: 0;
+
     line-height: 69px;
+  }
+
+  @include media-desktop-wide {
+    margin-bottom: 25px;
   }
 }
 
@@ -109,6 +151,7 @@
   color: $_main_dark;
 
   @include media-tablet  {
+    margin-left: 208px;
     font-size: 18px;
     line-height: 24px;
   }
