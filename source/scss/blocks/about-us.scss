@@ -5,6 +5,7 @@
 .about-us__container {
   position: relative;
   padding: 105px 16px 198px;
+
   background-color: $_main_dark;
   @include media-desktop-wide  {
     padding-left:108px;
@@ -14,7 +15,7 @@
 .about-us__title {
   box-sizing: border-box;
   position: relative;
-  padding: 0 40px 40px 0;
+  padding: 0 40px 40px 16px;
   margin: 0;
   font-family: $_f__common;
   font-style: normal;
@@ -28,12 +29,15 @@
     font-size: 75px;
     line-height: 78px;
     padding-bottom:80px;
+    padding-left:32px;
+    letter-spacing: -5px;
   }
   @include media-desktop  {
     font-size: 96px;
     line-height: 100px;
     padding-bottom:98px;
     letter-spacing: -1px;
+    padding-left:20px;
 
   }
   @include media-desktop-wide  {
@@ -48,8 +52,8 @@
 
 .about-us__content {
   position: relative;
-  margin: 0;
-  padding: 0 35px 0 0;
+  margin-left: 2vw;
+  margin-right: 35px;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 300;
@@ -57,28 +61,28 @@
   line-height: 24px;
   color: $_main_light;
 
+
   @include media-tablet  {
     font-size: 28px;
     line-height: 128%;
-    padding-left:104px;
-    width:644px;
+    width:538px;
+    margin-left:24vw;
   }
   @include media-desktop  {
     font-size: 32px;
-    padding-left:224px;
+    padding-left:248px;
     width:896px;
   }
   @include media-desktop-wide  {
     font-size: 32px;
-    padding-left:520px;
+    padding-left:628px;
     width:1250px;
   }
   &::before {
     content: "";
     position: absolute;
-    right: 0;
+    right: -16px;
     background-image: url("data:image/svg+xml, %3Csvg fill='none' stroke='%235D9F93' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0.9 0.9 24.2 24.2'%3E%3Cg stroke-width='0.07' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' vector-effect='non-scaling-stroke' stroke-width='2px'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    bottom: -40px;
     background-position: bottom right;
     width: 100vw;
     height: 700px;

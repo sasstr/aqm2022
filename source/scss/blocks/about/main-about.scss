@@ -2,10 +2,14 @@
   margin: 0;
   padding: 80px 0 0;
   background-color: $_main_dark;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23F3F1D8' stroke='%23F3F1D8' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0 0 26 26'%3E%3Cg stroke-width='0.1' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' stroke-width='0.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  background-repeat:no-repeat;
+  background-position: top 0px right 23px;
+  background-size:440px auto;
 }
 
 .main-about__container {
-  background-color: $_secondary_light;
+
   padding: 0 16px 0;
 }
 
