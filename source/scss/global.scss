@@ -13,12 +13,11 @@ body {
   height: 100vh;
   margin: 0 auto;
   padding: 0;
-  font-family: $_f__common, sans-serif;
+  font-family: $_f__common;
   font-weight: normal;
 }
 
 img {
-  max-width: 100%;
   width: 100%;
 }
 
@@ -35,7 +34,6 @@ a {
   opacity: 0 !important;
   overflow: hidden !important;
   z-index: -1;
-  transition: all 0.3s;
 }
 
 .visually-hidden {

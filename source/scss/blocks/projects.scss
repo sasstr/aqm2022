@@ -37,7 +37,8 @@
   }
 }
 
-.projects__card:hover .card__image {
+.card__link:hover .card__image {
+  transition-duration: 0.3s;
   filter: blur(17px);
 }
 
@@ -61,6 +62,6 @@
   margin-right: auto;
 }
 
-.projects__card:hover .card__button {
+.card__link:hover .card__button {
   visibility:visible;
 }

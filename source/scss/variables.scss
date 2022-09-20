@@ -6,12 +6,10 @@ $tablet: 768px;
 $tablet-container-max: 920px; // максимальная ширина контейнера на планшете
 
 $desktop: 1024px;
-
 $desktop-container-max: 1439px; // максимальная ширина контейнера на десктопе
 
 $desktop-wide-container-max: 1600px; // максимальная ширина контейнера на широком десктопе
 $desktop-wide: 1440px;
-
 
 // Colors
 
@@ -27,7 +25,7 @@ $_button_hover: #FAB38E;
 $_button_click: #deb29a;
 $_font_grass: #5D9F93;
 
-
+// Ретина
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
