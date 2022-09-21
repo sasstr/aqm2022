@@ -53,3 +53,8 @@
   color: $_font_grass;
   cursor: pointer;
 }
+
+.navigation__link:hover {
+  color: $_white;
+  font-weight: 400;
+}
