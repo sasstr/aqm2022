@@ -85,21 +85,39 @@
   background: linear-gradient(180deg,#e1f1e3 79%,#ffffff 79%);
 
   @include media-tablet {
+    padding: 0 32px;
     background: linear-gradient(180deg,#e1f1e3 60%,#ffffff 60%);
   }
 
   @include media-desktop {
+    padding: 0 20px;
     background: linear-gradient(180deg,#e1f1e3 81%,#ffffff 81%);
   }
 
   @include media-desktop-wide {
-    background: linear-gradient(180deg,#e1f1e3 90%,#ffffff 90%);
+    padding: 0 108px;
   }
 }
 
-.biomes__image,
 .biomes__img {
   display: block;
+}
+
+.biomes__image {
+  display: block;
+  margin: 0 auto;
+
+  @include media-tablet {
+    max-width: 704px;
+  }
+
+  @include media-desktop {
+    max-width: 984px;
+  }
+
+  @include media-desktop-wide {
+    max-width: 1016px;
+  }
 }
 
 .biomes__holder {
@@ -115,6 +133,10 @@
 
   @include media-desktop {
     padding: 130px 20px 153px;
+  }
+
+  @include media-desktop-wide {
+    padding: 95px 108px 105px;
   }
 }
 
@@ -164,16 +186,24 @@
   color: $_main_dark;
 
   @include media-tablet  {
-    margin-left: 208px;
+    width: 500px;
+    margin-left: auto;
 
     font-size: 18px;
     line-height: 24px;
   }
 
   @include media-desktop {
+    margin-right: 64px;
+    width: 650px;
+
     font-size: 24px;
     line-height: 140%;
     letter-spacing: -1px;
+  }
+
+  @include media-desktop-wide {
+    margin-right: 305px;
   }
 }
 
@@ -190,7 +220,7 @@
   @include media-tablet {
     gap: 24px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 
     padding: 91px 32px 101px;
   }
@@ -201,6 +231,7 @@
 
   @include media-desktop-wide {
     padding: 111px 108px 153px;
+    gap: 67px;
   }
 }
 
@@ -219,6 +250,10 @@
   @include media-tablet {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @include media-desktop {
+    max-width: 480px;
   }
 }
 
@@ -239,7 +274,7 @@
   background-color: $_main_light;
 
   @include media-tablet {
-    padding: 45px 40px 50px;
+    padding: 45px 8px 50px 40px;
   }
 
   @include media-desktop {
@@ -318,6 +353,8 @@
 }
 
 .biomes__item {
+  width: 308px;
+
   @include media-tablet {
     width: 304px;
   }
@@ -334,6 +371,7 @@
 .biomes__item-title {
   margin: 0;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 700;
@@ -350,19 +388,27 @@
 .biomes__list-features {
   @include list-style-reset;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   gap: 26px;
 
   @include media-tablet {
-    flex-direction: row;
-    flex-wrap: wrap;
     gap: 48px;
+  }
+
+  @include media-desktop {
+    width: 800px;
+  }
+
+  @include media-desktop-wide {
+    width: 1000px;
   }
 }
 
 .biomes__item-text {
   margin: 0;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
