@@ -83,6 +83,18 @@
 .biomes__image-box {
   padding: 0 16px;
   background: linear-gradient(180deg,#e1f1e3 79%,#ffffff 79%);
+
+  @include media-tablet {
+    background: linear-gradient(180deg,#e1f1e3 60%,#ffffff 60%);
+  }
+
+  @include media-desktop {
+    background: linear-gradient(180deg,#e1f1e3 81%,#ffffff 81%);
+  }
+
+  @include media-desktop-wide {
+    background: linear-gradient(180deg,#e1f1e3 90%,#ffffff 90%);
+  }
 }
 
 .biomes__image,
@@ -97,11 +109,11 @@
 .biomes__container--holder {
   padding: 80px 16px 75px;
 
-  @include media-tablet  {
+  @include media-tablet {
     padding: 91px 32px;
   }
 
-  @include media-desktop  {
+  @include media-desktop {
     padding: 130px 20px 153px;
   }
 }
@@ -118,7 +130,7 @@
   letter-spacing: -2px;
   color: $_main_dark;
 
-  @include media-tablet  {
+  @include media-tablet {
     width: 630px;
     margin-bottom: 59px;
 
@@ -142,6 +154,7 @@
 .biomes__lead {
   margin: 0;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -152,6 +165,7 @@
 
   @include media-tablet  {
     margin-left: 208px;
+
     font-size: 18px;
     line-height: 24px;
   }
@@ -172,11 +186,28 @@
   display: flex;
   flex-direction: column;
   gap: 23px;
+
+  @include media-tablet {
+    gap: 24px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 91px 32px 101px;
+  }
+
+  @include media-desktop {
+    padding: 97px 20px;
+  }
+
+  @include media-desktop-wide {
+    padding: 111px 108px 153px;
+  }
 }
 
 .biomes__desc {
   margin: 0;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -185,18 +216,39 @@
   letter-spacing: -0.5px;
   color: $_main_dark;
 
-  @include media-tablet  {
+  @include media-tablet {
     font-size: 18px;
     line-height: 24px;
   }
 }
 
 .biomes__features {
-  background-color: #e1f1e3;
+  background-color: $_main_light;
+
+  @include media-tablet  {
+    background-color: $_white;
+  }
 }
 
 .biomes__container-features {
-  padding: 32px 16px 66px;
+  @include main-container-padding;
+}
+
+.biomes__wrapper-features {
+  padding-block: 32px 66px;
+  background-color: $_main_light;
+
+  @include media-tablet {
+    padding: 45px 40px 50px;
+  }
+
+  @include media-desktop {
+    padding: 58px 141px 66px 60px;
+  }
+
+  @include media-desktop-wide {
+    padding: 86px 208px 90px 104px;
+  }
 }
 
 .biomes__descr-text {
@@ -210,12 +262,13 @@
   letter-spacing: -1px;
   color: $_main_dark;
 
-  @include media-tablet  {
+  @include media-tablet {
     font-size: 28px;
   }
 
-  @include media-desktop  {
+  @include media-desktop {
     font-size: 32px;
+    margin: 0 0 19px;
   }
 }
 
@@ -230,13 +283,17 @@
   letter-spacing: -2px;
   color: $_main_dark;
 
-  @include media-tablet  {
+  @include media-tablet {
+    width: 600px;
+    margin-bottom: 64px;
+
     font-size: 50px;
     line-height: 53px;
     letter-spacing: -3px;
   }
 
-  @include media-desktop  {
+  @include media-desktop {
+    margin-bottom: 45px;
     font-size: 55px;
     line-height: 69px;
   }
@@ -253,9 +310,24 @@
   letter-spacing: -0.5px;
   color: $_main_dark;
 
-  @include media-tablet  {
+  @include media-tablet {
+    margin: 0 0 15px;
     font-size: 18px;
     line-height: 24px;
+  }
+}
+
+.biomes__item {
+  @include media-tablet {
+    width: 304px;
+  }
+
+  @include media-desktop {
+    width: 336px;
+  }
+
+  @include media-desktop-wide {
+    width: 390px;
   }
 }
 
@@ -270,7 +342,7 @@
   letter-spacing: -0.5px;
   color: $_main_dark;
 
-  @include media-tablet  {
+  @include media-tablet {
     font-size: 24px;
   }
 }
@@ -280,6 +352,12 @@
   display: flex;
   flex-direction: column;
   gap: 26px;
+
+  @include media-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 48px;
+  }
 }
 
 .biomes__item-text {
@@ -293,7 +371,7 @@
   letter-spacing: -0.5px;
   color: $_main_dark;
 
-  @include media-tablet  {
+  @include media-tablet {
     font-size: 18px;
   }
 }

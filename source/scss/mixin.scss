@@ -3,3 +3,35 @@
   padding: 0;
   list-style-type: none;
 }
+
+@mixin main-container-padding {
+  padding: 0 16px;
+
+  @include media-tablet {
+    padding: 0 32px;
+  }
+
+  @include media-desktop {
+    padding: 0 20px;
+  }
+
+  @include media-desktop-wide {
+    padding: 0 108px;
+  }
+}
+
+@mixin main-container-margin {
+  margin: 0 16px;
+
+  @include media-tablet {
+    margin: 0 32px;
+  }
+
+  @include media-desktop {
+    margin: 0 20px;
+  }
+
+  @include media-desktop-wide {
+    margin: 0 108px;
+  }
+}
