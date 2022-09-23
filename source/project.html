@@ -144,36 +144,38 @@
       </section>
 
       <div class="project-slider">
-        <picture class="project-slider__picture">
-          <source srcset="./img/project_ybg_slider-desktop-wide-1x.jpg" media="(min-width: 1440px)">
-          <source srcset="./img/project_ybg_slider-desktop-1x.jpg" media="(min-width: 1024px)">
-          <source srcset="./img/project_ybg_slider-tablet-1x.jpg" media="(min-width: 768px)">
-          <img class="project-slider__image" loading="lazy" src="./img/project_ybg_slider-mob-1x.jpg" alt="Yaranga Botanical Garden">
-        </picture>
+        <div class="project-slider__box">
+          <picture class="project-slider__picture">
+            <source srcset="./img/project_ybg_slider-desktop-wide-1x.jpg" media="(min-width: 1440px)">
+            <source srcset="./img/project_ybg_slider-desktop-1x.jpg" media="(min-width: 1024px)">
+            <source srcset="./img/project_ybg_slider-tablet-1x.jpg" media="(min-width: 768px)">
+            <img class="project-slider__image" loading="lazy" src="./img/project_ybg_slider-mob-1x.jpg" alt="Yaranga Botanical Garden">
+          </picture>
+        </div>
         <ul class="project-slider__nav-list">
           <li class="project-slider__nav-item project-slider__nav-item--active" role="presrntation" >
-            <button type="button" role="tab" tabindex="0" aria-selected="true"></button>
+            <button class="project-slider__nav-btn project-slider__nav-btn--active" type="button" role="tab" tabindex="0" aria-selected="true"></button>
           </li>
           <li class="project-slider__nav-item"  role="presrntation">
-            <button type="button" role="tab" tabindex="-1"></button>
+            <button class="project-slider__nav-btn" type="button" role="tab" tabindex="-1"></button>
           </li>
           <li class="project-slider__nav-item" role="presrntation">
-            <button type="button" role="tab" tabindex="-1"></button>
+            <button class="project-slider__nav-btn" type="button" role="tab" tabindex="-1"></button>
           </li>
           <li class="project-slider__nav-item" role="presrntation">
-            <button type="button" role="tab" tabindex="-1"></button>
+            <button class="project-slider__nav-btn" type="button" role="tab" tabindex="-1"></button>
           </li>
           <li class="project-slider__nav-item" role="presrntation">
-            <button type="button" role="tab" tabindex="-1"></button>
+            <button class="project-slider__nav-btn" type="button" role="tab" tabindex="-1"></button>
           </li>
           <li class="project-slider__nav-item" role="presrntation">
-            <button type="button" role="tab" tabindex="-1"></button>
+            <button class="project-slider__nav-btn" type="button" role="tab" tabindex="-1"></button>
           </li>
           <li class="project-slider__nav-item" role="presrntation">
-            <button type="button" role="tab" tabindex="-1"></button>
+            <button class="project-slider__nav-btn" type="button" role="tab" tabindex="-1"></button>
           </li>
           <li class="project-slider__nav-item" role="presrntation">
-            <button type="button" role="tab" tabindex="-1"></button>
+            <button class="project-slider__nav-btn" type="button" role="tab" tabindex="-1"></button>
           </li>
         </ul>
       </div>
@@ -190,7 +192,15 @@
         </p>
       </div>
       <div class="project-image-box">
-        <img class="project-image-box__image" loading="lazy" src="./img/project_yaranga_mob.jpg" alt="Yaranga project">
+
+        <picture class="project-slider__picture">
+          <source srcset="./img/project_yaranga-desktop-extra-wide-1x.jpg" media="(min-width: 1440px)">
+          <source srcset="./img/project_yaranga-desktop-wide-1x.jpg" media="(min-width: 1440px)">
+          <source srcset="./img/project_yaranga-desktop-1x.jpg" media="(min-width: 1024px)">
+          <source srcset="./img/project_yaranga-tablet-1x.jpg" media="(min-width: 768px)">
+          <img class="project-image-box__image" loading="lazy" src="./img/project_yaranga-mob-1x.jpg" alt="Yaranga project">
+        </picture>
+
       </div>
       <div class="project-text">
         <p class="project-text__content">Given the advanced knowledge required to operate the rainforest gardens, an onsite educational center will be developed to facilitate this need. Recruitment will be simplified with Yaranga employees receiving the necessary qualifications and training in botany and related fields through classes and a teaching laboratory.
@@ -215,7 +225,13 @@
       </div>
       <div class="project-content">
         <div class="project-content__video">
-          <img class="project-content__image" loading="lazy" src="./img/project_yaranga_mob_video.jpg" alt="Video Yaranga">
+          <picture>
+            <source srcset="./img/project_yaranga_video-desktop-wide-1x.jpg" media="(min-width: 1440px)">
+            <source srcset="./img/project_yaranga_video-desktop-1x.jpg" media="(min-width: 1024px)">
+            <source srcset="./img/project_yaranga_video-tablet-1x.jpg" media="(min-width: 768px)">
+            <img class="project-content__image" loading="lazy" src="./img/project_yaranga_video-mob-1x.jpg" alt="Video Yaranga" width="328" height="186">
+          </picture>
+
           <svg  class="project-content__icon-play" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4993 45C34.9253 45 44.9986 34.9264 44.9986 22.5C44.9986 10.0736 34.9253 0 22.4993 0C10.0733 0 0 10.0736 0 22.5C0 34.9264 10.0733 45 22.4993 45ZM16.9464 31.6081L32.7251 22.498L16.9464 13.3879V31.6081Z" fill="#FAB38E"/>
           </svg>
