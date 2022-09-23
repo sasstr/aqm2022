@@ -245,7 +245,13 @@
         <div class="project-content__box">
           <div class="project-content__box-prev">
             <a href="#" class="project-content__link project-content__link--prev">
-              <img class="project-content__image" loading="lazy" src="./img/project_prev_mob.jpg" alt="previous project">
+              <picture>
+                <source srcset="./img/project_prev-desktop-wide-1x.jpg" media="(min-width: 1440px)">
+                <source srcset="./img/project_prev-desktop-1x.jpg" media="(min-width: 1024px)">
+                <source srcset="./img/project_prev-tablet-1x.jpg" media="(min-width: 768px)">
+                <img class="project-content__image" loading="lazy" src="./img/project_prev-mob-1x.jpg" alt="previous project">
+              </picture>
+
               <div class="project-content__desc">
                 <p class="project-content__desc-text">Previous project</p>
                 <h3 class="project-content__desc-title">Lima Aquqrium</h3>
@@ -254,7 +260,13 @@
           </div>
           <div class="project-content__box-next">
             <a href="#" class="project-content__link project-content__link--next">
-              <img class="project-content__image" loading="lazy" src="./img/project_next_mob.jpg" alt="next project">
+              <picture>
+                <source srcset="./img/project_next-desktop-wide-1x.jpg" media="(min-width: 1440px)">
+                <source srcset="./img/project_next-desktop-1x.jpg" media="(min-width: 1024px)">
+                <source srcset="./img/project_next-tablet-1x.jpg" media="(min-width: 768px)">
+                <img class="project-content__image" loading="lazy" src="./img/project_next-mob-1x.jpg" alt="next project">
+
+              </picture>
               <div class="project-content__desc">
                 <p class="project-content__desc-text">Next project</p>
                 <h3 class="project-content__desc-title">Gujurat Oceanarium</h3>
