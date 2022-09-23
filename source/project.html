@@ -76,7 +76,7 @@
 
   <main class="main">
     <div class="main__banner">
-      <picture>
+      <picture class="main__banner-picture">
         <source srcset="./img/project_banner_video-desktop-extra-wide-1x.jpg" media="(min-width: 1920px)">
         <source srcset="./img/project_banner_video-desktop-wide-1x.jpg" media="(min-width: 1440px)">
         <source srcset="./img/project_banner_video-desktop-1x.jpg" media="(min-width: 1024px)">
@@ -144,12 +144,38 @@
       </section>
 
       <div class="project-slider">
-        <picture>
+        <picture class="project-slider__picture">
           <source srcset="./img/project_ybg_slider-desktop-wide-1x.jpg" media="(min-width: 1440px)">
           <source srcset="./img/project_ybg_slider-desktop-1x.jpg" media="(min-width: 1024px)">
           <source srcset="./img/project_ybg_slider-tablet-1x.jpg" media="(min-width: 768px)">
           <img class="project-slider__image" loading="lazy" src="./img/project_ybg_slider-mob-1x.jpg" alt="Yaranga Botanical Garden">
         </picture>
+        <ul class="project-slider__nav-list">
+          <li class="project-slider__nav-item project-slider__nav-item--active" role="presrntation" >
+            <button type="button" role="tab" tabindex="0" aria-selected="true"></button>
+          </li>
+          <li class="project-slider__nav-item"  role="presrntation">
+            <button type="button" role="tab" tabindex="-1"></button>
+          </li>
+          <li class="project-slider__nav-item" role="presrntation">
+            <button type="button" role="tab" tabindex="-1"></button>
+          </li>
+          <li class="project-slider__nav-item" role="presrntation">
+            <button type="button" role="tab" tabindex="-1"></button>
+          </li>
+          <li class="project-slider__nav-item" role="presrntation">
+            <button type="button" role="tab" tabindex="-1"></button>
+          </li>
+          <li class="project-slider__nav-item" role="presrntation">
+            <button type="button" role="tab" tabindex="-1"></button>
+          </li>
+          <li class="project-slider__nav-item" role="presrntation">
+            <button type="button" role="tab" tabindex="-1"></button>
+          </li>
+          <li class="project-slider__nav-item" role="presrntation">
+            <button type="button" role="tab" tabindex="-1"></button>
+          </li>
+        </ul>
       </div>
 
       <div class="project-description">
@@ -170,7 +196,14 @@
         <p class="project-text__content">Given the advanced knowledge required to operate the rainforest gardens, an onsite educational center will be developed to facilitate this need. Recruitment will be simplified with Yaranga employees receiving the necessary qualifications and training in botany and related fields through classes and a teaching laboratory.
 
           With a team of experts contributing, we are building Yaranga to exacting standards of engineering and innovative thinking. Replicating a hot and humid rainforest environment when outside temperatures reach between -30 and -40 C will be achieved by implementing the best digital irrigation systems and plant bed heating systems.</p>
-          <img class="project-text__image" loading="lazy" src="./img/project_yaranga_01.jpg" alt="Yaranga project">
+          <picture>
+            <source srcset="./img/project_yaranga_01-desktop-extra-wide-1x.jpg" media="(min-width: 1920px)">
+            <source srcset="./img/project_yaranga_01-desktop-wide-1x.jpg" media="(min-width: 1440px)">
+            <source srcset="./img/project_yaranga_01-desktop-1x.jpg" media="(min-width: 1024px)">
+            <source srcset="./img/project_yaranga_01-tablet-1x.jpg" media="(min-width: 768px)">
+            <img class="project-text__image" loading="lazy" src="./img/project_yaranga_01-mob-1x.jpg" alt="Yaranga project">
+          </picture>
+
       </div>
       <div class="project-subject">
         <p class="project-subject__text">
