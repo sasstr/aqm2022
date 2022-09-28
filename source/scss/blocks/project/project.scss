@@ -17,16 +17,39 @@
   letter-spacing: -1px;
   color: $_main_light;
   background-color: $_main_dark;
+
+  @include media-tablet {
+    font-size: 40px;
+    letter-spacing: -2px;
+  }
+
+  @include media-desktop {
+    font-size: 55px;
+    letter-spacing: -3px;
+  }
+}
+
+.project__box-info {
+  @include media-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 2px solid rgba(225, 241, 227, 0.6);
+  }
 }
 
 .project__info {
   margin: 0;
   padding: 0;
-  color: $_main_light;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border-top: 2px solid rgba(225, 241, 227, 0.6);
+
+  color: $_main_light;
+
+  @include media-tablet {
+    width: 60%;
+  }
 }
 
 .project__feature-box {
@@ -43,6 +66,14 @@
   line-height: 52px;
   letter-spacing: -1px;
   color: $_main_light;
+
+  @include media-tablet {
+    font-size: 32px;
+  }
+
+  @include media-desktop {
+    font-size: 36px;
+  }
 }
 
 .project__feature {
@@ -53,6 +84,14 @@
   line-height: 24px;
   text-transform: lowercase;
   color: $_main_light;
+
+  @include media-tablet {
+    font-size: 14px;
+  }
+
+  @include media-desktop {
+    font-size: 16px;
+  }
 }
 
 .project__list-of-works {
@@ -84,6 +123,10 @@
 
 .project__text--small {
   padding: 0 35px 33px 0;
+
+  @include media-tablet {
+    width: 315px;
+  }
 }
 
 .project__text--large {
@@ -92,6 +135,14 @@
   line-height: 140%;
   letter-spacing: -1px;
   color: $_white;
+
+  @include media-tablet {
+    width: 600px;
+    margin-left: auto;
+
+    font-size: 28px;
+    line-height: 128%;
+  }
 }
 
 .project__info--project2 {

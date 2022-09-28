@@ -1,5 +1,11 @@
 .project-text {
   padding: 40px 16px;
+
+  @include media-tablet {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
 }
 
 .project-text__content {
@@ -12,8 +18,19 @@
   line-height: 135%;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  @include media-tablet {
+    order: 2;
+  }
 }
 
 .project-text__image {
   display: block;
+
+  @include media-tablet {
+    min-width: 392px;
+    height: auto;
+
+    order: 1;
+  }
 }

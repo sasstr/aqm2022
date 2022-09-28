@@ -1,6 +1,12 @@
 .project-subject {
   padding: 0 16px 40px;
   background-color: $_white;
+
+  @include media-tablet {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
 }
 
 .project-subject__text {

@@ -5,11 +5,8 @@
 
 .project-description__text {
   margin: 0;
-  padding: 0;
-}
-
-.project-description__text {
   padding: 0 0 36px;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -21,6 +18,7 @@
 
 .project-description__text--large {
   padding: 0 0 32px;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 300;
@@ -28,6 +26,10 @@
   line-height: 128%;
   letter-spacing: -1px;
   color: $_main_dark;
+
+  @include media-tablet {
+    width: 470px;
+  }
 }
 .project-description--project2 {
   background-color: $_main_dark;
