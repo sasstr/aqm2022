@@ -22,6 +22,11 @@
   @include media-tablet {
     order: 2;
   }
+
+  @include media-desktop {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .project-text__image {

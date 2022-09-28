@@ -18,4 +18,18 @@
   line-height: 135%;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  @include media-desktop {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.project-subject__image {
+  display: block;
+
+  @include media-tablet {
+    min-width: 392px;
+    height: auto;
+  }
 }
