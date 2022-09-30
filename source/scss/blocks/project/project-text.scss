@@ -5,6 +5,16 @@
     display: flex;
     gap: 24px;
     align-items: center;
+
+    padding: 40px 32px;
+  }
+
+  @include media-desktop {
+    padding: 40px 20px;
+  }
+
+  @include media-desktop-wide {
+    padding: 40px 108px;
   }
 }
 
@@ -33,9 +43,13 @@
   display: block;
 
   @include media-tablet {
-    min-width: 392px;
+    min-width: 56vw;
     height: auto;
 
     order: 1;
+  }
+
+  @include media-desktop {
+    min-width: 45vw;
   }
 }

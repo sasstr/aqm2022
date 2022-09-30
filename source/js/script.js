@@ -81,5 +81,4 @@ function onmyscreen(el)
     if (offset <= window_top+$(window).height())  return true;
 
     return false;
-
 }

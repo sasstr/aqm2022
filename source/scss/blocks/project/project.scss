@@ -3,12 +3,13 @@
 }
 
 .project__container {
-  padding: 0 16px;
+  @include main-container-padding;
 }
 
 .project__title {
   margin: 0;
   padding: 16px 0 18px;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -16,24 +17,44 @@
   line-height: 69px;
   letter-spacing: -1px;
   color: $_main_light;
+
   background-color: $_main_dark;
 
   @include media-tablet {
+    padding: 54px 0 70px;
+
     font-size: 40px;
     letter-spacing: -2px;
+
   }
 
   @include media-desktop {
+    padding: 105px 0 44px;
+
     font-size: 55px;
     letter-spacing: -3px;
+  }
+
+  @include media-desktop-wide {
+    padding-top: 90px;
   }
 }
 
 .project__box-info {
+  border-top: 2px solid rgba(225, 241, 227, 0.6);
+  padding-bottom: 53px;
+  padding-top: 53px;
+
   @include media-tablet {
     display: flex;
     flex-wrap: wrap;
-    border-top: 2px solid rgba(225, 241, 227, 0.6);
+
+    padding-top: 40px;
+  }
+
+  @include media-desktop {
+    padding-top: 90px;
+    padding-bottom: 66px;
   }
 }
 
@@ -59,6 +80,7 @@
 .project__item-info {
   margin: 0;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -99,20 +121,35 @@
   flex-direction: column;
   gap: 5px;
   @include list-style-reset;
-  margin: 0;
-  padding: 0 0 53px;
-  color: $_main_light;
+  padding-bottom: 53px;
 
+  color: $_main_light;
 }
 
 .project__text-box {
   padding: 84px 0 86px;
+
   border-top: 2px solid rgba(225, 241, 227, 0.6);
+
+  @include media-tablet {
+    padding: 46px 0;
+  }
+
+  @include media-desktop {
+    display: flex;
+
+    padding: 93px 0 117px;
+  }
+
+  @include media-desktop-wide {
+    padding: 44px 0 197px;
+  }
 }
 
 .project__text {
   margin: 0;
   padding: 0;
+
   color: $_main_light;
   font-family: $_f__common;
   font-style: normal;

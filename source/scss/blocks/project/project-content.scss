@@ -22,6 +22,19 @@
   font-size: 16px;
   line-height: 24px;
   color: $_button_dark;
+
+  @include media-tablet {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  @include media-desktop {
+    width: 230px;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+  }
 }
 
 .project-content__box-back {
