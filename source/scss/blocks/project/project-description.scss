@@ -13,7 +13,19 @@
     flex-wrap: wrap;
     gap: 50px;
 
+    padding: 34px 30px 57px;
+
     background-color: $_main_dark;
+  }
+
+  @include media-desktop {
+    gap: 80px;
+
+    padding: 84px 60px 100px;
+  }
+
+  @include media-desktop-wide {
+    padding: 84px 80px 100px;
   }
 }
 

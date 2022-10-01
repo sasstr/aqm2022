@@ -71,10 +71,24 @@
   @include media-tablet {
     width: 60%;
   }
+
+  @include media-desktop {
+    width: 70%;
+  }
 }
 
 .project__feature-box {
   width: 45%;
+
+  @include media-desktop {
+    width: 30%;
+  }
+}
+
+.project__feature-box--order {
+  @include media-desktop {
+    order: -1;
+  }
 }
 
 .project__item-info {

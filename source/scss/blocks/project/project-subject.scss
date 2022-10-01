@@ -7,15 +7,16 @@
     gap: 24px;
     align-items: center;
 
-    padding: 0 32px 40px;
+    padding: 0 32px 65px;
   }
 
   @include media-desktop {
-    padding: 0 20px 40px;
+    padding: 0 20px 51px;
   }
 
   @include media-desktop-wide {
-    padding: 0 108px 40px;
+    padding: 0 108px 122px;
+    gap: 128px;
   }
 }
 
@@ -35,6 +36,17 @@
   }
 }
 
+.project-subject__picture {
+
+  @include media-desktop {
+    margin-top: -175px;
+  }
+
+  @include media-desktop-wide {
+    margin-top: -215px;
+  }
+}
+
 .project-subject__image {
   display: block;
 
@@ -45,5 +57,9 @@
 
   @include media-desktop {
     min-width: 45vw;
+  }
+
+  @include media-desktop-wide {
+    min-width: 27vw;
   }
 }
