@@ -1,5 +1,5 @@
 .project-subject {
-  padding: 0 16px 40px;
+  padding: 0 16px 80px;
   background-color: $_white;
 
   @include media-tablet {
@@ -7,15 +7,15 @@
     gap: 24px;
     align-items: center;
 
-    padding: 0 32px 65px;
+    padding: 0 32px 105px;
   }
 
   @include media-desktop {
-    padding: 0 20px 51px;
+    padding: 0 20px 91px;
   }
 
   @include media-desktop-wide {
-    padding: 0 108px 122px;
+    padding: 0 108px 162px;
     gap: 128px;
   }
 }

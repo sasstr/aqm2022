@@ -16,6 +16,12 @@
   }
 }
 
+@mixin media-desktop-extra-wide {
+  @media (min-width: $desktop-extra-wide) {
+      @content;
+  }
+}
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       @content;

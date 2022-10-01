@@ -1,7 +1,8 @@
 .project-content {
-  padding: 40px 16px 0;
   background-color: $_white;
   background: linear-gradient(180deg, $_white 43%, rgba(225,241,227,1) 43%);
+
+  @include main-container-padding;
 }
 
 .project-content__box {

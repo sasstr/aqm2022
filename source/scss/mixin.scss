@@ -18,4 +18,8 @@
   @include media-desktop-wide {
     padding: 0 108px;
   }
+
+  @include media-desktop-extra-wide {
+    padding: 0 348px;
+  }
 }
