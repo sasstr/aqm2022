@@ -40,7 +40,7 @@
       <nav class="header__navigation navigation hidden">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a class="navigation__link" href="#">Works</a>
+            <a class="navigation__link">Works</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="./about.html">About us</a>
@@ -78,7 +78,12 @@
         <article class="works__card big-work-card">
           <p class="big-work-card__desc">– concept, completed</p>
           <a class="big-work-card__link big-work-card__link--image" href="./project.html">
-            <img class="big-work-card__image" src="./img/work_yaranga_garden.jpg" alt="Yaranga Botanical Garden">
+            <picture>
+              <source srcset="./img/work_yaranga_garden-desktop-wide-1x.jpg" media="(min-width: 1440px)">
+              <source srcset="./img/work_yaranga_garden-desktop-1x.jpg" media="(min-width: 1024px)">
+              <source srcset="./img/work_yaranga_garden-tablet-1x.jpg" media="(min-width: 768px)">
+              <img class="big-work-card__image" src="./img/work_yaranga_garden-mob-1x.jpg" alt="Yaranga Botanical Garden">
+            </picture>
           </a>
           <h2 class="big-work-card__subject">
             <a class="big-work-card__link" href="./project.html">Yaranga Botanical Garden</a>
@@ -168,7 +173,12 @@
         <article class="works__card big-work-card">
           <p class="big-work-card__desc">– concept, completed</p>
           <a class="big-work-card__link" href="./project.html">
-            <img class="big-work-card__image" src="./img/work_gujurat_oceanarium.jpg" alt="Gujurat Oceanarium">
+            <picture>
+              <source srcset="./img/work_gujurat_oceanarium-desktop-wide-1x.jpg" media="(min-width: 1440px)">
+              <source srcset="./img/work_gujurat_oceanarium-desktop-1x.jpg" media="(min-width: 1024px)">
+              <source srcset="./img/work_gujurat_oceanarium-tablet-1x.jpg" media="(min-width: 768px)">
+              <img class="big-work-card__image" src="./img/work_gujurat_oceanarium-mob-1x.jpg" alt="Gujurat Oceanarium">
+            </picture>
           </a>
           <h2 class="big-work-card__subject">
             <a class="big-work-card__link" href="./project.html">Gujurat Oceanarium</a>

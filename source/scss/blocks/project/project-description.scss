@@ -1,15 +1,46 @@
 .project-description {
   padding: 76px 16px 40px;
   background: $_main_light;
+
+  @include media-tablet {
+    padding: 108px 32px 0;
+  }
+
+  @include media-desktop {
+    padding: 52px 20px 0;
+  }
+
+  @include media-desktop-wide {
+    padding: 97px 108px 0;
+  }
+}
+
+.project-description__box {
+  @include media-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    padding: 34px 30px 57px;
+
+    background-color: $_main_dark;
+  }
+
+  @include media-desktop {
+    gap: 80px;
+
+    padding: 84px 60px 100px;
+  }
+
+  @include media-desktop-wide {
+    padding: 84px 80px 100px;
+  }
 }
 
 .project-description__text {
   margin: 0;
-  padding: 0;
-}
-
-.project-description__text {
   padding: 0 0 36px;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -17,10 +48,16 @@
   line-height: 135%;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  @include media-tablet {
+    color: $_main_light;
+    width: 45%;
+  }
 }
 
 .project-description__text--large {
   padding: 0 0 32px;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 300;
@@ -28,6 +65,11 @@
   line-height: 128%;
   letter-spacing: -1px;
   color: $_main_dark;
+
+  @include media-tablet {
+    width: 66%;
+    color: $_main_light;
+  }
 }
 .project-description--project2 {
   background-color: $_main_dark;

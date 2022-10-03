@@ -1,6 +1,23 @@
 .project-subject {
-  padding: 0 16px 40px;
+  padding: 0 16px 80px;
   background-color: $_white;
+
+  @include media-tablet {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    padding: 0 32px 105px;
+  }
+
+  @include media-desktop {
+    padding: 0 20px 91px;
+  }
+
+  @include media-desktop-wide {
+    padding: 0 108px 162px;
+    gap: 128px;
+  }
 }
 
 .project-subject__text {
@@ -12,4 +29,37 @@
   line-height: 135%;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  @include media-desktop {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.project-subject__picture {
+
+  @include media-desktop {
+    margin-top: -175px;
+  }
+
+  @include media-desktop-wide {
+    margin-top: -215px;
+  }
+}
+
+.project-subject__image {
+  display: block;
+
+  @include media-tablet {
+    min-width: 56vw;
+    height: auto;
+  }
+
+  @include media-desktop {
+    min-width: 45vw;
+  }
+
+  @include media-desktop-wide {
+    min-width: 27vw;
+  }
 }
