@@ -6,6 +6,13 @@
   @include main-container-padding;
 }
 
+.project-2__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-bottom: 75px;
+}
+
 .project-2__title {
   margin: 0;
   padding: 125px 0 43px;
@@ -46,8 +53,13 @@
   display: block;
 }
 
-.banner-project-2__image-right {
+.project-2__image-right {
   display: none;
+
+  @include media-tablet {
+    display: block;
+    margin-top: -150px;
+  }
 }
 
 .project-2__banner-picture {
@@ -179,6 +191,8 @@
   border-top: 2px solid rgba(225, 241, 227, 0.6);
 
   @include media-tablet {
+    display: flex;
+    gap: 80px;
     padding: 46px 0;
   }
 
@@ -197,7 +211,7 @@
   margin: 0;
   padding: 0;
 
-  color: $_main_light;
+  color: $_white;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -209,7 +223,7 @@
   padding: 0 35px 33px 0;
 
   @include media-tablet {
-    width: 315px;
+    width: 210px;
   }
 }
 
@@ -221,7 +235,7 @@
   color: $_white;
 
   @include media-tablet {
-    width: 600px;
+    width: 415px;
     margin-left: auto;
 
     font-size: 28px;

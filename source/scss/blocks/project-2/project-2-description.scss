@@ -1,6 +1,6 @@
-.project-description {
-  padding: 76px 16px 40px;
-  background: $_main_light;
+.project-2-description {
+  background-color: $_main_dark;
+  padding: 72px 16px 79px;
 
   @include media-tablet {
     padding: 108px 32px 0;
@@ -15,7 +15,7 @@
   }
 }
 
-.project-description__box {
+.project-2-description__box {
   @include media-tablet {
     display: flex;
     flex-wrap: wrap;
@@ -37,9 +37,9 @@
   }
 }
 
-.project-description__text {
+.project-2-description__text {
   margin: 0;
-  padding: 0 0 36px;
+  padding: 0 0 25px;
 
   font-family: $_f__common;
   font-style: normal;
@@ -47,7 +47,7 @@
   font-size: 16px;
   line-height: 135%;
   letter-spacing: -0.5px;
-  color: $_main_dark;
+  color: $_main_light;
 
   @include media-tablet {
     color: $_main_light;
@@ -55,7 +55,7 @@
   }
 }
 
-.project-description__text--large {
+.project-2-description__text--large {
   padding: 0 0 32px;
 
   font-family: $_f__common;
@@ -64,19 +64,10 @@
   font-size: 20px;
   line-height: 128%;
   letter-spacing: -1px;
-  color: $_main_dark;
+  color: $_main_light;
 
   @include media-tablet {
     width: 66%;
     color: $_main_light;
   }
-}
-.project-description--project2 {
-  background-color: $_main_dark;
-  padding: 72px 16px 79px;
-}
-
-.project-description__text-project2,
-.project-description__text--large-project2 {
-  color: $_main_light;
 }
