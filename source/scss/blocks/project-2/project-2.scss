@@ -8,7 +8,7 @@
 
 .project-2__title {
   margin: 0;
-  padding: 125px 0 18px;
+  padding: 125px 0 43px;
 
   font-family: $_f__common;
   font-style: normal;
@@ -52,13 +52,12 @@
 
 .project-2__banner-picture {
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
-.project__box-info {
+.project-2__box-info {
   border-top: 2px solid rgba(225, 241, 227, 0.6);
-  padding-bottom: 53px;
-  padding-top: 53px;
+  padding: 53px 0 68px;
 
   @include media-tablet {
     display: flex;
@@ -73,8 +72,9 @@
   }
 }
 
-.project__info {
+.project-2__info {
   margin: 0;
+  margin-bottom: 31px;
   padding: 0;
 
   display: flex;
@@ -92,7 +92,7 @@
   }
 }
 
-.project__feature-box {
+.project-2__feature-box {
   width: 45%;
 
   @include media-desktop {
@@ -106,7 +106,7 @@
   }
 }
 
-.project__item-info {
+.project-2__item-info {
   margin: 0;
   padding: 0;
 
@@ -127,7 +127,7 @@
   }
 }
 
-.project__feature {
+.project-2__feature {
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -145,7 +145,7 @@
   }
 }
 
-.project__list-of-works {
+.project-2__list-of-works {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -155,8 +155,26 @@
   color: $_main_light;
 }
 
-.project__text-box {
-  padding: 84px 0 86px;
+.project-2__item-of-works {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 149%;
+  color: $_main_light;
+
+  @include media-tablet {
+    font-size: 16px;
+  }
+
+  @include media-desktop {
+    font-size: 18px;
+    letter-spacing: -1px;
+  }
+}
+
+.project-2__text-box {
+  padding: 56px 0 0;
 
   border-top: 2px solid rgba(225, 241, 227, 0.6);
 
@@ -175,7 +193,7 @@
   }
 }
 
-.project__text {
+.project-2__text {
   margin: 0;
   padding: 0;
 
@@ -187,7 +205,7 @@
   line-height: 149%;
 }
 
-.project__text--small {
+.project-2__text--small {
   padding: 0 35px 33px 0;
 
   @include media-tablet {
@@ -195,7 +213,7 @@
   }
 }
 
-.project__text--large {
+.project-2__text--large {
   font-weight: 300;
   font-size: 22px;
   line-height: 140%;
@@ -210,8 +228,3 @@
     line-height: 128%;
   }
 }
-
-.project__info--project2 {
-  padding: 60px 0 0;
-}
-

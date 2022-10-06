@@ -140,6 +140,24 @@
   color: $_main_light;
 }
 
+.project__item-of-works {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 149%;
+  color: $_main_light;
+
+  @include media-tablet {
+    font-size: 16px;
+  }
+
+  @include media-desktop {
+    font-size: 18px;
+    letter-spacing: -1px;
+  }
+}
+
 .project__text-box {
   padding: 84px 0 86px;
 
