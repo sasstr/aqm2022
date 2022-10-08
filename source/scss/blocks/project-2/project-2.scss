@@ -10,12 +10,25 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  padding-bottom: 75px;
+
+  padding: 125px 0 60px;
+
+  @include media-tablet {
+    padding: 125px 0 75px;
+  }
+
+  @include media-desktop {
+    padding: 145px 0 55px;
+  }
+
+  @include media-desktop-wide {
+    padding-bottom: 75px;
+  }
 }
 
 .project-2__title {
   margin: 0;
-  padding: 125px 0 43px;
+  padding-bottom: 43px;
 
   font-family: $_f__common;
   font-style: normal;
@@ -28,7 +41,7 @@
   background-color: $_main_dark;
 
   @include media-tablet {
-    padding: 125px 0 70px;
+    padding-bottom: 100px;
 
     font-size: 65px;
     line-height: 69px;
@@ -37,15 +50,30 @@
   }
 
   @include media-desktop {
-    padding: 125px 0 44px;
+    padding-bottom: 145px;
 
     font-size: 96px;
     line-height: 100px;
     letter-spacing: -5px;
   }
+}
+
+.project-2__container-picture {
+
+  @include media-tablet {
+    display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+  width: 100%;
+  }
+
+  @include media-desktop {
+    gap: 85px;
+  }
 
   @include media-desktop-wide {
-    padding-top: 90px;
+    gap: 104px;
   }
 }
 
@@ -58,13 +86,20 @@
 
   @include media-tablet {
     display: block;
-    margin-top: -150px;
+    margin-top: -180px;
+  }
+
+  @include media-desktop {
+    margin-top: -250px;
+  }
+
+  @include media-desktop-wide {
+    margin-top: -265px;
   }
 }
 
 .project-2__banner-picture {
   display: block;
-  margin-bottom: 60px;
 }
 
 .project-2__box-info {
@@ -72,15 +107,18 @@
   padding: 53px 0 68px;
 
   @include media-tablet {
+    padding: 44px 0px 60px;
+
     display: flex;
     flex-wrap: wrap;
-
-    padding-top: 40px;
   }
 
   @include media-desktop {
-    padding-top: 90px;
-    padding-bottom: 66px;
+    padding: 68px 0px 85px;
+  }
+
+  @include media-desktop-wide {
+    padding: 110px 0px 130px;
   }
 }
 
@@ -96,6 +134,7 @@
   color: $_main_light;
 
   @include media-tablet {
+    margin-bottom: 60px;
     width: 60%;
   }
 
@@ -108,7 +147,7 @@
   width: 45%;
 
   @include media-desktop {
-    width: 30%;
+    width: 23%;
   }
 }
 
@@ -165,6 +204,19 @@
   padding-bottom: 53px;
 
   color: $_main_light;
+
+  @include media-tablet {
+    gap: 6px;
+    padding-bottom: 110px;
+  }
+
+  @include media-desktop {
+    padding-bottom: 34px;
+  }
+
+  @include media-desktop-wide {
+    padding-bottom: 43px;
+  }
 }
 
 .project-2__item-of-works {
@@ -186,6 +238,7 @@
 }
 
 .project-2__text-box {
+  width: 100%;
   padding: 56px 0 0;
 
   border-top: 2px solid rgba(225, 241, 227, 0.6);
@@ -193,17 +246,17 @@
   @include media-tablet {
     display: flex;
     gap: 80px;
-    padding: 46px 0;
+    padding: 60px 0 0;
   }
 
   @include media-desktop {
     display: flex;
 
-    padding: 93px 0 117px;
+    padding: 68px 0 0;
   }
 
   @include media-desktop-wide {
-    padding: 44px 0 197px;
+    padding: 110px 0 0;
   }
 }
 
@@ -215,8 +268,8 @@
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 149%;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .project-2__text--small {
@@ -225,12 +278,16 @@
   @include media-tablet {
     width: 210px;
   }
+
+  @include media-desktop {
+    width: 312px;
+  }
 }
 
 .project-2__text--large {
   font-weight: 300;
   font-size: 22px;
-  line-height: 140%;
+  line-height: 128%;
   letter-spacing: -1px;
   color: $_white;
 
@@ -240,5 +297,15 @@
 
     font-size: 28px;
     line-height: 128%;
+  }
+
+  @include media-desktop {
+    width: 565px;
+
+    font-size: 32px;
+  }
+
+  @include media-desktop-wide {
+    width: 705px;
   }
 }

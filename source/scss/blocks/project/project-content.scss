@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-content: flex-end;
-  gap: 6.6%;
+  gap: 10%;
 }
 
 .project-content__link-back {
@@ -142,6 +142,6 @@
 }
 
 .project-content--project2 {
-  padding: 0 16px;
+
   background: linear-gradient(180deg, $_white 43%, $_white 43%);
 }
