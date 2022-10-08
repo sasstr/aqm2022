@@ -1,12 +1,17 @@
-.project-slider {
+.project-2-slider {
   position: relative;
   padding: 0 16px 0;
-  background: linear-gradient(180deg, rgba(0,49,55,1) 50%, rgba(225,241,227,1) 50%);
+  background: linear-gradient(180deg, rgba(0,49,55,1) 50%, rgba(0,49,55,1) 50%);
+
+
+  @include media-tablet {
+    background: linear-gradient(180deg, rgba(0,49,55,1) 50%, rgba(225,241,227,1) 50%);
+  }
 
   @include main-container-padding;
 }
 
-.project-slider__box {
+.project-2-slider__box {
   position: relative;
 
     &:after,
@@ -31,7 +36,7 @@
   }
 }
 
-.project-slider__nav-list {
+.project-2-slider__nav-list {
   @include list-style-reset;
   display: flex;
   gap: 9px;
@@ -43,7 +48,7 @@
   transform: translateX(-50%);
 }
 
-.project-slider__nav-btn {
+.project-2-slider__nav-btn {
   display: block;
   width: 10px;
   height: 10px;
@@ -55,11 +60,11 @@
   background-image: url("../img/project-slider-point.svg");
 }
 
-.project-slider__nav-btn--active {
+.project-2-slider__nav-btn--active {
   background-image: url("../img/project-slider-active-point.svg");
 }
 
-.project-slider__picture {
+.project-2-slider__picture {
   position: relative;
 
   &:after,
@@ -82,7 +87,7 @@
   }
 }
 
-.project-slider__image {
+.project-2-slider__image {
   display: block;
 }
 

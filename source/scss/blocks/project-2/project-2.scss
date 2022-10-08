@@ -1,65 +1,130 @@
-.project {
+.project-2 {
   background-color: $_main_dark;
 }
 
-.project__container {
+.project-2__container {
   @include main-container-padding;
 }
 
-.project__title {
+.project-2__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  padding: 125px 0 60px;
+
+  @include media-tablet {
+    padding: 125px 0 75px;
+  }
+
+  @include media-desktop {
+    padding: 145px 0 55px;
+  }
+
+  @include media-desktop-wide {
+    padding-bottom: 75px;
+  }
+}
+
+.project-2__title {
   margin: 0;
-  padding: 16px 0 18px;
+  padding-bottom: 43px;
 
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
-  line-height: 69px;
+  font-size: 32px;
+  line-height: 43px;
   letter-spacing: -1px;
   color: $_main_light;
 
   background-color: $_main_dark;
 
   @include media-tablet {
-    padding: 54px 0 70px;
+    padding-bottom: 100px;
 
-    font-size: 40px;
-    letter-spacing: -2px;
+    font-size: 65px;
+    line-height: 69px;
+    letter-spacing: -3px;
 
   }
 
   @include media-desktop {
-    padding: 105px 0 44px;
+    padding-bottom: 145px;
 
-    font-size: 55px;
-    letter-spacing: -3px;
-  }
-
-  @include media-desktop-wide {
-    padding-top: 90px;
+    font-size: 96px;
+    line-height: 100px;
+    letter-spacing: -5px;
   }
 }
 
-.project__box-info {
-  border-top: 2px solid rgba(225, 241, 227, 0.6);
-  padding-bottom: 53px;
-  padding-top: 53px;
+.project-2__container-picture {
 
   @include media-tablet {
     display: flex;
-    flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
 
-    padding-top: 40px;
+  width: 100%;
   }
 
   @include media-desktop {
-    padding-top: 90px;
-    padding-bottom: 66px;
+    gap: 85px;
+  }
+
+  @include media-desktop-wide {
+    gap: 104px;
   }
 }
 
-.project__info {
+.banner-project-2__image--left {
+  display: block;
+}
+
+.project-2__image-right {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+    margin-top: -180px;
+  }
+
+  @include media-desktop {
+    margin-top: -250px;
+  }
+
+  @include media-desktop-wide {
+    margin-top: -265px;
+  }
+}
+
+.project-2__banner-picture {
+  display: block;
+}
+
+.project-2__box-info {
+  border-top: 2px solid rgba(225, 241, 227, 0.6);
+  padding: 53px 0 68px;
+
+  @include media-tablet {
+    padding: 44px 0px 60px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include media-desktop {
+    padding: 68px 0px 85px;
+  }
+
+  @include media-desktop-wide {
+    padding: 110px 0px 130px;
+  }
+}
+
+.project-2__info {
   margin: 0;
+  margin-bottom: 31px;
   padding: 0;
 
   display: flex;
@@ -69,6 +134,7 @@
   color: $_main_light;
 
   @include media-tablet {
+    margin-bottom: 60px;
     width: 60%;
   }
 
@@ -77,11 +143,11 @@
   }
 }
 
-.project__feature-box {
+.project-2__feature-box {
   width: 45%;
 
   @include media-desktop {
-    width: 30%;
+    width: 23%;
   }
 }
 
@@ -91,7 +157,7 @@
   }
 }
 
-.project__item-info {
+.project-2__item-info {
   margin: 0;
   padding: 0;
 
@@ -112,7 +178,7 @@
   }
 }
 
-.project__feature {
+.project-2__feature {
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -130,7 +196,7 @@
   }
 }
 
-.project__list-of-works {
+.project-2__list-of-works {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -138,9 +204,22 @@
   padding-bottom: 53px;
 
   color: $_main_light;
+
+  @include media-tablet {
+    gap: 6px;
+    padding-bottom: 110px;
+  }
+
+  @include media-desktop {
+    padding-bottom: 34px;
+  }
+
+  @include media-desktop-wide {
+    padding-bottom: 43px;
+  }
 }
 
-.project__item-of-works {
+.project-2__item-of-works {
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -158,27 +237,30 @@
   }
 }
 
-.project__text-box {
-  padding: 84px 0 86px;
+.project-2__text-box {
+  width: 100%;
+  padding: 56px 0 0;
 
   border-top: 2px solid rgba(225, 241, 227, 0.6);
 
   @include media-tablet {
-    padding: 46px 0;
+    display: flex;
+    gap: 80px;
+    padding: 60px 0 0;
   }
 
   @include media-desktop {
     display: flex;
 
-    padding: 93px 0 117px;
+    padding: 68px 0 0;
   }
 
   @include media-desktop-wide {
-    padding: 44px 0 197px;
+    padding: 110px 0 0;
   }
 }
 
-.project__text {
+.project-2__text {
   margin: 0;
   padding: 0;
 
@@ -186,34 +268,44 @@
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 149%;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.project__text--small {
+.project-2__text--small {
   padding: 0 35px 33px 0;
 
   @include media-tablet {
-    width: 315px;
+    width: 210px;
+  }
+
+  @include media-desktop {
+    width: 312px;
   }
 }
 
-.project__text--large {
+.project-2__text--large {
   font-weight: 300;
   font-size: 22px;
-  line-height: 140%;
+  line-height: 128%;
   letter-spacing: -1px;
   color: $_white;
 
   @include media-tablet {
-    width: 600px;
+    width: 415px;
     margin-left: auto;
 
     font-size: 28px;
     line-height: 128%;
   }
-}
 
-.project__info--project2 {
-  padding: 60px 0 0;
+  @include media-desktop {
+    width: 565px;
+
+    font-size: 32px;
+  }
+
+  @include media-desktop-wide {
+    width: 705px;
+  }
 }
