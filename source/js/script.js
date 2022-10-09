@@ -6,7 +6,24 @@ document.head.appendChild(jQueryScript);
 const navigation = document.querySelector('.navigation');
 const btnHeaderMenu = document.querySelector('.header__toggle');
 const burgerMenu = document.querySelector('.burger-menu');
-const burgerMenuClose = document.querySelector('.burger-menu-close')
+const burgerMenuClose = document.querySelector('.burger-menu-close');
+const workList = document.querySelector('.work__list');
+const workItems = workList.querySelectorAll('.work__item');
+
+const isMouseOnElement= function (e) {
+  if(e.target.classList.contains('work__item')) {
+    workItems.forEach(it => it.style.opacity = 0.5)
+    e.target.style.opacity = 1;
+  }
+};
+
+const isMouseOutOnElement = function () {
+  workItems.forEach(it => it.style.opacity = 1)
+};
+
+workList.addEventListener('mouseover', isMouseOnElement);
+
+workList.addEventListener('mouseout', isMouseOutOnElement);
 
 const onKeyupEsc = function (evt) {
   if (evt.keyCode == 27){
