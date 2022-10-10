@@ -2,21 +2,25 @@
   background-color: $_main_dark;
 }
 
-.about-us__container {
-  position: relative;
-  padding: 105px 16px 198px;
+// .about-us__container {
+//   position: relative;
+//   padding: 105px 16px 198px;
 
-  background-color: $_main_dark;
-  @include media-desktop-wide  {
-    padding-left:108px;
-  }
+//   @include media-desktop-wide  {
+//     padding-left:108px;
+//   }
+// }
+
+.about-us__container {
+  @include main-container-padding;
 }
 
 .about-us__title {
   box-sizing: border-box;
   position: relative;
-  padding: 0 40px 40px 16px;
+  padding-block: 105px 40px;
   margin: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -28,8 +32,7 @@
   @include media-tablet  {
     font-size: 75px;
     line-height: 78px;
-    padding-bottom:80px;
-    padding-left:32px;
+    padding: 137px 0 72px;
     letter-spacing: -5px;
   }
   @include media-desktop  {
@@ -52,8 +55,12 @@
 
 .about-us__content {
   position: relative;
+
+  margin-block: 0;
   margin-left: 2vw;
   margin-right: 35px;
+  padding-bottom: 200px;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 300;
@@ -61,12 +68,12 @@
   line-height: 24px;
   color: $_main_light;
 
-
   @include media-tablet  {
     font-size: 28px;
     line-height: 128%;
     width:538px;
     margin-left:24vw;
+    padding-bottom: 250px;
   }
   @include media-desktop  {
     font-size: 32px;
@@ -89,24 +96,27 @@
     background-repeat:no-repeat;
     bottom: -40px;
     background-size: min(200vw, 900px) min(200vw,900px);
-     @include media-tablet  {
+
+      @include media-tablet  {
       bottom:-80px;
       right:-30px;
       width:877px;
       height:877px;
       background-size:cover;
-     }
-     @include media-desktop  {
+    }
+
+    @include media-desktop  {
       bottom:-80px;
       right:-30px;
       width:1329px;
       height:1329px;
       background-size:cover;
-     }
-     @include media-desktop-wide  {
+    }
+
+    @include media-desktop-wide  {
       bottom:-80px;
       right:-100px;
-     }
+    }
   }
 }
 
