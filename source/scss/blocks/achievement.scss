@@ -7,7 +7,16 @@ background-size:636px 348px;
 }
 
 .achievement__container {
-  padding: 47px 16px 56px;
+  @include main-container-padding;
+  padding-block: 47px 56px;
+
+  @include media-tablet {
+    padding-block: 105px 110px;
+  }
+
+  @include media-desktop {
+    padding-block: 105px 130px;
+  }
 
 }
 
@@ -49,16 +58,13 @@ padding: 0;
 }
 
 @include media-tablet {
-.achievement
-{
+.achievement {
   background-size:1059px 580px;
   }
-  .achievement__container
-  {
-    padding: 105px 32px 110px 32px;
+
+  .achievement__amount {
+    font-size:120px;
   }
-  .achievement__amount
-  {font-size:120px;}
   .achievement__text
   {font-size: 22px;
     line-height: 88%;
@@ -70,10 +76,7 @@ padding: 0;
 {
   background-size:1729px 945px;
   }
-  .achievement__container
-  {
-    padding: 105px 50px 130px 50px;
-  }
+
   .achievement__amount
   {font-size: 140px;}
   .achievement__text

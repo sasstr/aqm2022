@@ -3,7 +3,12 @@
 }
 
 .magazine__container {
-  padding: 72px 16px 147px;
+  @include main-container-padding;
+  padding-block: 72px 147px;
+
+  @include media-tablet {
+    padding-block: 127px 166px;
+  }
 }
 
 .magazine__title {

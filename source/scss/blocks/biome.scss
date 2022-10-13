@@ -27,7 +27,22 @@
 
 .biome__container--down {
   min-height: 572px;
-  padding: 135px 16px 195px;
+  @include main-container-padding;
+  padding-block: 135px 88px;
+
+  @include media-tablet {
+    padding-block: 164px 93px;
+  }
+
+  @include media-desktop {
+    min-height: 537px;
+    padding-block: 238px 116px;
+  }
+
+  @include media-desktop-wide {
+    min-height: 500px;
+    padding-block: 226px 91px;
+  }
 }
 
 .biome__title {
@@ -52,6 +67,10 @@
   @include media-desktop {
     font-size: 64px;
     line-height: 77px;
+  }
+
+  @include media-desktop-wide {
+    width: 1016px;
   }
 }
 
@@ -96,15 +115,25 @@
     width: 984px;
     height: 587px;
     left:calc(50% - 492px);
-    bottom: -115px;
+    bottom: -155px;
   }
 
   @include media-desktop-wide {
     width: 1222px;
     height: 730px;
     left:calc(50% - 611px);
-    bottom: -115px;
+    bottom: -175px;
   }
+}
+
+.biome__content-box {
+
+  @include media-desktop {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
 }
 
 .biome__text {
@@ -117,4 +146,19 @@
   line-height: 140%;
   color: $_main_light;
   letter-spacing: -1px;
+
+  @include media-tablet {
+    padding: 0 0 73px;
+
+    font-size: 32px;
+    line-height: 128%;
+  }
+
+  @include media-desktop {
+    width: 704px;
+  }
+}
+
+.biome__button {
+  display: block;
 }
