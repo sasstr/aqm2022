@@ -23,6 +23,12 @@
   }
 }
 
+.work__container--services {
+  @include media-desktop {
+    padding-block: 152px 57px;
+  }
+}
+
 .work__slogan {
   position: relative;
   margin: 0;
@@ -104,13 +110,6 @@
 };
 
 @include media-desktop {
-  .work__container {
-    display: grid;
-    justify-items: start;
-    grid-template-columns: 2fr 1fr;
-  }
-
-
   .work__list {
     columns: 2;
     grid-column: 1 / 3;
