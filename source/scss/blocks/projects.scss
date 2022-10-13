@@ -36,6 +36,17 @@
   line-height: 69px;
   color: $_secondary_black;
   letter-spacing: -2px;
+
+  @include media-tablet  {
+    font-size: 50px;
+    line-height: 69px;
+    letter-spacing: -3px;
+  }
+
+  @include media-desktop {
+    font-size: 55px;
+    line-height: 69px;
+  }
 }
 
 .projects__container {
@@ -71,8 +82,7 @@
   visibility:hidden;
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .card__link:hover .card__button {

@@ -38,6 +38,10 @@
     min-width: $desktop-wide;
     max-width: $desktop-wide-container-max;
   }
+
+  @include media-desktop-extra-wide {
+    padding: 49px 348px 30px;
+  }
 }
 
 .header__logo {

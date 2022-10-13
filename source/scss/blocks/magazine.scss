@@ -14,13 +14,23 @@
 .magazine__title {
   margin: 0 0 69px;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
   font-size: 35px;
   line-height: 69px;
   color: $_secondary_black;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
+
+  @include media-tablet {
+    font-size: 50px;
+    letter-spacing: -3px;
+  }
+
+  @include media-desktop {
+    font-size: 55px;
+  }
 }
 
 .magazine__list {
@@ -52,6 +62,14 @@
   font-size: 18px;
   line-height: 135%;
   color: $_secondary_black;
+  letter-spacing: -0.5px;
+
+  @include media-tablet {
+    width: 575px;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: -1px;
+  }
 }
 
 .magazine__link {
@@ -74,5 +92,19 @@
     background-image: url('../img/download_sign.svg');
     background-repeat: no-repeat;
     background-size: 13px 15px;
+  }
+
+  @include media-tablet {
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+
+    &::before {
+      right: -5px;
+      top: 8px;
+      width: 20px;
+      height: 23px;
+      background-image: url('../img/download_sign-tablet.svg');
+    }
   }
 }
