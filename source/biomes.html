@@ -17,26 +17,26 @@
           <img src="./img/logo.svg" alt="Logo Aquamarine">
         </a>
       </div>
-      <ul class="header__lang lang">
+      <div class="header__lang lang">
+        <a class="lang__link lang__link--active" href="#" hreflang="en">English</a>
+        <ul class="lang__list">
         <li>
-          <a class="lang__link" href="#">English</a>
+          <a class="lang__link" href="#" hreflang="ru">Russian</a>
         </li>
         <li>
-          <a class="lang__link" href="#">Russian</a>
+          <a class="lang__link" href="#" hreflang="es">Española</a>
         </li>
         <li>
-          <a class="lang__link" href="#">Española</a>
+          <a class="lang__link" href="#" hreflang="ko">한국어</a>
         </li>
         <li>
-          <a class="lang__link" href="#">한국어</a>
+          <a class="lang__link" href="#" hreflang="ar">عربى</a>
         </li>
         <li>
-          <a class="lang__link" href="#">عربى</a>
-        </li>
-        <li>
-          <a class="lang__link" href="#">中文</a>
+          <a class="lang__link" href="#" hreflang="zh" >中文</a>
         </li>
       </ul>
+      </div>
       <nav class="header__navigation navigation hidden">
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -154,8 +154,11 @@
   <footer class="footer">
     <div class="main__wrapper footer__container">
         <div class="footer__logo">
-          <a href="/">
-            <img loading="lazy" src="./img/aqm_logo_footer.svg" alt="Logo Aquamarine" width="67" height="23">
+          <a class="footer__logo-link" href="/">
+            <picture>
+              <source srcset="./img/aqm_logo_footer-tablet.svg" media="(min-width: 768px)">
+              <img loading="lazy" src="./img/aqm_logo_footer-mob.svg" alt="Logo Aquamarine" width="67" height="23">
+            </picture>
             </a>
           <span class="footer__copyright">© 2022 Aquamarine. All Rights Reserved</span>
         </div>

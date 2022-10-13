@@ -5,38 +5,73 @@
 .biome__container--up {
   position: relative;
   min-height: 470px;
-  padding: 48px 16px 290px;
+  @include main-container-padding;
+  padding-block: 48px 290px;
   z-index: 5;
 
   @include media-tablet {
     min-height: 550px;
+    padding-block: 78px 460px;
   }
 
   @include media-desktop {
     min-height: 650px;
+    padding-block: 58px 480px;
   }
 
   @include media-desktop-wide {
     min-height: 800px;
+    padding-block: 58px 590px;
   }
 }
 
 .biome__container--down {
   min-height: 572px;
-  padding: 135px 16px 195px;
+  @include main-container-padding;
+  padding-block: 135px 88px;
+
+  @include media-tablet {
+    padding-block: 164px 93px;
+  }
+
+  @include media-desktop {
+    min-height: 537px;
+    padding-block: 238px 116px;
+  }
+
+  @include media-desktop-wide {
+    min-height: 500px;
+    padding-block: 226px 91px;
+  }
 }
 
 .biome__title {
   margin: 0;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 44px;
   color: $_main_dark;
-  z-index: 5;
   letter-spacing: -3px;
+
+  z-index: 5;
+
+  @include media-tablet {
+    font-size: 48px;
+    line-height: 63px;
+  }
+
+  @include media-desktop {
+    font-size: 64px;
+    line-height: 77px;
+  }
+
+  @include media-desktop-wide {
+    width: 1016px;
+  }
 }
 
 .biome__wrapper {
@@ -80,15 +115,25 @@
     width: 984px;
     height: 587px;
     left:calc(50% - 492px);
-    bottom: -115px;
+    bottom: -155px;
   }
 
   @include media-desktop-wide {
     width: 1222px;
     height: 730px;
     left:calc(50% - 611px);
-    bottom: -115px;
+    bottom: -175px;
   }
+}
+
+.biome__content-box {
+
+  @include media-desktop {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
 }
 
 .biome__text {
@@ -101,4 +146,19 @@
   line-height: 140%;
   color: $_main_light;
   letter-spacing: -1px;
+
+  @include media-tablet {
+    padding: 0 0 73px;
+
+    font-size: 32px;
+    line-height: 128%;
+  }
+
+  @include media-desktop {
+    width: 704px;
+  }
+}
+
+.biome__button {
+  display: block;
 }

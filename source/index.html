@@ -68,24 +68,24 @@
           <img src="./img/logo.svg" alt="Logo Aquamarine">
         </div>
         <div class="header__lang lang">
-          <a class="lang__link lang__link--active" href="#">English</a>
+          <a class="lang__link lang__link--active" href="#" hreflang="en">English</a>
           <ul class="lang__list">
-            <li>
-              <a class="lang__link" href="#">Russian</a>
-            </li>
-            <li>
-              <a class="lang__link" href="#">Española</a>
-            </li>
-            <li>
-              <a class="lang__link" href="#">한국어</a>
-            </li>
-            <li>
-              <a class="lang__link" href="#">عربى</a>
-            </li>
-            <li>
-              <a class="lang__link" href="#">中文</a>
-            </li>
-          </ul>
+          <li>
+            <a class="lang__link" href="#" hreflang="ru">Russian</a>
+          </li>
+          <li>
+            <a class="lang__link" href="#" hreflang="es">Española</a>
+          </li>
+          <li>
+            <a class="lang__link" href="#" hreflang="ko">한국어</a>
+          </li>
+          <li>
+            <a class="lang__link" href="#" hreflang="ar">عربى</a>
+          </li>
+          <li>
+            <a class="lang__link" href="#" hreflang="zh" >中文</a>
+          </li>
+        </ul>
         </div>
 
         <nav class="header__navigation navigation hidden">
@@ -127,19 +127,23 @@
     <main class="main">
 
       <div class="main__container">
-        <div class="main__wrapper">
-          <div class="main__banner">
-            <img loading="lazy" class="main__image" src="./img/video_mock.jpg" alt="Video">
+        <div class="main__banner">
+          <picture>
+            <source srcset="./img/video_mock-desktop-extra-wide-1x.jpg" media="(min-width: 1920px)">
+            <source srcset="./img/video_mock-desktop-wide-1x.jpg" media="(min-width: 1440px)">
+            <source srcset="./img/video_mock-desktop-1x.jpg" media="(min-width: 1024px)">
+            <source srcset="./img/video_mock-tablet-1x.jpg" media="(min-width: 768px)">
+            <img class="main__image" src="./img/video_mock-mob-1x.jpg" alt="Video">
+          </picture>
 
-            <svg class="main__play-sing" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4993 45C34.9253 45 44.9986 34.9264 44.9986 22.5C44.9986 10.0736 34.9253 0 22.4993 0C10.0733 0 0 10.0736 0 22.5C0 34.9264 10.0733 45 22.4993 45ZM16.9464 31.6081L32.7251 22.498L16.9464 13.3879V31.6081Z" fill="#FAB38E"/>
-            </svg>
-          </div>
+
+          <svg class="main__play-sing" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4993 45C34.9253 45 44.9986 34.9264 44.9986 22.5C44.9986 10.0736 34.9253 0 22.4993 0C10.0733 0 0 10.0736 0 22.5C0 34.9264 10.0733 45 22.4993 45ZM16.9464 31.6081L32.7251 22.498L16.9464 13.3879V31.6081Z" fill="#FAB38E"/>
+          </svg>
         </div>
       </div>
       <section class="about-us">
-
-        <div class='main__wrapper'>
+        <div class='main__wrapper about-us__container'>
           <h1 class="about-us__title">Aquamarine <br/>– a design ecosystem</h1>
           <p class="about-us__content">Our forte is creating sustainable developments that are unique to location and context. Designed to let us work anywhere and achieve anything, our flexible approach is focused on delivering solutions and outcomes, not pigeon-holing our offering or services. Whatever is needed, we can provide the specialists to make it happen.</p>
         </div>
@@ -200,7 +204,7 @@
             <li class="work__item">Construction - specialist & building</li>
             <li class="work__item">Creative direction</li>
             <li class="work__item">Exhibit design</li>
-            <li class="work__item">Feasibility assessment</li>
+            <li class="work__item work__item--no-border-bottom">Feasibility assessment</li>
             <li class="work__item">General management consulting</li>
             <li class="work__item">Interior design</li>
             <li class="work__item">Operational design & strategy</li>
@@ -249,9 +253,9 @@
           </div>
         </div>
         <div class="main__wrapper biome__container biome__container--down">
-          <div>
+          <div class="biome__content-box">
             <p class="biome__text">Aquamarine’s ‘Biome’ concept offers a new take on entertainment destination design that enhances guest experiences and offers a more sustainable future for the industry.</p>
-            <a class="button" href="#">&rdsh; Learn more</a>
+            <a class="button biome__button" href="#">&rdsh; Learn more</a>
           </div>
         </div>
       </section>
@@ -284,9 +288,14 @@
       </section>
       <section class="client">
         <div class="main__wrapper client__container">
-          <h2 class="client__title">Partners and clients</h2>
-          <p class="client__text">We work with people and companies sharing our values and aiming to improve the world, environment and society we live in.</p>
+          <div class="client__content-box">
+            <h2 class="client__title">Partners and clients</h2>
+            <p class="client__text">We work with people and companies sharing our values and aiming to improve the world, environment and society we live in.</p>
+          </div>
           <div class="client__image-wrapper">
+            <img loading="lazy" class="client__image" src="./img/partner_logo_1.png" alt="logo_1">
+            <img loading="lazy" class="client__image" src="./img/partner_logo_2.png" alt="logo_2">
+            <img loading="lazy" class="client__image" src="./img/partner_logo_3.png" alt="logo_3">
             <img loading="lazy" class="client__image" src="./img/partner_logo_1.png" alt="logo_1">
             <img loading="lazy" class="client__image" src="./img/partner_logo_2.png" alt="logo_2">
             <img loading="lazy" class="client__image" src="./img/partner_logo_3.png" alt="logo_3">
@@ -378,8 +387,11 @@
     <footer class="footer">
       <div class="main__wrapper footer__container">
         <div class="footer__logo">
-          <a>
-            <img loading="lazy" src="./img/aqm_logo_footer.svg" alt="Logo Aquamarine" width="67" height="23">
+          <a class="footer__logo-link">
+            <picture>
+              <source srcset="./img/aqm_logo_footer-tablet.svg" media="(min-width: 768px)">
+              <img loading="lazy" src="./img/aqm_logo_footer-mob.svg" alt="Logo Aquamarine" width="67" height="23">
+            </picture>
           </a>
           <span class="footer__copyright">© 2022 Aquamarine. All Rights Reserved</span>
         </div>

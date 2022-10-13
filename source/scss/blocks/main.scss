@@ -33,6 +33,10 @@
 .main__banner {
   position: relative;
   z-index: 5;
+
+  @include media-desktop {
+    background: linear-gradient(180deg, rgba(0, 49, 55, 0.4) 0%, rgba(0, 49, 55, 0) 90.32%);
+  }
 }
 
 .main__banner-picture {
@@ -61,7 +65,7 @@
       height:130px;
   }
       @include media-desktop-wide {
-       display:none;
+      display:none;
   }
 
 }

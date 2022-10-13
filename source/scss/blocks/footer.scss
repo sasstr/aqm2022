@@ -7,12 +7,21 @@
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
-  padding: 32px 96px 50px 16px;
+  min-height: 250px;
+  margin: 0 auto;
+
+  @include main-container-padding;
+  padding-block: 32px 27px;
+
+  @include media-tablet {
+    justify-content: unset;
+    padding-block: 81px 57px;
+  }
 }
 
 .footer__copyright {
   position: absolute;
-  bottom: 17px;
+  bottom: 25px;
   left: 16px;
   display: block;
   font-family: $_f__common;
@@ -21,12 +30,37 @@
   font-size: 14px;
   line-height: 17px;
   color: $_main_light;
+
+  @include media-tablet {
+    position: static;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .footer__logo {
   display: flex;
   width: 100%;
   margin-right: auto;
+
+  @include media-tablet {
+    flex-direction: column;
+    gap: 11px;
+    width: 150px;
+    margin-right: 0 auto;
+  }
+}
+
+.footer__logo-link {
+  width: 88px;
+  height: 30px;
+}
+
+.footer__address {
+  @include media-tablet {
+    margin-right: 73px;
+  }
 }
 
 .footer__address-title {

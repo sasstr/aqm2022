@@ -1,15 +1,28 @@
 .projects {
   position:relative;
-  padding: 53px 4.4% 90px;
+  @include main-container-padding;
+  padding-block: 53px 90px;
   background:$_white;
+
+  @include media-tablet  {
+    padding-block: 95px 117px;
+  }
+
+  @include media-desktop {
+    padding-block: 95px 134px;
+  }
+
+  @include media-desktop-wide {
+    padding-block: 115px 160px;
+  }
 }
 
-@include media-tablet  {
+  @include media-tablet  {
   .projects__box {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
 }
 
@@ -23,6 +36,17 @@
   line-height: 69px;
   color: $_secondary_black;
   letter-spacing: -2px;
+
+  @include media-tablet  {
+    font-size: 50px;
+    line-height: 69px;
+    letter-spacing: -3px;
+  }
+
+  @include media-desktop {
+    font-size: 55px;
+    line-height: 69px;
+  }
 }
 
 .projects__container {
@@ -58,8 +82,7 @@
   visibility:hidden;
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .card__link:hover .card__button {
