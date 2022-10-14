@@ -1,14 +1,21 @@
 .works {
+  padding-top: 80px;
   background: $_main_light;
+
+  @include media-tablet {
+    padding-top: 100px;
+  }
 }
 
 .works__container {
-  padding: 81px 16px 0;
+  @include main-container-padding;
+  padding-block: 81px 0px;
 }
 
 .works__title {
   margin: 0;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -16,4 +23,13 @@
   line-height: 69px;
   letter-spacing: -2px;
   color: $_main_dark;
+
+  @include media-tablet {
+    font-size: 50px;
+    letter-spacing: -3px;
+  }
+
+  @include media-desktop {
+    font-size: 55px;
+  }
 }

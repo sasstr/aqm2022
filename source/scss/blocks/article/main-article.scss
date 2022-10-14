@@ -1,21 +1,13 @@
 .main-article {
   padding: 81px 0 0 0;
+
+  @include media-tablet {
+    padding-top: 100px;
+  }
 }
 
 .main-article__container {
-  padding: 0 16px;
-
-  @include media-tablet {
-    padding: 0 32px;
-  }
-
-  @include media-desktop {
-    padding: 0 20px;
-  }
-
-  @include media-desktop-wide {
-    padding: 0 108px;
-  }
+  @include main-container-padding;
 }
 
 .main-article__box--up {

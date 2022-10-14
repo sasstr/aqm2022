@@ -1,5 +1,10 @@
 .articles {
+  padding-top: 80px;
   background: #E1F1E3;
+
+  @include media-tablet  {
+    padding-top: 100px;
+  }
 }
 
 .articles__container {

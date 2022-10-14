@@ -1,12 +1,14 @@
 .contacts {
+  padding-top: 80px;
   position: relative;
+
   overflow: hidden;
   background-color: $_main_dark;
 }
 
 .contacts__container {
   @include main-container-padding;
-  padding-block: 50px 0px;
+  padding-block: 0;
 
   &::before {
     position: absolute;
@@ -53,7 +55,7 @@
 .contacts__box {
 display: flex;
 justify-content: space-between;
-margin-bottom: 59px;
+margin-bottom: 60px;
 letter-spacing: -0.5px;
 }
 

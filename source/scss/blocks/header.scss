@@ -4,11 +4,19 @@
   top:0px;
   z-index:1000;
   width:100%;
-  height:81px;
+  height: 81px;
+
+  @include media-tablet {
+    height: 100px;
+  }
 
     @include media-desktop  {
       background:linear-gradient(180deg, rgba(0, 49, 55, 0.4) 0%, rgba(0, 49, 55, 0) 90.32%);
   }
+}
+
+.header--green {
+  background: linear-gradient(180deg, rgba(0, 49, 55, 0.81) 0%, $_main_dark 100%);
 }
 
 .header__wrapper {
@@ -20,7 +28,7 @@
   margin: 0 auto;
   padding: 30px 16px;
 
-  @include media-tablet  {
+  @include media-tablet {
     height: 100px;
     padding: 41px 32px;
     min-width: $tablet;
