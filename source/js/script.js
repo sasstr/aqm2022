@@ -72,19 +72,19 @@ document.addEventListener('keyup', onKeyupEsc);
 btnHeaderMenu.addEventListener('click', onClickBtnHeaderMenu);
 
 function defer(){
-   if ( window.jQuery){
+  if ( window.jQuery){
 
       $("section, .footer,  .projects__card, .projects__title").not('.main__wrapper.projects').css('opacity','0');
       $(window).scroll(function() {OnWinScroll()});
       OnWinScroll();
-   }
-   else{window.setTimeout("defer();",100);}
+  }
+  else{window.setTimeout("defer();",100);}
 }
 defer();
 
 function OnWinScroll()
 {
- $("section, .footer,  .projects__card, .projects__title").not('main__wrapper.projects').each(function(){if(onmyscreen($(this)))
+  $("section, .footer,  .projects__card, .projects__title").not('main__wrapper.projects').each(function(){if(onmyscreen($(this)))
   MyShow($(this));})
 }
 function MyShow(el)
