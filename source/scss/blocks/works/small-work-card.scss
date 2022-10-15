@@ -62,16 +62,16 @@
 }
 
 .small-work-card__button {
-  background: transparent;
-  position: absolute;
-  top: calc(50% - 25px);
-  z-index: 100;
-  border: 1px solid $_white;
-  cursor: pointer;
-  // visibility: hidden;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
+    background: transparent;
+    position: absolute;
+    top: calc(50% - 25px);
+    z-index: 100;
+    border: 1px solid $_white;
+    cursor: pointer;
+    // visibility: hidden;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
 }
 
 .small-work-card__link:hover .small-work-card__button {

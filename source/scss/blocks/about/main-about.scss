@@ -2,20 +2,47 @@
   margin: 0;
   padding: 80px 0 0;
   background-color: $_main_dark;
-  background-image: url("data:image/svg+xml,%3Csvg fill='%23F3F1D8' stroke='%23F3F1D8' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0 0 26 26'%3E%3Cg stroke-width='0.1' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' stroke-width='0.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
-  background-repeat:no-repeat;
-  background-position: top 0px right 23px;
-  background-size:440px auto;
+
+  @include media-desktop {
+    width: 50%;
+  }
+}
+
+.main-about__box {
+  @include media-desktop {
+    display: flex;
+  }
 }
 
 .main-about__container {
+  position: relative;
+  @include main-container-padding;
 
-  padding: 0 16px 0;
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: -80px;
+    width: 440px;
+    height: 440px;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23F3F1D8' stroke='%23F3F1D8' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0 0 26 26'%3E%3Cg stroke-width='0.1' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' stroke-width='0.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat:no-repeat;
+    background-position: top -20px left -93px;
+    background-size:440px auto;
+    z-index: 5;
+
+    @include media-tablet {
+      width: 100%;
+      background-size:800px auto;
+      background-position: top -250px left -70px;
+    }
+  }
 }
 
 .main-about__title {
+  position: relative;
   margin: 0;
-  padding: 56px 0 0;
+  padding-block: 56px 0;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -23,12 +50,22 @@
   line-height: 69px;
   letter-spacing: -2px;
   color: $_secondary_dark;
+
+  z-index: 10;
+
+  @include media-tablet {
+    padding: 71px 0 46px 30px;
+
+    font-size: 55px;
+    letter-spacing: -3px;
+  }
 }
 
 .main-about__text {
+  position: relative;
   width: 262px;
   margin: 0;
-  padding: 0 0 71px 0;
+  padding: 0 0 71px 16px;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -36,4 +73,16 @@
   line-height: 24px;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  z-index: 10;
+
+  @include media-tablet {
+    width: 630px;
+    padding: 0 0 95px 184px;
+
+
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+  }
 }

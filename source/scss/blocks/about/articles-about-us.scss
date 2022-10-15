@@ -1,5 +1,9 @@
 .articles-about-us {
   background-color: $_main_dark;
+
+  @include media-desktop {
+    width: 50%;
+  }
 }
 
 .articles-about-us__container {
