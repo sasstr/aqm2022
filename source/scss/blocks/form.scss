@@ -25,25 +25,39 @@
 
 .form__input {
   width: 100%;
-  padding: 0;
+  padding: 0 5px 0 5px;
 
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 40px;
-  color: $_main_light;
+  line-height: 58px;
+  color: $_white;
   letter-spacing: -1px;
 
   background-color: transparent;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border: none;
   border-bottom: 1px solid $_font_grass;
 
   @include media-tablet {
     font-size: 20px;
     line-height: 69px;
+  }
+}
+
+.form__textarea::placeholder,
+.form__input::placeholder {
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 69px;
+  letter-spacing: -1px;
+  color: $_main_light;
+  opacity: 0.4;
+
+  @include media-tablet {
+    font-size: 20px;
   }
 }
 
@@ -68,7 +82,7 @@
 }
 
 .form__textarea {
-  padding: 0;
+  padding: 0 5px 0 5px;
   max-height: 420px;
   width: 100%;
 
@@ -77,13 +91,11 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 40px;
-  color: $_main_light;
+  color: $_white;
   letter-spacing: -1px;
 
   background-color: $_main_dark;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border: none;
   border-bottom: 1px solid $_font_grass;
   resize: vertical;
 
