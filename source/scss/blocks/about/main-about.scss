@@ -36,6 +36,11 @@
       background-size:800px auto;
       background-position: top -250px left -70px;
     }
+
+    @include media-desktop {
+      left: -30px;
+      background-size:830px 820px;
+    }
   }
 }
 
@@ -80,9 +85,14 @@
     width: 630px;
     padding: 0 0 95px 184px;
 
-
     font-size: 24px;
     line-height: 140%;
     letter-spacing: -1px;
+  }
+
+  @include media-desktop {
+    width: 100%;
+    padding-inline: 60px;
+    padding-bottom: 75px;
   }
 }

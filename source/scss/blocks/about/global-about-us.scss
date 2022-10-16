@@ -4,7 +4,20 @@
 }
 
 .global-about-us__container {
-  padding: 31px 16px 73px;
+  @include main-container-padding;
+  padding-block: 31px 73px;
+}
+
+.global-about-us__content-box {
+  @include media-desktop {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 95px 68px;
+  }
+
+  @include media-desktop {
+    padding-block: 75px 95px;
+  }
 }
 
 .global-about-us__title {
@@ -13,10 +26,19 @@
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 35px;
   line-height: 69px;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
   color: $_main_light;
+
+  @include media-tablet {
+    font-size: 50px;
+    letter-spacing: -2px;
+  }
+
+  @include media-desktop {
+    font-size: 55px;
+  }
 }
 
 .global-about-us__text {
@@ -29,6 +51,16 @@
   line-height: 24px;
   letter-spacing: -0.5px;
   color: $_main_light;
+
+  @include media-tablet {
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+  }
+
+  @include media-desktop {
+    width: 480px;
+  }
 }
 
 .global-about-us__located {
@@ -41,11 +73,46 @@
   line-height: 24px;
   letter-spacing: -0.5px;
   color: $_main_light;
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.global-about-us__map {
+  display: block;
+  margin: 0 auto;
+
+  @include media-tablet {
+    width: 704px;
+    height: 386px;
+    background-image: url(../img/about_map-tablet.svg);
+    background-repeat: no-repeat;
+    background-size: 704px 386px;
+  }
+
+  @include media-desktop {
+    width: 984px;
+    height: 539px;
+    background-image: url(../img/about_map-desktop.svg);
+    background-size: 984px 539px;
+  }
+
+  @include media-desktop-wide {
+    width: 1224px;
+    height: 670px;
+    background-image: url(../img/about_map-desktop.svg);
+    background-size: 1224px 670px;
+  }
 }
 
 .global-about-us__list {
   @include list-style-reset;
   margin-bottom: 44px;
+
+  @include media-tablet {
+    display: none;
+  }
 }
 
 .global-about-us__item {
@@ -68,6 +135,11 @@
   line-height: 24px;
   letter-spacing: -0.5px;
   color: $_main_light;
+
+  @include media-tablet {
+    width: 645px;
+    padding-top: 72px;
+  }
 }
 
 .global-about-us__image-box {

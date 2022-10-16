@@ -1,0 +1,36 @@
+.article-about-us__title {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 52px;
+  letter-spacing: -1px;
+  color: $_white;
+
+  @include media-tablet {
+    font-size: 28px;
+  }
+
+  @include media-desktop {
+    font-size: 32px;
+  }
+}
+
+.article-about-us__text {
+  margin: 0;
+  padding: 0;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 138%;
+  letter-spacing: -0.5px;
+  color: $_main_light;
+
+  @include media-desktop {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}

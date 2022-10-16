@@ -11,28 +11,28 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
 
-.article-about-us__title {
-  margin: 0;
-  padding: 0;
-  font-family: $_f__common;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 52px;
-  letter-spacing: -1px;
-  color: $_white;
-}
+  @include media-tablet {
+    padding-inline: 32px;
+  }
 
-.article-about-us__text {
-  margin: 0;
-  padding: 0;
-  font-family: $_f__common;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 138%;
-  letter-spacing: -0.5px;
-  color: $_main_light;
+  @include media-desktop {
+    position: relative;
+    padding-top: 170px;
+    padding-bottom: 0;
+  }
+
+  &::before {
+    @include media-desktop {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 112px;
+      background:
+      linear-gradient(to top, #003137 6.48%, rgba(0, 49, 55, 0.4) 62.62%);
+      // transform: rotate(-90deg);
+    }
+  }
 }
