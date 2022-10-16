@@ -414,23 +414,26 @@
           <form class="contacts__form form" action="#" method="post">
             <p class="form__reason">Ready to discuss your vision?
               We’re ready to make it happen.</p>
-            <div class="form__wrapper">
-              <label class="visually-hidden" for="contact-name">Name</label>
-              <input class="form__input" id="contact-name" type="text" placeholder="Name" required pattern="^[a-zA-Z\s]+$">
-            </div>
-            <div class="form__wrapper">
-              <label class="visually-hidden" for="contact-phone">Phone</label>
-              <input class="form__input" id="contact-phone" type="text" placeholder="Phone" pattern="^[0-9]+$">
-            </div>
-            <div class="form__wrapper">
-              <label class="visually-hidden" for="contact-email">Email</label>
-              <input class="form__input" id="contact-email" type="email" placeholder="Email">
-            </div>
-            <div class="form__wrapper">
-              <label class="visually-hidden" for="contact-textarea">Request</label>
-              <textarea class="form__textarea" id="contact-textarea" name="contact-textarea" cols="33" rows="1" placeholder="Request"></textarea>
-            </div>
-            <button class="form__btn-submit" type="submit">&rdsh; Submit</button>
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">User info</legend>
+              <div class="form__wrapper">
+                <label class="visually-hidden" for="contact-name">Name</label>
+                <input class="form__input" id="contact-name" type="text" placeholder="Name" required pattern="^[a-zA-Z\s]+$">
+              </div>
+              <div class="form__wrapper">
+                <label class="visually-hidden" for="contact-phone">Phone</label>
+                <input class="form__input" id="contact-phone" type="text" placeholder="Phone" pattern="^[0-9]+$">
+              </div>
+              <div class="form__wrapper">
+                <label class="visually-hidden" for="contact-email">Email</label>
+                <input class="form__input" id="contact-email" type="email" placeholder="Email">
+              </div>
+              <div class="form__wrapper">
+                <label class="visually-hidden" for="contact-textarea">Request</label>
+                <textarea class="form__textarea" id="contact-textarea" name="contact-textarea" cols="33" rows="1" placeholder="Request"></textarea>
+              </div>
+              <button class="form__btn-submit" type="submit">&rdsh; Submit</button>
+            </fieldset>
           </form>
         </div>
       </section>
