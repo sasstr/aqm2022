@@ -35,6 +35,10 @@
 
 .magazine__list {
   @include list-style-reset;
+
+  @include media-tablet {
+    width: 70%;
+  }
 }
 
 .magazine__item {
@@ -45,8 +49,16 @@
   border-bottom: 1px solid $_font_grass;
 }
 
-.magazine__item:first-child {
-  border-top: 1px solid $_font_grass;
+// .magazine__item:first-child {
+//   border-top: 1px solid $_font_grass;
+// }
+
+.magazine__item--active {
+  background-color: $_main_light;
+  margin-inline: -35px;
+  padding-inline: 35px;
+  border-top: none;
+  border-bottom: none;
 }
 
 .magazine__item-name,
@@ -55,7 +67,7 @@
 }
 
 .magazine__item-name {
-  width: 230px;
+  width: 60%;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 300;
@@ -65,7 +77,6 @@
   letter-spacing: -0.5px;
 
   @include media-tablet {
-    width: 70%;
     font-size: 24px;
     line-height: 35px;
     letter-spacing: -1px;
