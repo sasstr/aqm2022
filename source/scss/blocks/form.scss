@@ -26,34 +26,83 @@
 .form__input {
   width: 100%;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 40px;
   color: $_main_light;
+  letter-spacing: -1px;
+
   background-color: transparent;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid $_font_grass;
+
+  @include media-tablet {
+    font-size: 20px;
+    line-height: 69px;
+  }
+}
+
+.form__input:invalid {
+  border-bottom: 1px solid $_button_dark;
+}
+
+.form__input:placeholder-shown {
+  border-bottom: 1px solid $_font_grass;
+}
+
+.form__input:focus {
+  outline: 1px solid $_font_grass;
+}
+
+.form__input:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.form__input:focus-visible {
+  outline: 1px solid $_font_grass;
 }
 
 .form__textarea {
   padding: 0;
   max-height: 420px;
+  width: 100%;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 40px;
   color: $_main_light;
+  letter-spacing: -1px;
+
   background-color: $_main_dark;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid $_font_grass;
   resize: vertical;
+
+  @include media-tablet {
+    font-size: 20px;
+    line-height: 69px;
+  }
+}
+
+.form__textarea:focus {
+  outline: 1px solid $_font_grass;
+}
+
+.form__textarea:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.form__textarea:focus-visible {
+  outline: 1px solid #5D9F93;
 }
 
 .form__btn-submit {
@@ -72,4 +121,8 @@
   color: $_white;
   cursor: pointer;
   z-index: 5;
+}
+
+.form__btn-submit:focus-visible {
+  outline: 2px solid #5D9F93;
 }

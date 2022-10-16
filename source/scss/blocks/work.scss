@@ -95,8 +95,13 @@
   letter-spacing: -1px;
 }
 
-.work__item:hpver {
+.work__item:hover {
   cursor: pointer;
+  border-bottom: 1px solid rgba(93, 159, 147, .5);
+
+  &:work__item--no-border-bottom {
+    border-bottom: none;
+  }
 }
 
 .work__item:last-child {
