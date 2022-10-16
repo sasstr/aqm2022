@@ -55,7 +55,7 @@
 }
 
 .magazine__item-name {
-  width: 120px;
+  width: 230px;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 300;
@@ -65,7 +65,7 @@
   letter-spacing: -0.5px;
 
   @include media-tablet {
-    width: 575px;
+    width: 70%;
     font-size: 24px;
     line-height: 35px;
     letter-spacing: -1px;
@@ -107,4 +107,25 @@
       background-image: url('../img/download_sign-tablet.svg');
     }
   }
+}
+
+.magazine__list-box {
+  @include media-tablet {
+    display: flex;
+    gap: 12%;
+  }
+
+}
+
+.magazine__brochure {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+    min-width: 30%;
+  }
+}
+
+.magazine__list-box--biomes {
+  margin-bottom: 200px;
 }
