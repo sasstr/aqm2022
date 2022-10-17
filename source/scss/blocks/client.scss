@@ -78,7 +78,17 @@
   gap: 30px 50px;
 
   @include media-tablet {
+    margin: 0 auto;
     gap: 110px 95px;
+    width: 600px;
+  }
+
+  @include media-desktop {
+    width: 986px;
+  }
+
+  @include media-desktop-wide {
+    width: 1090px;
   }
 }
 
