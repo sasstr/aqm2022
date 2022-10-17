@@ -5,7 +5,6 @@
   gap: 18px;
   padding: 0 0 39px 35px;
   margin: 0 0 0 16px;
-  z-index: 5;
 
   &::before {
     position: absolute;
@@ -43,10 +42,6 @@
     }
 }
 
-.form__wrapper {
-  z-index: 5;
-}
-
 .form__reason {
   margin: 0;
   padding: 0;
@@ -71,6 +66,7 @@
 }
 
 .form__input {
+  position: relative;
   width: 100%;
   padding: 0 5px 0 5px;
 
@@ -85,6 +81,8 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $_font_grass;
+
+  z-index: 5;
 
   @include media-tablet {
     font-size: 20px;
@@ -129,6 +127,7 @@
 }
 
 .form__textarea {
+  position: relative;
   padding: 0 5px 0 5px;
   margin-bottom: 27px;
   min-height: 58px;
@@ -147,6 +146,7 @@
   border: none;
   border-bottom: 1px solid $_font_grass;
   resize: vertical;
+  z-index: 5;
 
   @include media-tablet {
     margin-bottom: 64px;
@@ -168,6 +168,7 @@
 }
 
 .form__btn-submit {
+  position: relative;
   width: 175px;
   padding: 12px 36px;
 
