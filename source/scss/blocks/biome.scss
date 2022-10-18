@@ -128,10 +128,20 @@
 
 .biome__content-box {
 
+  @include media-tablet {
+    width: 704px;
+    margin: 0 auto;
+  }
+
   @include media-desktop {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    width: 984px;
+  }
+
+  @include media-desktop-wide {
+    width: 1223px;
   }
 
 }

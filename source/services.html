@@ -140,21 +140,74 @@
       <section class="magazine">
         <div class="main__wrapper magazine__container">
           <h2 class="magazine__title">Magazines</h2>
-          <ul class="magazine__list">
-            <li class="magazine__item">
-              <span class="magazine__item-name">Seek Insight</span>
-              <span class="magazine__download">
-                <a class="magazine__link" href="#" download>Download</a>
-              </span>
-            </li>
-            <li class="magazine__item">
-              <span class="magazine__item-name">Biomes, the future of entertainment</span>
-              <span class="magazine__download">
-                <a class="magazine__link" href="#" download>Download</a>
-              </span>
-            </li>
-          </ul>
-        </div>
+          <div class="magazine__list-box magazine__list-box--biomes">
+            <div class="magazine__brochure">
+              <img class="magazine__brochure-image" src="./img/magazine-biomes-desktop-wide-1x.jpg" alt="Aquamarine Biomes company brochure">
+            </div>
+            <ul class="magazine__list magazine__list-biomes">
+              <li class="magazine__item magazine__item--active">
+                <span class="magazine__item-name">Biomes, the future of entertainment</span>
+                <span class="magazine__download">
+                  <a class="magazine__link" href="#" download>Download</a>
+                </span>
+              </li>
+              <li class="magazine__item">
+                <span class="magazine__item-name">Биомы - будущее индустрии развлечений</span>
+                <span class="magazine__download">
+                  <a class="magazine__link" href="#" download>Скачать</a>
+                </span>
+              </li>
+              <li class="magazine__item">
+                <span class="magazine__item-name">المواطن البيئية هي مستقبل قطاع الترفيه</span>
+                <span class="magazine__download">
+                  <a class="magazine__link" href="#" download>تحميل الملف</a>
+                </span>
+              </li>
+              <li class="magazine__item">
+                <span class="magazine__item-name">进入到一个生物群落中 - 可持续发展的未来</span>
+                <span class="magazine__download">
+                  <a class="magazine__link" href="#" download>下載</a>
+                </span>
+              </li>
+              <li class="magazine__item">
+                <span class="magazine__item-name">Biomas — El Futuro Sostenible</span>
+                <span class="magazine__download">
+                  <a class="magazine__link" href="#" download>Descargar</a>
+                </span>
+              </li>
+              <li class="magazine__item">
+                <span class="magazine__item-name">생물군계는 엔터테이먼트의 미래다</span>
+                <span class="magazine__download">
+                  <a class="magazine__link" href="#" download>다운로드</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="magazine__list-box">
+            <div  class="magazine__brochure">
+            <img src="./img/magazine-brochure-desktop-wide-1x.jpg" alt="Aquamarine projects company brochure">
+            </div>
+            <ul class="magazine__list">
+              <li class="magazine__item magazine__item--active">
+                <span class="magazine__item-name">Company brochure</span>
+                <span class="magazine__download">
+                  <a class="magazine__link" href="#" download>Download</a>
+                </span>
+              </li>
+              <li class="magazine__item">
+                <span class="magazine__item-name">公司简介</span>
+                <span class="magazine__download">
+                  <a class="magazine__link" href="#" download>下載</a>
+                </span>
+              </li>
+              <li class="magazine__item">
+                <span class="magazine__item-name">О компании</span>
+                <span class="magazine__download">
+                  <a class="magazine__link" href="#" download>Скачать</a>
+                </span>
+              </li>
+            </ul>
+          </div>
       </section>
       <section class="contacts">
         <div class="main__wrapper contacts__container">
@@ -174,39 +227,42 @@
             <div class="contacts__social social">
               <h3 class="social__title">Social</h3>
 
-                <ul class="social__list">
-                  <li class="social__item">
-                    <a class="social__link" href="https://www.facebook.com/aquamarineprojects">Facebook</a>
-                  </li>
-                  <li class="social__item">
-                    <a class="social__link" href="https://www.instagram.com/aquamarineprojects/">Instagram</a>
-                  </li>
-                  <li class="social__item">
-                    <a class="social__link" href="https://www.youtube.com/channel/UCFh5dyLcBnb8-mzJ4pYPV9g">YouTube</a>
-                  </li>
-                </ul>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="https://www.facebook.com/aquamarineprojects">Facebook</a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="https://www.instagram.com/aquamarineprojects/">Instagram</a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="https://www.youtube.com/channel/UCFh5dyLcBnb8-mzJ4pYPV9g">YouTube</a>
+                </li>
+              </ul>
             </div>
           </div>
           <form class="contacts__form form" action="#" method="post">
             <p class="form__reason">Ready to discuss your vision?
               We’re ready to make it happen.</p>
-            <div class="form__wrapper">
-              <label class="visually-hidden" for="contact-name">Name</label>
-              <input class="form__input" id="contact-name" type="text" placeholder="Name" required pattern="^[a-zA-Z\s]+$">
-            </div>
-            <div class="form__wrapper">
-              <label class="visually-hidden" for="contact-phone">Phone</label>
-              <input class="form__input" id="contact-phone" type="text" placeholder="Phone" pattern="^[0-9]+$">
-            </div>
-            <div class="form__wrapper">
-              <label class="visually-hidden" for="contact-email">Email</label>
-              <input class="form__input" id="contact-email" type="email" placeholder="Email">
-            </div>
-            <div class="form__wrapper">
-              <label class="visually-hidden" for="contact-textarea">Request</label>
-              <textarea class="form__textarea" id="contact-textarea" name="contact-textarea" cols="33" rows="1" placeholder="Request"></textarea>
-            </div>
-            <button class="form__btn-submit" type="submit">↳ Submit</button>
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">User info</legend>
+              <div class="form__wrapper">
+                <label class="visually-hidden" for="contact-name">Name</label>
+                <input class="form__input" id="contact-name" type="text" placeholder="Name" required pattern="^[a-zA-Z\s]+$">
+              </div>
+              <div class="form__wrapper">
+                <label class="visually-hidden" for="contact-phone">Phone</label>
+                <input class="form__input" id="contact-phone" type="text" placeholder="Phone" pattern="^[0-9]+$">
+              </div>
+              <div class="form__wrapper">
+                <label class="visually-hidden" for="contact-email">Email</label>
+                <input class="form__input" id="contact-email" type="email" placeholder="Email">
+              </div>
+              <div class="form__wrapper">
+                <label class="visually-hidden" for="contact-textarea">Request</label>
+                <textarea class="form__textarea" id="contact-textarea" name="contact-textarea" cols="33" rows="1" placeholder="Request"></textarea>
+              </div>
+              <button class="form__btn-submit" type="submit">&rdsh; Submit</button>
+            </fieldset>
           </form>
         </div>
       </section>
