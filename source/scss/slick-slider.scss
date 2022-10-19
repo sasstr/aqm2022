@@ -52,61 +52,8 @@
   }
 }
 
-// .slick-prev:hover {
-//   position: absolute;
-//   content: "";
-//   padding-block: 7px;
-//   width: 28px;
-//   height: 12px;
-
-//   font-size: 0;
-
-//   left: 6px;
-//   top: 50%;
-//   z-index: 5;
-
-//   background-image: url("../img/project-arrow-mob-left.svg");
-//   background-color: transparent;
-//   background-repeat: no-repeat;
-//   border: none;
-
-//   @include media-tablet {
-//     width: 59px;
-//     height: 12px;
-//     background-size: 59px 12px;
-//   }
-// }
-
-// .slick-next:hover  {
-//   position: absolute;
-//   content: "";
-//   width: 28px;
-//   height: 7px;
-//   padding-block: 7px;
-//   font-size: 0;
-
-//   right: 6px;
-//   top: 50%;
-//   z-index: 5;
-//   background-image: url("../img/project-arrow-mob.svg");
-//   background-color: transparent;
-//   background-repeat: no-repeat;
-//   border: none;
-
-//   @include media-tablet {
-//     width: 59px;
-//     height: 12px;
-//     background-size: 59px 12px;
-//   }
-
-//   @include media-desktop-wide {
-//     width: 73px;
-//     height: 14px;
-//     background-size: 73px 14px;
-//   }
-// }
-
 .slick-dots {
+  transform: translateX(-50%);
   position: absolute;
   bottom: 20px;
   left: 50%;
