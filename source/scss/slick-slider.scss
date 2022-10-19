@@ -2,59 +2,109 @@
   position: relative;
 }
 
-.slick-prev{
+.slick-prev {
   position: absolute;
   content: "";
-  padding-block: 7px;
-  width: 28px;
-  height: 12px;
+  width: 27%;
+  height: 100%;
 
   font-size: 0;
 
-  left: 6px;
-  top: 50%;
+  left: 0;
+  top: 0;
   z-index: 5;
 
-  background-image: url("../img/project-arrow-mob-left.svg");
+  background: linear-gradient(94.29deg, rgba(0, 49, 55, 0.6)  0.06%, rgba(243, 241, 216, 0) 87.25%);
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
 
-  @include media-tablet {
-    width: 59px;
-    height: 12px;
-    background-size: 59px 12px;
+  cursor: url(../img/project-arrow-mob-left.svg),e-resize;
+
+  @include media-desktop {
+    cursor: url(../img/slider-arrow-left-cursor.svg),e-resize;
   }
+
 }
 
-.slick-next{
+.slick-next {
+  transform:  rotate(180deg);
   position: absolute;
   content: "";
-  width: 28px;
-  height: 7px;
-  padding-block: 7px;
+  width: 27%;
+  height: 100%;
+
   font-size: 0;
 
-  right: 6px;
-  top: 50%;
+  right: 0;
+  top: 0;
   z-index: 5;
-  background-image: url("../img/project-arrow-mob.svg");
+
+  background: linear-gradient(94.29deg, rgba(0, 49, 55, 0.6) 0.06%, rgba(243, 241, 216, 0) 87.25%);
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
 
-  @include media-tablet {
-    width: 59px;
-    height: 12px;
-    background-size: 59px 12px;
-  }
+  cursor: url(../img/project-arrow-mob.svg),e-resize;
 
-  @include media-desktop-wide {
-    width: 73px;
-    height: 14px;
-    background-size: 73px 14px;
+  @include media-desktop {
+    cursor: url(../img/slider-arrow-right-cursor.svg), e-resize;
   }
 }
+
+// .slick-prev:hover {
+//   position: absolute;
+//   content: "";
+//   padding-block: 7px;
+//   width: 28px;
+//   height: 12px;
+
+//   font-size: 0;
+
+//   left: 6px;
+//   top: 50%;
+//   z-index: 5;
+
+//   background-image: url("../img/project-arrow-mob-left.svg");
+//   background-color: transparent;
+//   background-repeat: no-repeat;
+//   border: none;
+
+//   @include media-tablet {
+//     width: 59px;
+//     height: 12px;
+//     background-size: 59px 12px;
+//   }
+// }
+
+// .slick-next:hover  {
+//   position: absolute;
+//   content: "";
+//   width: 28px;
+//   height: 7px;
+//   padding-block: 7px;
+//   font-size: 0;
+
+//   right: 6px;
+//   top: 50%;
+//   z-index: 5;
+//   background-image: url("../img/project-arrow-mob.svg");
+//   background-color: transparent;
+//   background-repeat: no-repeat;
+//   border: none;
+
+//   @include media-tablet {
+//     width: 59px;
+//     height: 12px;
+//     background-size: 59px 12px;
+//   }
+
+//   @include media-desktop-wide {
+//     width: 73px;
+//     height: 14px;
+//     background-size: 73px 14px;
+//   }
+// }
 
 .slick-dots {
   position: absolute;
