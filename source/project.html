@@ -15,6 +15,7 @@
       href="./fonts/AkkuratLLCyr-Light.woff2"
       as="font"
       crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./css/style.min.css">
   </head>
   <body>
@@ -202,7 +203,8 @@
 
       <div class="project-slider">
         <div class="project-slider__box">
-          <picture class="project-slider__picture">
+          <div>
+            <picture class="project-slider__picture">
             <source
               srcset="./img/project_ybg_slider-desktop-wide-1x.jpg"
               media="(min-width: 1440px)"
@@ -221,78 +223,53 @@
               src="./img/project_ybg_slider-mob-1x.jpg"
               alt="Yaranga Botanical Garden"
             >
-          </picture>
+            </picture>
+          </div>
+          <div>
+            <picture class="project-slider__picture">
+            <source
+              srcset="./img/project_ybg_slider-desktop-wide-1x.jpg"
+              media="(min-width: 1440px)"
+            >
+            <source
+              srcset="./img/project_ybg_slider-desktop-1x.jpg"
+              media="(min-width: 1024px)"
+            >
+            <source
+              srcset="./img/project_ybg_slider-tablet-1x.jpg"
+              media="(min-width: 768px)"
+            >
+            <img
+              class="project-slider__image"
+              loading="lazy"
+              src="./img/project_ybg_slider-mob-1x.jpg"
+              alt="Yaranga Botanical Garden"
+            >
+            </picture>
+          </div>
+          <div>
+            <picture class="project-slider__picture">
+            <source
+              srcset="./img/project_ybg_slider-desktop-wide-1x.jpg"
+              media="(min-width: 1440px)"
+            >
+            <source
+              srcset="./img/project_ybg_slider-desktop-1x.jpg"
+              media="(min-width: 1024px)"
+            >
+            <source
+              srcset="./img/project_ybg_slider-tablet-1x.jpg"
+              media="(min-width: 768px)"
+            >
+            <img
+              class="project-slider__image"
+              loading="lazy"
+              src="./img/project_ybg_slider-mob-1x.jpg"
+              alt="Yaranga Botanical Garden"
+            >
+            </picture>
+          </div>
         </div>
-        <ul class="project-slider__nav-list">
-          <li
-            class="project-slider__nav-item project-slider__nav-item--active"
-            role="presentation"
-          >
-            <button
-              class="project-slider__nav-btn project-slider__nav-btn--active"
-              type="button"
-              role="tab"
-              tabindex="0"
-              aria-selected="true"
-            ></button>
-          </li>
-          <li class="project-slider__nav-item" role="presentation">
-            <button
-              class="project-slider__nav-btn"
-              type="button"
-              role="tab"
-              tabindex="-1"
-            ></button>
-          </li>
-          <li class="project-slider__nav-item" role="presentation">
-            <button
-              class="project-slider__nav-btn"
-              type="button"
-              role="tab"
-              tabindex="-1"
-            ></button>
-          </li>
-          <li class="project-slider__nav-item" role="presentation">
-            <button
-              class="project-slider__nav-btn"
-              type="button"
-              role="tab"
-              tabindex="-1"
-            ></button>
-          </li>
-          <li class="project-slider__nav-item" role="presentation">
-            <button
-              class="project-slider__nav-btn"
-              type="button"
-              role="tab"
-              tabindex="-1"
-            ></button>
-          </li>
-          <li class="project-slider__nav-item" role="presentation">
-            <button
-              class="project-slider__nav-btn"
-              type="button"
-              role="tab"
-              tabindex="-1"
-            ></button>
-          </li>
-          <li class="project-slider__nav-item" role="presentation">
-            <button
-              class="project-slider__nav-btn"
-              type="button"
-              role="tab"
-              tabindex="-1"
-            ></button>
-          </li>
-          <li class="project-slider__nav-item" role="presentation">
-            <button
-              class="project-slider__nav-btn"
-              type="button"
-              role="tab"
-              tabindex="-1"
-            ></button>
-          </li>
-        </ul>
       </div>
 
       <div class="project-description">
@@ -591,6 +568,29 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.project-slider__box').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
+
+          responsive:[
+            {
+              breakpoint: 768,
+              settings: {
+                dots: false,
+              }
+            }
+          ]
+        });
+      });
+    </script>
     <script src="./js/script.min.js"></script>
   </body>
 </html>
