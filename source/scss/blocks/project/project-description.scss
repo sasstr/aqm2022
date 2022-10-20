@@ -13,6 +13,10 @@
   @include media-desktop-wide {
     padding: 97px 108px 0;
   }
+
+  @include media-desktop-extra-wide {
+    padding: 97px 350px 0;
+  }
 }
 
 .project-description__box {

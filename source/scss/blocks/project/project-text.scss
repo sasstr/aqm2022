@@ -18,6 +18,10 @@
 
     padding: 118px 108px;
   }
+
+  @include media-desktop-extra-wide {
+    padding: 118px 350px;
+  }
 }
 
 .project-text__content {

@@ -8,6 +8,7 @@ const btnHeaderMenu = document.querySelector('.header__toggle');
 const burgerMenu = document.querySelector('.burger-menu');
 const burgerMenuClose = document.querySelector('.burger-menu-close');
 
+// переключение списка работ по наведению мышки прозрачные/не прозрачные
 if(document.querySelector('.work__list') && document.querySelectorAll('.work__item') ){
   const workList = document.querySelector('.work__list');
   const workItems = workList.querySelectorAll('.work__item');
@@ -38,7 +39,7 @@ const onKeyupEsc = function (evt) {
     $('body').css('overflow','auto');
   }
 }
-
+// Открыетие и закрытие меню гамбургер
 const onClickBtnHeaderMenu = function (evt) {
   evt.preventDefalt;
   navigation.classList.toggle('hidden');
@@ -58,6 +59,8 @@ const onClickBtnHeaderMenu = function (evt) {
     document.querySelector('.header__logo').classList.add('hidden');
   }
 };
+
+// Функция блокировки скролла
 function disableScrolling(){
     var x=window.scrollX;
     var y=window.scrollY;
@@ -103,3 +106,39 @@ function onmyscreen(el)
 
     return false;
 }
+
+// Анимация цифорок в блоке на главной странице achievement
+const time = 3000;
+const step = 1;
+let achievement = document.querySelector('.achievement');
+let elemNumber = achievement.querySelectorAll('.achievement__number');
+
+const animateCounter = function (elem) {
+  const num = parseInt( elem.textContent);
+  let counter = 0;
+  const timeInt = Math.round(time / (num / step));
+
+  let interval = setInterval(()=> {
+    counter += step;
+    if (counter === num) {
+      clearInterval(interval);
+    }
+    elem.textContent = counter;
+  }, timeInt);
+};
+
+const onScrollNumberAnimate = function () {
+
+  let numberTop = achievement.getBoundingClientRect().top
+  console.log(numberTop);
+
+  if (window.pageYOffset > (numberTop - window.innerHeight)/2) {
+      this.removeEventListener('scroll', onScrollNumberAnimate);
+      elemNumber.forEach((it) => animateCounter(it));
+  }
+}
+
+// Запускаем анимацию чисел
+window.addEventListener('scroll',onScrollNumberAnimate)
+
+
