@@ -3,6 +3,10 @@
   @include list-style-reset;
 }
 
+.header__lang:hover .lang__link
+{
+display:block;
+}
 .lang__link {
   position: relative;
   min-width: 60px;
