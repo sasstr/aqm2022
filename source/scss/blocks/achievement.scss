@@ -162,3 +162,23 @@ padding: 0;
     padding-top: 30px;
   }
 }
+
+.achievement__number
+ { 
+  overflow:hidden;
+  display:block;
+ }
+.achievement__number span
+ {
+  display:inline-block;
+  overflow:hidden;
+  line-height:100%;
+ }
+ .achievement__number span span
+ {
+ line-height:100%;
+ }
+  .achievement__number div
+  {
+  position:relative;
+  }
