@@ -1,0 +1,587 @@
+.about-map {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+
+  @include media-tablet {
+    width: 704px;
+    height: 386px;
+    background-image: url(../img/about-map.svg);
+    background-repeat: no-repeat;
+    background-size: 704px 386px;
+  }
+
+  @include media-desktop {
+    width: 984px;
+    height: 539px;
+    background-image: url(../img/about-map.svg);
+    background-size: 984px 539px;
+  }
+
+  .about-map__point {
+    display: none;
+  @include media-tablet {
+    position: absolute;
+    top: 185px;
+    left: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+
+    font-family: $_f__common;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    color: $_main_light;
+
+    border-radius: 50%;
+    background-color: $_button_dark;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &--active {
+      position: relative;
+      width: 17px;
+      height: 17px;
+      opacity: 0.8;
+      background-image: url('../img/cursor-map-down.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 5;
+    }
+
+    &--active::after {
+      position: absolute;
+      content: '';
+      top: -29px;
+      left: -29px;
+      width: 76px;
+      height: 76px;
+      background-color: $_button_dark;
+      background-size: 76px 76px;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      opacity: 0.7;
+      z-index: 1;
+
+    }
+
+    &--1 {
+      top: 200px;
+      left: 405px;
+    }
+
+    &--2 {
+      top: 185px;
+      left: 430px;
+    }
+
+    &--3 {
+      top: 158px;
+      left: 425px;
+    }
+
+    &--4 {
+      top: 160px;
+      left: 387px;
+    }
+
+    &--5 {
+      top: 150px;
+      left: 380px;
+    }
+
+    &--6 {
+      top: 160px;
+      left: 359px;
+    }
+
+    &--7 {
+      top: 140px;
+      left: 340px;
+    }
+
+    &--8 {
+      top: 95px;
+      left: 385px;
+    }
+// India Mumbay
+    &--9 {
+      top: 196px;
+      left: 468px;
+    }
+
+    &--10 {
+      top: 215px;
+      left: 480px;
+    }
+
+    &--11 {
+      top: 210px;
+      left: 520px;
+    }
+
+    &--12 {
+      top: 225px;
+      left: 517px;
+    }
+
+    &--13 {
+      top: 237px;
+      left: 523px;
+    }
+
+    &--14 {
+      top: 218px;
+      left: 538px;
+    }
+
+    &--15 {
+      top: 151px;
+      left: 570px;
+    }
+// New Zeland
+    &--16 {
+      top: 337px;
+      left: 668px;
+    }
+// Kogalym
+    &--17 {
+      top: 82px;
+      left: 470px;
+    }
+
+    &--18 {
+      top: 196px;
+      left: 153px;
+    }
+
+    &--19 {
+      top: 192px;
+      left: 110px;
+    }
+
+    /*&--20 {
+      top: 185px;
+      left: 430px;
+    } */
+
+    &--21 {
+      top: 225px;
+      left: 170px;
+    }
+
+    &--22 {
+      top: 142px;
+      left: 163px;
+    }
+
+    &--23 {
+      top: 151px;
+      left: 168px;
+    }
+
+    &--24 {
+      top: 152px;
+      left: 180px;
+    }
+
+    &--25 {
+      top: 270px;
+      left: 173px;
+    }
+
+    &--26 {
+      top: 300px;
+      left: 220px;
+    }
+  }
+
+  @include media-desktop {
+    width: 12px;
+    height: 12px;
+
+    font-size: 10px;
+    line-height: 12px;
+
+    &--1 {
+      top: 280px;  /* 200 - 80*/
+      left: 567px;  /* 405 - 162*/
+    }
+
+    &--2 {
+      top: 265px; /**/
+      left: 607px;
+    }
+
+    &--3 {
+      top: 225px; /**/
+      left: 598px;
+    }
+
+    &--4 {
+      top: 224px; /**/
+      left: 540px;
+    }
+
+    &--5 {
+      top: 207px; /**/
+      left: 533px;
+    }
+
+    &--6 {
+      top: 226px; /**/
+      left: 500px;
+    }
+
+    &--7 {
+      top: 199px; /* Marsel */
+      left: 476px;
+    }
+
+    &--8 {
+      top: 133px; /* Piter */
+      left: 539px;
+    }
+
+    &--9 {
+      top: 274px; /* India Mumbay */
+      left: 654px;
+    }
+
+    &--10 {
+      top: 305px; /* Chennai */
+      left: 672px;
+    }
+
+    &--11 {
+      top: 294px; /**/
+      left: 725px;
+    }
+
+    &--12 {
+      top: 315px; /**/
+      left: 722px;
+    }
+
+    &--13 {
+      top: 331px; /**/
+      left: 731px;
+    }
+
+    &--14 {
+      top: 307px; /**/
+      left: 751px;
+    }
+
+    &--15 {
+      top: 217px; /*Korea*/
+      left: 797px;
+    }
+
+    &--16 {
+      top: 471px; /*New Zeland*/
+      left: 934px;
+    }
+
+    &--17 {
+      top: 115px; /*Kogalym*/
+      left: 650px;
+    }
+
+    &--18 {
+      top: 277px; /**/
+      left: 217px;
+    }
+
+    &--19 {
+      top: 268px; /**/
+      left: 153px;
+    }
+
+  /* &--20 {
+      top: 185px;
+      left: 430px;
+    } */
+
+    &--21 {
+      top: 315px; /**/
+      left: 240px;
+    }
+
+    &--22 {
+      top: 202px; /**/
+      left: 228px;
+    }
+
+    &--23 {
+      top: 212px; /**/
+      left: 237px;
+    }
+
+    &--24 {
+      top: 214px; /**/
+      left: 254px;
+    }
+
+    &--25 {
+      top: 378px; /**/
+      left: 245px;
+    }
+
+    &--26 {
+      top: 422px; /**/
+      left: 306px;
+    }
+  }
+
+  @include media-desktop-wide {
+    width: 15px;
+    height: 15px;
+
+    &--1 {
+      top: 348px; /*Arab*/
+      left: 704px;
+    }
+
+    &--2 {
+      top: 328px; /*Arab-1*/
+      left: 752px;
+    }
+
+    &--3 {
+      top: 280px;  /*Baku*/
+      left: 742px;
+    }
+
+    &--4 {
+      top: 279px; /*Antalia*/
+      left: 670px;
+    }
+
+    &--5 {
+      top: 260px; /*Stambul*/
+      left: 663px;
+    }
+
+    &--6 {
+      top: 282px; /*Siciliya*/
+      left: 620px;
+    }
+
+    &--7 {
+      top: 270px; /* Marsel */
+      left: 565px;
+    }
+
+    &--8 {
+      top: 165px; /* Piter */
+      left: 671px;
+    }
+
+    &--9 {
+      top: 343px; /*India Mumbay*/
+      left: 815px;
+    }
+
+    &--10 {
+      top: 376px; /*Chenai*/
+      left: 834px;
+    }
+
+    &--11 {
+      top: 363px; /**/
+      left: 901px;
+    }
+
+    &--12 {
+      top: 392px; /**/
+      left: 898px;
+    }
+
+    &--13 {
+      top: 412px; /**/
+      left: 910px;
+    }
+
+    &--14 {
+      top: 380px; /**/
+      left: 933px;
+    }
+
+    &--15 {
+      top: 267px; /*Korea*/ /**/
+      left: 996px;
+    }
+
+    &--16 {
+      top: 587px; /*New Zeland*/
+      left: 1165px;
+    }
+
+    &--17 {
+      top: 140px; /*Kogalym*/
+      left: 820px;
+    }
+
+    &--18 {
+      top: 345px; /**/
+      left: 268px;
+    }
+
+    &--19 {
+      top: 336px;  /**/
+      left: 192px;
+    }
+
+    /* &--20 {
+      top: 185px;
+      left: 430px;
+    } */
+
+    &--21 {
+      top: 394px;  /**/
+      left: 298px;
+    }
+
+    &--22 {
+      top: 250px; /**/
+      left: 283px;
+    }
+
+    &--23 {
+      top: 263px; /**/
+      left: 293px;
+    }
+
+    &--24 {
+      top: 263px; /**/
+      left: 314px;
+    }
+
+    &--25 {
+      top: 468px;
+      left: 305px;
+    }
+
+    &--26 {
+      top: 525px;
+      left: 380px;
+    }
+  }
+}
+
+  .about-map__pin {
+  @include media-tablet {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 0 50%;
+    cursor: pointer;
+
+    background: #E1F1E3;
+    transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
+
+    &--1 {
+      top: 295px; /* Afrika */
+      left: 365px;
+    }
+
+    &--2 {
+      top: 313px;  /* New Z */
+      left: 662px;
+    }
+
+    &--3 {
+      top: 85px; /* Moscow */
+      left: 400px;
+    }
+  }
+
+  @include media-desktop {
+    &--1 {
+      top: 423px; /* Afrika */
+      left: 515px;
+    }
+
+    &--2 {
+      top: 447px; /* New Z */
+      left: 929px;
+    }
+
+    &--3 {
+      top: 130px; /* Moscow */
+      left: 560px;
+    }
+  }
+
+  @include media-desktop-wide {
+    &--1 {
+      top: 530px; /* Afrika */
+      left: 640px;
+    }
+
+    &--2 {
+      top: 563px; /* New Z */
+      left: 1160px;
+    }
+
+    &--3 {
+      top: 160px; /* Moscow */
+      left: 710px;
+    }
+  }
+}
+
+  @include media-desktop-wide {
+    width: 1224px;
+    height: 670px;
+    background-image: url(../img/about-map.svg);
+    background-size: 1224px 670px;
+  }
+}
+
+.about-map__box-button {
+  @include media-tablet {
+  position: absolute;
+  top: -50px;
+  left: -9px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(141, 107, 92);
+  background-size: cover;
+  opacity: 1;
+}
+
+.about-map__button  {
+  position: absolute;
+  top: 10px;
+  left: 6px;
+  width: 25px;
+  height: 15px;
+
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 13px;
+  color: $_white;
+
+  border: 0.5px solid #FFFFFF;
+  border-radius: 64px;
+  background-color: transparent;
+  z-index: 5;
+  }
+}
+
+

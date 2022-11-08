@@ -6,17 +6,37 @@
 .global-about-us__container {
   @include main-container-padding;
   padding-block: 31px 73px;
-}
 
-.global-about-us__content-box {
-  @include media-desktop {
-    display: flex;
-    justify-content: space-between;
-    padding-block: 95px 68px;
+  @include media-tablet {
+    padding-block: 95px 77px;
   }
 
   @include media-desktop {
-    padding-block: 75px 95px;
+    padding-block: 92px 101px;
+  }
+
+  @include media-desktop {
+    padding-block: 75px 145px;
+  }
+
+  @include media-desktop-wide {
+    padding-block: 75px 135px;
+  }
+}
+
+.global-about-us__content-box {
+
+  @include media-tablet {
+    padding-bottom: 77px;
+  }
+
+  @include media-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include media-desktop-wide {
+    padding-bottom: 115px;
   }
 }
 
@@ -44,6 +64,7 @@
 .global-about-us__text {
   margin: 0 0 27px;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -53,6 +74,8 @@
   color: $_main_light;
 
   @include media-tablet {
+    margin-bottom: 0px;
+
     font-size: 24px;
     line-height: 140%;
     letter-spacing: -1px;
@@ -79,32 +102,244 @@
   }
 }
 
-.global-about-us__map {
-  display: block;
-  margin: 0 auto;
+// .global-about-us__map {
+//   position: relative;
+//   display: block;
+//   margin: 0 auto;
 
-  @include media-tablet {
-    width: 704px;
-    height: 386px;
-    background-image: url(../img/about_map-tablet.svg);
-    background-repeat: no-repeat;
-    background-size: 704px 386px;
-  }
+//   @include media-tablet {
+//     width: 704px;
+//     height: 386px;
+//     background-image: url(../img/about-map.svg);
+//     background-repeat: no-repeat;
+//     background-size: 704px 386px;
+//   }
 
-  @include media-desktop {
-    width: 984px;
-    height: 539px;
-    background-image: url(../img/about_map-desktop.svg);
-    background-size: 984px 539px;
-  }
+//   @include media-desktop {
+//     width: 984px;
+//     height: 539px;
+//     background-image: url(../img/about-map.svg);
+//     background-size: 984px 539px;
+//   }
 
-  @include media-desktop-wide {
-    width: 1224px;
-    height: 670px;
-    background-image: url(../img/about_map-desktop.svg);
-    background-size: 1224px 670px;
-  }
-}
+//   .global-about-us__map-point {
+//     position: absolute;
+//     top: 185px;
+//     left: 430px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 10px;
+//     height: 10px;
+
+//     font-family: $_f__common;
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 8px;
+//     line-height: 10px;
+//     color: $_main_light;
+
+//     border-radius: 50%;
+//     background-color: $_button_dark;
+//     background-repeat: no-repeat;
+//     opacity: 0.8;
+//     cursor: pointer;
+
+//     &--active {
+//       position: relative;
+//       width: 17px;
+//       height: 17px;
+//       opacity: 0.8;
+//       background-image: url('../img/cursor-map-down.svg');
+//       background-position: center;
+//       background-repeat: no-repeat;
+//       z-index: 5;
+//     }
+
+//     &--active::after {
+//       position: absolute;
+//       content: '';
+//       top: -29px;
+//       left: -29px;
+//       width: 76px;
+//       height: 76px;
+//       background-color: $_button_dark;
+//       background-size: 76px 76px;
+//       background-repeat: no-repeat;
+//       background-position: center;
+//       border-radius: 50%;
+//       opacity: 0.7;
+//       z-index: 1;
+
+//     }
+
+//     &--1 {
+//       top: 200px;
+//       left: 405px;
+//     }
+
+//     &--2 {
+//       top: 185px;
+//       left: 430px;
+//     }
+
+//     &--3 {
+//       top: 158px;
+//       left: 425px;
+//     }
+
+//     &--4 {
+//       top: 160px;
+//       left: 387px;
+//     }
+
+//     &--5 {
+//       top: 150px;
+//       left: 380px;
+//     }
+
+//     &--6 {
+//       top: 160px;
+//       left: 359px;
+//     }
+
+//     &--7 {
+//       top: 140px;
+//       left: 340px;
+//     }
+
+//     &--8 {
+//       top: 95px;
+//       left: 385px;
+//     }
+// // India Mumbay
+//     &--9 {
+//       top: 196px;
+//       left: 468px;
+//     }
+
+//     &--10 {
+//       top: 215px;
+//       left: 480px;
+//     }
+
+//     &--11 {
+//       top: 210px;
+//       left: 520px;
+//     }
+
+//     &--12 {
+//       top: 225px;
+//       left: 517px;
+//     }
+
+//     &--13 {
+//       top: 237px;
+//       left: 523px;
+//     }
+
+//     &--14 {
+//       top: 218px;
+//       left: 538px;
+//     }
+
+//     &--15 {
+//       top: 151px;
+//       left: 570px;
+//     }
+// // New Zeland
+//     &--16 {
+//       top: 337px;
+//       left: 668px;
+//     }
+// // Kogalym
+//     &--17 {
+//       top: 82px;
+//       left: 470px;
+//     }
+
+//     &--18 {
+//       top: 196px;
+//       left: 153px;
+//     }
+
+//     &--19 {
+//       top: 192px;
+//       left: 110px;
+//     }
+
+//     &--20 {
+//       top: 185px;
+//       left: 430px;
+//     }
+
+//     &--21 {
+//       top: 225px;
+//       left: 170px;
+//     }
+
+//     &--22 {
+//       top: 142px;
+//       left: 163px;
+//     }
+
+//     &--23 {
+//       top: 151px;
+//       left: 168px;
+//     }
+
+//     &--24 {
+//       top: 152px;
+//       left: 180px;
+//     }
+
+//     &--25 {
+//       top: 270px;
+//       left: 173px;
+//     }
+
+//     &--26 {
+//       top: 300px;
+//       left: 220px;
+//     }
+//   }
+
+//   .global-about-us__map-pin {
+//     position: absolute;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 20px;
+//     height: 20px;
+//     border-radius: 50% 50% 0 50%;
+//     cursor: pointer;
+
+//     background: #E1F1E3;
+//     transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
+
+//     &--1 {
+//       top: 295px;
+//       left: 365px;
+//     }
+
+//     &--2 {
+//       top: 313px;
+//       left: 662px;
+//     }
+
+//     &--3 {
+//       top: 85px;
+//       left: 400px;
+//     }
+//   }
+
+//   @include media-desktop-wide {
+//     width: 1224px;
+//     height: 670px;
+//     background-image: url(../img/about-map.svg);
+//     background-size: 1224px 670px;
+//   }
+// }
 
 .global-about-us__list {
   @include list-style-reset;
