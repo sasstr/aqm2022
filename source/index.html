@@ -10,10 +10,10 @@
     <style>
       #loader
       {
-        position:fixed;
+        position:fixed;left:0px;top:0px;
         background: #003137 url("data:image/svg+xml, %3Csvg fill='none' stroke='%235D9F93' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0.9 0.9 24.2 24.2'%3E%3Cg stroke-width='0.07' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' vector-effect='non-scaling-stroke' stroke-width='2px'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");;
         z-index:5000;
-        width:100%; height:100%;
+        width:100vw; height:100vh;
         background-size: max(150px, 10%);
         background-repeat: no-repeat;
         background-position: center;
@@ -49,9 +49,9 @@
       }
       @keyframes firstlogo  {
         0% {top: calc(50% - max(75px,5%));}
-        35% {left: calc(50% - max(75px,5%));
+        25% {left: calc(50% - max(75px,5%));
             top: calc(50% - max(150px,10%) - 15px);}
-        100% {left: calc(50% + max(75px,5%));
+        100% {left: calc(52% + max(75px,5%));
             top: calc(50% - max(150px,10%));}
       }
 
@@ -289,30 +289,30 @@
           <dl class="achievement__list">
             <div class="achievement__item-wrapper">
               <dt class="achievement__amount">
-                <span class="achievement__number">385</span>
+                <span class="achievement__number" data-animation='385'></span>
               </dt>
               <dd class="achievement__text">meters3<br> of aquariums <br>made</dd>
             </div>
             <div class="achievement__item-wrapper">
               <dt class="achievement__amount">
-                <span class="achievement__number">250</span></dt>
+                <span class="achievement__number" data-animation='250'></span></dt>
               <dd class="achievement__text">projects</dd>
             </div>
             <div class="achievement__item-wrapper">
               <dt class="achievement__amount">
-                <span class="achievement__number">500</span>K
+                <span class="achievement__number" data-animation='500'></span>K
               </dt>
               <dd class="achievement__text">meters2</dd>
             </div>
             <div class="achievement__item-wrapper">
               <dt class="achievement__amount">
-                <span class="achievement__number">115</span>
+                <span class="achievement__number" data-animation='115'></span>
               </dt>
               <dd class="achievement__text">meters<br> of tunnels <br>built</dd>
             </div>
             <div class="achievement__item-wrapper">
               <dt class="achievement__amount">
-                <span class="achievement__number">300</span>
+                <span class="achievement__number" data-animation='300'></span>
               </dt>
               <dd class="achievement__text">exhibitions <br>made</dd>
             </div>
