@@ -3,6 +3,8 @@
   padding: 80px 0 0;
   background-color: $_main_dark;
 
+
+
   @include media-desktop {
     width: 50%;
   }
@@ -27,20 +29,37 @@
     height: 440px;
     background-image: url("data:image/svg+xml,%3Csvg fill='%23F3F1D8' stroke='%23F3F1D8' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0 0 26 26'%3E%3Cg stroke-width='0.1' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' stroke-width='0.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     background-repeat:no-repeat;
-    background-position: top -20px left -93px;
+    background-position: top -20px left -80px;
     background-size:440px auto;
     z-index: 5;
 
     @include media-tablet {
       width: 100%;
-      background-size:800px auto;
-      background-position: top -250px left -70px;
+      height: 800px;
+      background-size:800px 900px;
+      background-position: top -280px left -40px;
+      overflow: hidden;
     }
 
     @include media-desktop {
       left: -30px;
+      background-position: top -250px left -175px;
       background-size:830px 820px;
     }
+
+    @include media-desktop-wide {
+      padding-inline: 100px;
+      background-position: top -250px left 10px;
+    }
+
+    @include media-desktop-extra-wide {
+      background-position: top -250px left 180px;
+    }
+  }
+
+  @include media-desktop-extra-wide {
+    padding-left: 348px;
+    padding-right: 150px;
   }
 }
 
@@ -93,6 +112,12 @@
   @include media-desktop {
     width: 100%;
     padding-inline: 60px;
+    padding-bottom: 75px;
+  }
+
+  @include media-desktop-extra-wide {
+    width: 600px;
+    padding-inline: 0 30px;
     padding-bottom: 75px;
   }
 }

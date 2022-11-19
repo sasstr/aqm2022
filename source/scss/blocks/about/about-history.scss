@@ -59,12 +59,13 @@
   {
     position:absolute;
     content:"";
-    top:0px;
+    top:22px;
     left:0px;
     bottom:0px;
     right:0px;
     background-image: url("data:image/svg+xml,%3Csvg fill='%23F3F1D8' stroke='%23F3F1D8' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0 0 26 26'%3E%3Cg stroke-width='0.1' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' stroke-width='0.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
-
+    background-repeat: no-repeat;
+    background-position: 0 -50px;
   }
 }
 
@@ -74,7 +75,7 @@
   flex-direction: column;
   gap: 60px;
   margin: 0;
-  padding: 0 0 100px;
+  padding: 0 16px 100px;
 }
 
 .about-history__list--line::after {
@@ -88,19 +89,22 @@
 }
 
 .about-history__list--light {
+  padding-top: 60px;
+  gap: 20px;
   background-image: url("data:image/svg+xml,%3Csvg width='360' height='807' viewBox='0 0 360 807' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M479 403.502C479 181.58 297.419 -5.46759e-05 75.499 -3.5275e-05C-146.42 -1.58742e-05 -328 181.58 -328 403.503C-328 625.42 -146.42 807 75.499 807L479 807L479 403.502Z' fill='%23E1F1E3'/%3E%3C/svg%3E");
   background-repeat:no-repeat;
+
 }
 
 .about-history__item-box {
   display: flex;
   flex-shrink: 0;
-  gap: 10px;
 }
 
 .about-history__time--line {
   background-color: $_main_dark;
   z-index: 3;
+  margin-right: 15px;
 }
 
 .about-history__time {
@@ -122,7 +126,7 @@
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.5px;
   color: $_main_light;
@@ -131,7 +135,6 @@
 .about-history__item-box--light {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .about-history__desc--light {
