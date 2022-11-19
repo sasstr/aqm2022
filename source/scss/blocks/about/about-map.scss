@@ -476,6 +476,22 @@
   }
 }
 
+.about-map__pin-title {
+  display: none;
+
+  color: $_main_dark;
+  font-family: $_f__common;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -1px;
+  transform: rotate(-45deg);
+  z-index: 5;
+}
+
   .about-map__pin {
   @include media-tablet {
     position: absolute;
@@ -487,8 +503,8 @@
     border-radius: 50% 50% 0 50%;
     cursor: pointer;
 
-    background: #E1F1E3;
-    transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
+    background: $_main_light;
+    transform: rotate(45deg);
 
     &--1 {
       top: 295px; /* Afrika */
@@ -507,14 +523,47 @@
   }
 
   @include media-desktop {
+    &:hover {
+      opacity: 0.8;
+      width: 175px;
+      height: 175px;
+    }
+
+    &--1:hover { /* Afrika */
+      top: 236px;
+      left: 438px;
+    }
+
+    &--1:hover > .about-map__pin-title--1 { /* Afrika */
+      display: block;
+    }
+
     &--1 {
       top: 423px; /* Afrika */
       left: 515px;
     }
 
+    &--2:hover { /* New Z */
+      top: 260px;
+      left: 851px;
+    }
+
+    &--2:hover > .about-map__pin-title--2 { /* New Z */
+      display: block;
+    }
+
     &--2 {
       top: 447px; /* New Z */
       left: 929px;
+    }
+
+    &--3:hover { /* New Z */
+      top: -57px;
+      left: 483px;
+    }
+
+    &--3:hover > .about-map__pin-title--3 { /* New Z */
+      display: block;
     }
 
     &--3 {
@@ -524,14 +573,29 @@
   }
 
   @include media-desktop-wide {
+    &--1:hover { /* Afrika */
+      top: 343px;
+      left: 562px;
+    }
+
     &--1 {
       top: 530px; /* Afrika */
       left: 640px;
     }
 
+    &--2:hover { /* New Z */
+      top: 375px;
+      left: 1082px;
+    }
+
     &--2 {
       top: 563px; /* New Z */
       left: 1160px;
+    }
+
+    &--3:hover { /* Moscow */
+      top: -27px;
+      left: 632px;
     }
 
     &--3 {
@@ -577,7 +641,7 @@
   line-height: 13px;
   color: $_white;
 
-  border: 0.5px solid #FFFFFF;
+  border: 0.5px solid $_white;
   border-radius: 64px;
   background-color: transparent;
   z-index: 5;
