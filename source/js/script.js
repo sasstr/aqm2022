@@ -109,99 +109,103 @@ function onmyscreen(el)
 }
 
 // Анимация цифорок в блоке на главной странице achievement
-const time = 3000;
-const step = 1;
-let achievement = document.querySelector('.achievement');
-let elemNumber = achievement.querySelectorAll('.achievement__number');
+if (document.querySelectorAll('.achievement__number').length) {
+    const time = 3000;
+    const step = 1;
+    let achievement = document.querySelector('.achievement');
+    let elemNumber = achievement.querySelectorAll('.achievement__number');
 
-const animateCounter = function (elem) {
-    const num = parseInt( elem.textContent);
-    let counter = 0;
-    const timeInt = Math.round(time / (num / step));
+    const animateCounter = function (elem) {
+        const num = parseInt( elem.textContent);
+        let counter = 0;
+        const timeInt = Math.round(time / (num / step));
 
-    let interval = setInterval(()=> {
-            counter += step;
-            if (counter === num) {
-                clearInterval(interval);
+        let interval = setInterval(()=> {
+                counter += step;
+                if (counter === num) {
+                    clearInterval(interval);
+                }
+                elem.textContent = counter;
+            }, timeInt);
+    };
+
+    function PreFormatAnimation()
+    {
+        $('[data-animation]').each(
+            function()
+            {
+                $(this).html("<span>0</span>".repeat($(this).attr('data-animation').length));
+                //$(this).css("height",$(this).height()+"px");
+                $(this).css("width",$(this).width()+"px");
+                $(this).find("span").each(function(){
+                    $(this).css("width",$(this).width()+"px").css("height",$(this).height()+"px");
+                    $(this).html("<div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>0</div>");
+                });
             }
-            elem.textContent = counter;
-        }, timeInt);
-};
-
-function PreFormatAnimation()
-{
-    $('[data-animation]').each( 
-        function()
-        {  
-            $(this).html("<span>0</span>".repeat($(this).attr('data-animation').length));
-            //$(this).css("height",$(this).height()+"px");
-            $(this).css("width",$(this).width()+"px");
-            $(this).find("span").each(function(){
-                $(this).css("width",$(this).width()+"px").css("height",$(this).height()+"px");
-                $(this).html("<div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>0</div>");
-            });
-            
+        );
+    }
+    function animate1digit(element, to, speed)
+    {
+        if(to>0)
+        $(element).children().first().css('margin-top',-$(element).height()+'px');
+        if(to<10)
+        $(element).children().first().animate({'margin-top':-$(element).height()*to},speed*to)
+        else
+        {
+        $(element).children().first().animate({'margin-top':-$(element).height()*10},{speed:speed*10,complete:function(){animate1digit(element,to-10,speed)}});
         }
-    );    
-
-      
-}
-function animate1digit(element, to, speed)
-{
-    if(to>0)
-     $(element).children().first().css('margin-top',-$(element).height()+'px');
-    if(to<10)
-     $(element).children().first().animate({'margin-top':-$(element).height()*to},speed*to)
-    else
-    {
-     $(element).children().first().animate({'margin-top':-$(element).height()*10},{speed:speed*10,complete:function(){animate1digit(element,to-10,speed)}});
     }
-}
-function animate1number(element,speed)
-{
-    $(element).children().each(function(index,value)
+    function animate1number(element,speed)
     {
-        //index = 0 -> 3 ... 300/1
-        // index=1 -> 38 .. 300/3
-        // index=2 ->85 ..  300/8
-      total=$(value).parent().attr("data-animation");
-      //total%100^(3-)
-      total=parseInt(total/(10**(2-index)));
-      if(total>40) total=40+total%10;
-      if(total>10) speed=300/(total%10); else speed=300;
-      console.log(total)      ;
-      console.log(speed)      ;
-      animate1digit(value,total,speed);
-        
-    })
-    //animate1digit($(element).children().last(),$(element).attr("data-animation")%100,speed);
-    
-}
-function animateALLnumbers()
-{
-     $(".achievement__number").each(function(){animate1number($(this))});;
-}
+        $(element).children().each(function(index,value)
+        {
+            //index = 0 -> 3 ... 300/1
+            // index=1 -> 38 .. 300/3
+            // index=2 ->85 ..  300/8
+        total=$(value).parent().attr("data-animation");
+        //total%100^(3-)
+        total=parseInt(total/(10**(2-index)));
+            if(total>40) total=40+total%10;
+            if(total>10) speed=300/(total%10); else speed=300;
+        //   console.log(total);
+        //   console.log(speed);
+        animate1digit(value,total,speed);
 
-const onScrollNumberAnimate = function () {
+        })
+        //animate1digit($(element).children().last(),$(element).attr("data-animation")%100,speed);
 
-
-
-    let numberTop = achievement.getBoundingClientRect().top
-    console.log(numberTop);
-
-    if (window.pageYOffset > (numberTop - window.innerHeight)/2) {
-        this.removeEventListener('scroll', onScrollNumberAnimate);
-        elemNumber.forEach((it) => animateCounter2(it));
     }
+    function animateALLnumbers()
+    {
+        $(".achievement__number").each(function(){animate1number($(this))});;
+    }
+
+    const onScrollNumberAnimate = function () {
+
+
+
+        let numberTop = achievement.getBoundingClientRect().top
+        console.log(numberTop);
+
+        if (window.pageYOffset > (numberTop - window.innerHeight)/2) {
+            this.removeEventListener('scroll', onScrollNumberAnimate);
+            elemNumber.forEach((it) => animateCounter2(it));
+        }
+    }
+
+    defer (PreFormatAnimation);
+    const animateCounter2 = function(elem)
+    {
+
+    }
+
+    // Запускаем анимацию чисел
+    window.addEventListener('scroll',onScrollNumberAnimate)
+} else {
+  defer();
 }
 
-defer (PreFormatAnimation);
-const animateCounter2 = function(elem)
-{
 
-} 
 
-// Запускаем анимацию чисел
-window.addEventListener('scroll',onScrollNumberAnimate)
 
 
