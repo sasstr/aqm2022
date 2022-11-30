@@ -88,11 +88,20 @@
   color: $_main_dark;
 }
 
+.about-owner__image-wrapper {
+
+  @include media-tablet {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
 .about-owner__image {
   display: block;
 
   @include media-tablet {
-    width: 50%;
+    width: 100%;
     height: auto;
   }
 }
