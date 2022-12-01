@@ -6,6 +6,13 @@
   padding: 63px 16px 73px;
 }
 
+.about-history__box {
+  @include media-tablet {
+    display: flex;
+  }
+
+}
+
 .about-history__title {
   margin: 0 0 10px 0;
   padding: 0;
@@ -16,11 +23,31 @@
   line-height: 37px;
   letter-spacing: -2px;
   color: $_main_light;
+
+  @include media-tablet {
+    font-size: 50px;
+    line-height: 64px;
+  }
+
+  @include media-desktop {
+    font-size: 55px;
+    line-height: 69px;
+    letter-spacing: -3px;
+  }
+}
+
+.about-history__text-block {
+  @include media-tablet {
+    max-width: 306px;
+    margin-bottom: -330px;
+  }
+
 }
 
 .about-history__text {
   margin: 0;
   padding: 0 22px 0 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -47,11 +74,19 @@
   line-height: 24px;
   letter-spacing: -0.5px;
   color: $_white;
+
+  @include media-desktop {
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+  }
 }
 
 .about-history__image-box {
+  position: relative;
   z-index: 5;
   width: 100%;
+  max-width: 430px;
   border-radius: 50%;
   border-bottom-right-radius: 0%;
   height: auto;
@@ -60,26 +95,28 @@
   background-image: url("data:image/svg+xml,%3Csvg fill='%23F3F1D8' stroke='%23F3F1D8' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0 0 26 26'%3E%3Cg stroke-width='0.1' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' stroke-width='0.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: 0 -50px;
+
+    @include media-tablet {
+      max-width: 450px;
+      display: flex;
+      margin-left: auto;
+      margin-bottom: -440px;
+      z-index: 10;
+    }
+
+    @include media-desktop {
+      max-width: 580px;
+      margin-bottom: -540px;
+    }
+
+    @include media-desktop-wide {
+      max-width: 700px;
+    }
 }
 
 .about-history__image {
   display: block;
-  /*position:relative;
-  background-image: url('./img/about-mob-bob-traviss-bg.png') no-repeat;*/
   width:100%;
-  /*height:100vw;
-  &:before {
-    position:absolute;
-    content:"";
-    top:22px;
-    left:0px;
-    bottom:0px;
-    right:0px;
-    background-clip: border-box;
-    background-image: url("data:image/svg+xml,%3Csvg fill='%23F3F1D8' stroke='%23F3F1D8' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0 0 26 26'%3E%3Cg stroke-width='0.1' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' stroke-width='0.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: 0 -50px;
-  }*/
 }
 
 .about-history__list {
@@ -89,6 +126,10 @@
   gap: 60px;
   margin: 0;
   padding: 0 16px 100px;
+
+  @include media-tablet {
+    padding-top: 430px;
+  }
 }
 
 .about-history__list--line::after {
@@ -99,6 +140,10 @@
   width: 2px;
   height: 480px;
   border-left: 2px solid $_font_grass;
+
+  @include media-tablet {
+    top: 460px;
+  }
 }
 
 .about-history__list--light {
@@ -106,6 +151,13 @@
   gap: 20px;
   background-image: url("data:image/svg+xml,%3Csvg width='360' height='807' viewBox='0 0 360 807' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M479 403.502C479 181.58 297.419 -5.46759e-05 75.499 -3.5275e-05C-146.42 -1.58742e-05 -328 181.58 -328 403.503C-328 625.42 -146.42 807 75.499 807L479 807L479 403.502Z' fill='%23E1F1E3'/%3E%3C/svg%3E");
   background-repeat:no-repeat;
+
+  @include media-tablet {
+    padding-top: 430px;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='403' height='1163' viewBox='0 0 403 1163' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.71248e-05 534.504C9.73443e-05 188.832 282.834 -94.0001 628.502 -94.0001C974.167 -94 1257 188.832 1257 534.504C1257 880.168 974.167 1163 628.502 1163L1.21799e-05 1163L6.71248e-05 534.504Z' fill='%23E1F1E3'/%3E%3C/svg%3E");
+
+  }
 
 }
 
