@@ -1,14 +1,14 @@
 .about-owner {
-  background-color: #bebbad;
-  background-image: url(../img/about_owner_img_bg.png);
+  /**/ background-color: #bebbad;
+  background-image: url('../img/about_owner_img_bg.png');
   background-size: cover;
   background-repeat: no-repeat;
 
   @include media-tablet {
     display: flex;
     background-image: url('../img/about-tablet-nicholas-traviss-bg.png');
-    background-position: center bottom;
-    background-size: 100% auto ;
+    background-position: left bottom;
+    background-size: contain;
   }
 }
 
@@ -125,12 +125,11 @@
 }
 
 .about-owner__image-wrapper {
-  height: 100vw;
+  min-height: 500px;
   width: 100%;
-  margin-bottom: -1px;
   background-image: url('../img/about-mob-nicholas-traviss-bg.png');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: top;
 
 
@@ -139,12 +138,16 @@
     display: flex;
     align-items: flex-end;
     background-image: none;
-    height: auto;
+  }
+
+  @include media-desktop {
+
   }
 }
 
 .about-owner__image {
   display: block;
+  object-fit: cover;
 
   @include media-tablet {
     width: 100%;
