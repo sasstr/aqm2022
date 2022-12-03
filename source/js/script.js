@@ -43,12 +43,13 @@ const onKeyupEsc = function (evt) {
 const onClickBtnHeaderMenu = function (evt) {
     evt.preventDefalt;
     navigation.classList.toggle('hidden');
+
     if(navigation.classList.contains('hidden')) {
+        burgerMenu.classList.remove('hidden');
         burgerMenuClose.classList.add('hidden');
         $('body').unbind('touchmove');
         enableScrolling();
         $(".header").css("background-color","");
-        burgerMenu.classList.remove('hidden');
         document.querySelector('.header__logo').classList.remove('hidden');
     } else {
         burgerMenu.classList.add('hidden');
