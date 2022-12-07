@@ -1,11 +1,14 @@
 .lang__list,
 .lang {
+  position: relative;
   @include list-style-reset;
+  z-index: 5;
 }
 
-.header__lang:hover .lang__link
-{
-display:block;
+.header__lang:hover .lang__link {
+  position: relative;
+  display:block;
+  z-index: 5;
 }
 .lang__link {
   position: relative;
@@ -19,6 +22,8 @@ display:block;
   font-size: 14px;
   line-height: 24px;
   color: $_white;
+
+  z-index: 5;
 }
 
 .lang__link:hover {
@@ -28,6 +33,7 @@ display:block;
   font-size: 14px;
   line-height: 24px;
   color: $_button_hover;
+  z-index: 5;
 }
 
 .lang__link--active:hover {

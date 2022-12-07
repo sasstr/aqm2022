@@ -50,14 +50,14 @@ const onClickBtnHeaderMenu = function (evt) {
         $('body').unbind('touchmove');
         enableScrolling();
         $(".header").css("background-color","");
-        document.querySelector('.header__logo').classList.remove('hidden');
+        // document.querySelector('.header__logo').classList.remove('hidden');
     } else {
         burgerMenu.classList.add('hidden');
         burgerMenuClose.classList.remove('hidden');
         $('body').bind('touchmove', function(e){e.preventDefault()})
         disableScrolling();
         $(".header").css("background-color","#003137");
-        document.querySelector('.header__logo').classList.add('hidden');
+        // document.querySelector('.header__logo').classList.add('hidden');
     }
 };
 
