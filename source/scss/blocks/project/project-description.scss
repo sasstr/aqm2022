@@ -1,33 +1,60 @@
 .project-description {
-  padding: 76px 16px 40px;
+  position: relative;
+  overflow: hidden;
+  @include main-container-padding;
+  padding-block: 76px 40px;
   background: $_main_light;
 
   @include media-tablet {
-    padding: 108px 32px 0;
+    paddin-block: 108px 0;
   }
 
   @include media-desktop {
-    padding: 52px 20px 0;
+    padding-block: 52px 0;
   }
 
   @include media-desktop-wide {
-    padding: 97px 108px 0;
+    padding-block: 97px 0;
   }
 
   @include media-desktop-extra-wide {
-    padding: 97px 350px 0;
+    padding-block: 97px 0;
   }
+
+  @include media-tablet {
+    &::before {
+      position: absolute;
+      content: '';
+      top: 80px;
+      left: -60px;
+      width: 100%;
+      height: 93vw;
+      margin-left: 32px;
+      z-index: 5;
+      transform: rotate(180deg);
+
+      background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%23003137' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0.9 0.9 24.2 24.2'%3E%3Cg stroke-width='0.1' fill='%23003137' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' stroke-width='0.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 93vw;
+      background-clip: content-box;
+      /* background-color: $_main_dark; */
+      background-color: transparent;
+    }
+  }
+
 }
 
 .project-description__box {
+  position: relative;
   @include media-tablet {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
 
-    padding: 34px 30px 57px;
+    padding: 108px 30px 57px;
 
-    background-color: $_main_dark;
+    background-color: transparent;
+    z-index: 10;
   }
 
   @include media-desktop {
@@ -57,6 +84,11 @@
     color: $_main_light;
     width: 45%;
   }
+
+  @include media-desktop {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .project-description__text--large {
@@ -72,7 +104,13 @@
 
   @include media-tablet {
     width: 66%;
+
+    font-size: 24px;
     color: $_main_light;
+  }
+
+  @include media-desktop {
+    font-size: 32px;
   }
 }
 .project-description--project2 {
