@@ -7,21 +7,7 @@
 
   @include media-tablet {
     paddin-block: 108px 0;
-  }
 
-  @include media-desktop {
-    padding-block: 52px 0;
-  }
-
-  @include media-desktop-wide {
-    padding-block: 97px 0;
-  }
-
-  @include media-desktop-extra-wide {
-    padding-block: 97px 0;
-  }
-
-  @include media-tablet {
     &::before {
       position: absolute;
       content: '';
@@ -39,6 +25,29 @@
       background-clip: content-box;
       /* background-color: $_main_dark; */
       background-color: transparent;
+    }
+  }
+
+  @include media-desktop {
+    padding-block: 52px 0;
+    &::before {
+      margin-left: 20px;
+    }
+  }
+
+  @include media-desktop-wide {
+    padding-block: 97px 0;
+
+    &::before {
+      margin-left: 108px;
+    }
+  }
+
+  @include media-desktop-extra-wide {
+    padding-block: 97px 0;
+
+    &::before {
+      margin-left: 240px;
     }
   }
 
