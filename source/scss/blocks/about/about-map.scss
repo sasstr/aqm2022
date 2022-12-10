@@ -27,8 +27,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
 
     font-family: $_f__common;
     font-style: normal;
@@ -203,8 +203,8 @@
   }
 
   @include media-desktop {
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
 
     font-size: 10px;
     line-height: 12px;

@@ -17,7 +17,7 @@
   }
 
   @include media-desktop {
-    padding: 100px 155px;
+    padding: 100px 155px 175px;
     padding-right: 132px;
   }
 
@@ -37,7 +37,6 @@
       bottom: 70px;
       width: 1450px;
       height: 1450px;
-      z-index: 5;
 
       background-image: url("data:image/svg+xml, %3Csvg fill='none' stroke='%235D9F93' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0.9 0.9 24.2 24.2'%3E%3Cg stroke-width='0.07' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' vector-effect='non-scaling-stroke' stroke-width='2px'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       background-position: bottom right;
@@ -51,23 +50,24 @@
         height:949px;
 
         background-size:cover;
-        //background-size: 949px, 949px;
       }
 
       @include media-desktop  {
         right: 60px;
-        width:1382px;
-        height:1382px;
+        width: 1382px;
+        height: 1382px;
 
         background-size:cover;
       }
 
       @include media-desktop-wide  {
-        right: 220px;
+        right: 40px;
+        width: 1582px;
+        height: 1382px;
       }
 
       @include media-desktop-extra-wide  {
-        right: 450px;
+        right: -50px;
       }
   }
 }
@@ -126,7 +126,7 @@
   @include media-desktop {
     width: 600px;
     margin: 0;
-    margin-left: 192px;
+    margin-left: 160px;
   }
 
   @include media-desktop-wide {
@@ -283,16 +283,20 @@
     gap: 24px;
     flex-direction: row;
     justify-content: center;
+    width: 704px;
+    margin: 0 auto;
 
-    padding: 91px 32px 101px;
+    padding: 91px 0 101px;
   }
 
   @include media-desktop {
-    padding: 97px 20px;
+    padding: 97px 0;
+    width: 984px;
   }
 
   @include media-desktop-wide {
-    padding: 111px 108px 153px;
+    width: 1016px;
+    padding: 111px 0 153px;
     gap: 67px;
   }
 }
@@ -320,22 +324,75 @@
 }
 
 .biomes__features {
-  background-color: $_main_light;
+  position: relative;
+  overflow: hidden;
+
 
   @include media-tablet  {
-    background-color: $_white;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -2px;
+      left: -2px;
+      width: 912px;
+      height: 912px;
+      margin-left: 32px;
+
+      transform: rotate(180deg);
+      z-index: 5;
+
+
+      background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0.9 0.9 24.2 24.2'%3E%3Cg stroke-width='0.1' style='fill: %23e1f1e3' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' stroke-width='0.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-size: 912px 912px;
+      background-clip: content-box;
+    }
+  }
+
+  @include media-desktop {
+    &::before {
+      width: 982px;
+      margin-left: 20px;
+      background-size: 982px 982px;
+      background-position: 0px -70px;
+    }
+  }
+
+  @include media-desktop-wide {
+
+
+    &::before {
+      width: 1224px;
+      margin-left: 108px;
+      background-size: 1224px 1224px;
+      background-position: 0px -310px;
+    }
+  }
+
+  @include media-desktop-extra-wide {
+    &::before {
+      margin-left: 348px;
+    }
   }
 }
 
 .biomes__container-features {
   @include main-container-padding;
+  background-color: $_main_light;
+
+  @include media-tablet {
+    background-color: transparent;
+  }
 }
 
 .biomes__wrapper-features {
   padding-block: 32px 66px;
-  background-color: $_main_light;
+  z-index: 10;
 
   @include media-tablet {
+    overflow: hidden;
+    position: relative;
     padding: 45px 8px 50px 40px;
   }
 
@@ -455,14 +512,16 @@
   gap: 26px;
 
   @include media-tablet {
-    gap: 48px;
+    gap: 60px 30px;
   }
 
   @include media-desktop {
+    gap: 40px 84px;
     width: 800px;
   }
 
   @include media-desktop-wide {
+    gap: 40px 130px;
     width: 1000px;
   }
 }

@@ -1,11 +1,14 @@
 .about-owner {
-  background-color: #bebbad;
-  background-image: url(../img/about_owner_img_bg.png);
+  /**/ background-color: #bebbad;
+  background-image: url('../img/about_owner_img_bg.png');
   background-size: cover;
   background-repeat: no-repeat;
 
   @include media-tablet {
     display: flex;
+    background-image: url('../img/about-tablet-nicholas-traviss-bg.png');
+    background-position: left bottom;
+    background-size: contain;
   }
 }
 
@@ -17,6 +20,15 @@
     padding-block: 60px 113px;
     width: 50%;
     order: 1;
+  }
+
+  @include media-desktop {
+    padding-block: 164px 178px;
+  }
+
+  @include media-desktop-wide {
+    padding-block: 160px 150px;
+    padding-left: 0;
   }
 }
 
@@ -33,12 +45,20 @@
   color: $_main_dark;
 
   @include media-tablet {
+    margin-left: -50px;
+    margin-bottom: 42px;
+    min-width: 325px;
+
     font-size: 50px;
     line-height: 56px;
     letter-spacing: -3px;
   }
 
   @include media-desktop {
+    margin-left: -108px;
+    margin-bottom: 73px;
+    min-width: 590px;
+
     font-size: 55px;
     line-height: 69px;
 }
@@ -62,6 +82,11 @@
   line-height: 135%;
   letter-spacing: -0.5px;
   color: $_main_dark;
+
+  @include media-desktop {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .about-owner__cite {
@@ -74,9 +99,14 @@
   font-family: $_f__common;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 18px;
   color: $_main_dark;
+
+  @include media-tablet {
+    font-size: 24px;
+    line-height: 135%;
+  }
 }
 
 .about-owner__cite-position {
@@ -85,14 +115,42 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+  letter-spacing: -1px;
   color: $_main_dark;
+
+  @include media-tablet {
+    font-size: 20px;
+    line-height: 135%;
+  }
+}
+
+.about-owner__image-wrapper {
+  min-height: 500px;
+  width: 100%;
+  background-image: url('../img/about-mob-nicholas-traviss-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+
+  @include media-tablet {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    background-image: none;
+  }
+
+  @include media-desktop {
+
+  }
 }
 
 .about-owner__image {
   display: block;
+  object-fit: cover;
 
   @include media-tablet {
-    width: 50%;
+    width: 100%;
     height: auto;
   }
 }

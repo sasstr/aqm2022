@@ -3,14 +3,15 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding: 0 0 39px 35px;
+  padding: 39px 0 39px 35px;
   margin: 0 0 0 16px;
+
 
   &::before {
     position: absolute;
     content: "";
-    top: -70px;
-    left: -10px;
+    top: -0px;
+    left: -35px;
     width: min(140vw, 700px);
     height: min(140vw, 700px);
     background-image: url("data:image/svg+xml, %3Csvg fill='none' stroke='%235D9F93' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0.9 0.9 24.2 24.2'%3E%3Cg stroke-width='0.07' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' vector-effect='non-scaling-stroke' stroke-width='2px'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -25,6 +26,7 @@
       &::before {
         width: min(957px, 130vw);
         height: min(957px, 130vw);
+        top: -40px;
         left: -40px;
         width:125vw;
         height:125vw;
@@ -36,7 +38,16 @@
       &::before {
         width: 957px;
         height: 957px;
-        left: -100px;
+        left: -20px;
+        top: -150px;
+      }
+    }
+
+    @include media-desktop-wide{
+      &::before {
+        width: 1184px;
+        height: 1184px;
+        left: -20px;
         top: -150px;
       }
     }
@@ -51,6 +62,12 @@
   font-size: 18px;
   line-height: 24px;
   color: $_main_light;
+
+  @include media-tablet {
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+  }
 }
 
 .form__fieldset {
@@ -130,7 +147,7 @@
   position: relative;
   padding: 0 5px 0 5px;
   margin-bottom: 27px;
-  min-height: 58px;
+  min-height: 70px;
   max-height: 420px;
   width: 100%;
 
