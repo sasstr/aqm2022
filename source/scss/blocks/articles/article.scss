@@ -1,10 +1,15 @@
 .article {
-
-  @include media-tablet  {
-    width: 45%;
+  @include media-desktop  {
+    width: 30%;
   }
 }
 
+.article:nth-child(5n),
+.article:nth-child(5n-1) {
+  @include media-desktop  {
+    width: 45%;
+  }
+}
 .article:not(:last-child) {
   margin-bottom: 60px;
 }
@@ -87,36 +92,37 @@
   }
 }
 
+/*
+.article--japan {
+  @include media-desktop {
+    order: 1;
+  }
+}
+
 .article--earth {
-
-  @include media-tablet  {
-  width: 310px;
-  padding-bottom: 90px;
+  @include media-desktop {
+    order: 2;
   }
 }
 
-.article--wide {
-
-  @include media-tablet  {
-  width: 390px;
+.article--projects {
+  @include media-desktop {
+    order: 4;
   }
 }
 
-.article--up {
-
-  @include media-tablet  {
-  width: 286px;
-  margin-top: -270px;
+.article--nature-1 {
+  @include media-desktop {
+    order: 6;
   }
 }
 
 .article--author {
-
-  @include media-tablet  {
-    width: 390px;
-    }
+  @include media-desktop {
+    order: 5;
+  }
 }
-
+*/
 // ---------------------------
 // *** Big-article (First) ***
 // ---------------------------
