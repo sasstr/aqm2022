@@ -1,5 +1,5 @@
 
-var jQueryScript = document.createElement('script');
+const jQueryScript = document.createElement('script');
 jQueryScript.setAttribute('src', 'https://code.jquery.com/jquery-3.6.1.min.js');
 document.head.appendChild(jQueryScript);
 
@@ -14,7 +14,7 @@ if(document.querySelector('.work__list') && document.querySelectorAll('.work__it
     const workItems = workList.querySelectorAll('.work__item');
 
     const isMouseOnElement= function (e) {
-        if(e.target.classList.contains('work__item')) {
+        if(e.target.classList.contains('work__item') || e.target.classList.contains('work__list')) {
             workItems.forEach(it => it.style.opacity = 0.5)
             e.target.style.opacity = 1;
         }
@@ -50,14 +50,12 @@ const onClickBtnHeaderMenu = function (evt) {
         $('body').unbind('touchmove');
         enableScrolling();
         $(".header").css("background-color","");
-        // document.querySelector('.header__logo').classList.remove('hidden');
     } else {
         burgerMenu.classList.add('hidden');
         burgerMenuClose.classList.remove('hidden');
         $('body').bind('touchmove', function(e){e.preventDefault()})
         disableScrolling();
         $(".header").css("background-color","#003137");
-        // document.querySelector('.header__logo').classList.add('hidden');
     }
 };
 
@@ -168,8 +166,6 @@ if (document.querySelectorAll('.achievement__number').length) {
         total=parseInt(total/(10**(2-index)));
             if(total>40) total=40+total%10;
             if(total>10) speed=300/(total%10); else speed=300;
-        //   console.log(total);
-        //   console.log(speed);
         animate1digit(value,total,speed);
 
         })
@@ -186,7 +182,6 @@ if (document.querySelectorAll('.achievement__number').length) {
 
 
         let numberTop = achievement.getBoundingClientRect().top
-        console.log(numberTop);
 
         if (window.pageYOffset > (numberTop - window.innerHeight)/2) {
             this.removeEventListener('scroll', onScrollNumberAnimate);
