@@ -103,19 +103,12 @@
   color: $_main_dark;
 }
 
-.small-work-card__link:hover small-work-card__image {
-  transition-duration: 0.3s;
-  filter: blur(17px);
-}
-
 .small-work-card__image {
   width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
 }
-
-
 
 .small-work-card__button {
     background: transparent;
@@ -124,7 +117,7 @@
     z-index: 100;
     border: 1px solid $_white;
     cursor: pointer;
-    // visibility: hidden;
+    visibility: hidden;
     left: 0;
     right: 0;
     margin-inline: auto;
@@ -132,6 +125,11 @@
 
 .small-work-card__link:hover .small-work-card__button {
   visibility: visible;
+}
+
+.small-work-card__link:hover .small-work-card__image {
+  transition-duration: 0.3s;
+  filter: blur(17px);
 }
 
 .small-work-card__address {
