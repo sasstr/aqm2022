@@ -16,7 +16,6 @@
 }
 
 .main-about__container {
-  /* overflow: hidden;  */
   position: relative;
   @include main-container-padding;
 
@@ -59,7 +58,7 @@
 
   @include media-desktop-extra-wide {
     padding-left: 348px;
-    padding-right: 150px;
+    padding-right: 50px;
   }
 }
 

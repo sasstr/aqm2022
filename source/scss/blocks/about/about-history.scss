@@ -7,18 +7,27 @@
 .about-history__container {
   @include main-container-padding;
   padding-block: 63px 73px;
+
+  @include media-tablet {
+    padding-top: 90px;
+  }
 }
 
 .about-history__box {
   @include media-tablet {
     display: flex;
+    padding-bottom: 113px;
   }
 
+  @include media-desktop {
+    padding-bottom: 106px;
+  }
 }
 
 .about-history__title {
   margin: 0 0 10px 0;
   padding: 0;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -28,14 +37,33 @@
   color: $_main_light;
 
   @include media-tablet {
+    width: 560px;
+    margin-bottom: 12px;
     font-size: 50px;
     line-height: 64px;
   }
 
   @include media-desktop {
+    margin-bottom: -50px;
     font-size: 55px;
     line-height: 69px;
     letter-spacing: -3px;
+
+    @media (min-width: 1150px) {
+      margin-bottom: -100px;
+    }
+
+    @media (min-width: 1300px) {
+      margin-bottom: -150px;
+    }
+  }
+
+  @include media-desktop-wide {
+    margin-bottom: -180px;
+  }
+
+  @include media-desktop-extra-wide {
+    margin-bottom: -200px;
   }
 }
 
@@ -43,6 +71,11 @@
   @include media-tablet {
     max-width: 306px;
     margin-bottom: -330px;
+  }
+
+  @include media-desktop {
+    max-width: 506px;
+    padding-left: 60px;
   }
 
 }
@@ -78,6 +111,10 @@
   letter-spacing: -0.5px;
   color: $_white;
 
+  @include media-tablet {
+    padding-top: 46px;
+  }
+
   @include media-desktop {
     font-size: 24px;
     line-height: 140%;
@@ -111,18 +148,26 @@
     }
 
     @include media-desktop {
-      max-width: 580px;
-      margin-bottom: -540px;
+      max-width: 480px;
+      margin-bottom: -440px;
+
+      @media (min-width: 1150px) {
+        max-width: 550px;
+      }
+
+      @media (min-width: 1300px) {
+        max-width: 600px;
+      }
     }
 
     @include media-desktop-wide {
-      max-width: 700px;
+      max-width: 650px;
     }
 }
 
 .about-history__image {
   display: block;
-  width:100%;
+  width: 100%;
 }
 
 .about-history__list {
@@ -134,7 +179,15 @@
   padding: 0 16px 100px;
 
   @include media-tablet {
-    padding-top: 430px;
+    padding: 430px 0 0;
+  }
+}
+
+.about-history__list--line {
+  padding-right: 21px;
+
+  @include media-desktop {
+    padding-right: 60px;
   }
 }
 
@@ -158,6 +211,15 @@
 
   @include media-tablet {
     padding-top: 430px;
+    padding-left: 40px;
+  }
+
+  @include media-desktop {
+    padding-left: 83px;
+  }
+
+  @include media-desktop-wide {
+    padding-left: 103px;
   }
 
   &::before {
@@ -171,21 +233,22 @@
     background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0.9 0.9 24.2 24.2'%3E%3Cg stroke-width='0.1' style='fill: %23e1f1e3' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' stroke-width='0.1'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     background-repeat:no-repeat;
     background-size: 807px 807px;
-    background-position: -100px -70px;
     background-position: left center;
 
     @include media-tablet {
-      top: -100px;
+      top: -80px;
       left: 0px;
       width: 1257px;
       height: 1257px;
 
       padding-top: 430px;
-      background-repeat:no-repeat;
       background-size: 1257px 1257px;
-      background-position: -100px -70px;
-      background-position: left center;
       transform: rotate(90deg);
+    }
+
+    @include media-desktop {
+      top: -70px;
+      left: 30px;
     }
   }
 }
@@ -200,31 +263,59 @@
   background-color: $_main_dark;
   z-index: 3;
   margin-right: 15px;
-}
 
-.about-history__time {
-  width: 110px;
-  height: 69px;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
   line-height: 69px;
-  letter-spacing: -1px;
+  letter-spacing: -3px;
   color: $_main_light;
+
+  @include media-tablet {
+    letter-spacing: -1px;
+  }
+
+  @include media-desktop {
+    font-size: 55px;
+  }
+}
+
+.about-history__time {
+  width: 110px;
+  height: 69px;
 }
 
 .about-history__desc {
   width: 208px;
+
   margin: 0;
   padding: 0;
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.5px;
   color: $_main_light;
+
+  @include media-tablet {
+    width: 193px;
+  }
+
+  @include media-desktop {
+    width: 336px;
+    margin-left: 50px;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+  }
+
+  @include media-desktop-wide {
+    width: 413px;
+    margin-left: 70px;
+  }
+
 }
 
 .about-history__item-box--light {
@@ -233,12 +324,20 @@
 }
 
 .about-history__desc--light {
-  color: $_main_dark;
   width: 324px;
+  margin-left: 0;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: $_main_dark;
 }
 
 .about-history__time--light {
   width: 210px;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
@@ -246,4 +345,6 @@
   line-height: 128%;
   letter-spacing: -1px;
   color: $_main_dark;
+
+
 }

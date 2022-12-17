@@ -14,9 +14,9 @@
   }
 
   @include media-desktop {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     justify-items: start;
-    grid-template-columns: 2fr 1fr;
 
     padding-block: 52px 57px;
   }
@@ -40,6 +40,19 @@
   color: $_main_light;
   letter-spacing: -3px;
 
+  @include media-tablet {
+    width:670px;
+    font-size:85px;
+    line-height: 100px;
+    letter-spacing: -3px;
+  }
+
+  @include media-desktop {
+    width:704px;
+    font-size:96px;
+    padding-bottom:128px;
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -51,19 +64,54 @@
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
+
+    @include media-tablet {
+      width: 1184px;
+      height: 1184px;
+    }
+
+    @include media-desktop {
+      width: 1184px;
+      height: 1184px;
+      bottom: 75px;
+    }
   }
 }
 
 .work__text {
   margin: 0;
   padding: 0 0 28px;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: $_main_light;
-  letter-spacing: -0.5px;
+
+
+  @include media-tablet {
+    width:55%;
+    margin-left: auto;
+    margin-right: 0;
+
+    font-size:18px;
+    letter-spacing: -0.5px;
+  }
+
+  @include media-desktop {
+    width: 25vw;
+    margin-left: auto;
+    margin-right: 0;
+    letter-spacing:-0.5px;
+  }
+
+  @include media-desktop-wide {
+    width: 20vw;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: -1px;
+  }
 }
 
 .work__title {
@@ -76,6 +124,11 @@
   line-height: 52px;
   color: $_main_light;
   letter-spacing: -1px;
+
+  @include media-tablet {
+    font-size: 32px;
+    width: 100%;
+  }
 }
 
 .work__list {
@@ -139,48 +192,3 @@
     z-index: 10;
   }
 }
-
-@include media-tablet {
-  .work__slogan {
-    width:670px;
-    font-size:85px;
-    line-height: 100px;
-    letter-spacing: -3px;
-  }
-  .work__slogan::before {
-    width: 1184px;
-    height: 1184px;
-  }
-
-  .work__text {
-    width:55%;
-    margin-left: auto;
-    margin-right: 0;
-    font-size:18px;
-    letter-spacing:-0.5px;
-  }
-}
-
-@include media-desktop {
-
-  .work__slogan {
-  width:704px;
-  font-size:96px;
-  padding-bottom:128px;
-  }
-
-  .work__slogan::before {
-  width: 1184px;
-  height: 1184px;
-  bottom:75px;
-  }
-
-  .work__text {
-  width:25vw;
-  margin-left: auto;
-  margin-right: 0;
-  font-size:18px;
-  letter-spacing:-0.5px;
-  }
-}
-
