@@ -5,6 +5,7 @@
 
 .construction__container {
   position: relative;
+  margin: 0 auto;
   @include main-container-padding;
   padding-block: 12px 50px;
 

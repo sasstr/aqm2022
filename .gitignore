@@ -8,9 +8,12 @@
 *.sublime*
 *.fig
 *.zip
+*.mov
+*.mp4
 build/
 node_modules/
 npm-debug.*
 source/css/*.css
 source/css/*.map
 Thumbs.db
+video-design/

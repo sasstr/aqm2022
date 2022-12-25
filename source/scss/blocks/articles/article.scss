@@ -4,6 +4,10 @@
   }
 }
 
+.articles__container {
+  margin: 0 auto;
+}
+
 .article:nth-child(5n),
 .article:nth-child(5n-1) {
   @include media-desktop  {
@@ -91,38 +95,6 @@
     font-size: 24px;
   }
 }
-
-/*
-.article--japan {
-  @include media-desktop {
-    order: 1;
-  }
-}
-
-.article--earth {
-  @include media-desktop {
-    order: 2;
-  }
-}
-
-.article--projects {
-  @include media-desktop {
-    order: 4;
-  }
-}
-
-.article--nature-1 {
-  @include media-desktop {
-    order: 6;
-  }
-}
-
-.article--author {
-  @include media-desktop {
-    order: 5;
-  }
-}
-*/
 // ---------------------------
 // *** Big-article (First) ***
 // ---------------------------

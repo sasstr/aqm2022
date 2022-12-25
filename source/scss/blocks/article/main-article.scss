@@ -7,7 +7,17 @@
 }
 
 .main-article__container {
+  margin: 0 auto;
+  max-width: 1224px;
     @include main-container-padding;
+
+    @include media-desktop-wide {
+      max-width: 1440px;
+    }
+
+    @include media-desktop-extra-wide {
+      max-width: 1924px;
+    }
 }
 
 .main-article__box--up {
@@ -48,12 +58,17 @@
 }
 
 .main-article__image {
+  margin: 0 auto;
+  max-width: 1224px;
   @include media-desktop-wide {
     margin: 0 auto;
     display: block;
-    min-width: 1224px;
-    max-width: 1600px;
   }
+}
+
+.main-article__box--down {
+  margin: 0 auto;
+  max-width: 1224px;
 }
 
 .main-article__title {

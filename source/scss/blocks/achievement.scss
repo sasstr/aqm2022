@@ -16,6 +16,7 @@
 }
 
 .achievement__container {
+  margin: 0 auto;
   @include main-container-padding;
   padding-block: 47px 56px;
 
@@ -164,7 +165,7 @@ padding: 0;
 }
 
 .achievement__number
- { 
+ {
   overflow:hidden;
   display:block;
  }

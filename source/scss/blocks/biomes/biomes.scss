@@ -3,6 +3,8 @@
 }
 
 .biomes__container {
+  margin: 0 auto;
+  max-width: 1920px;
   @include main-container-padding;
 }
 

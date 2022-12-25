@@ -8,6 +8,7 @@
 }
 
 .works__container {
+  margin: 0 auto;
   @include main-container-padding;
   padding-block: 26px 70px;
 }

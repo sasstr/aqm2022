@@ -1,6 +1,7 @@
 .projects {
   position:relative;
   @include main-container-padding;
+  margin: 0 auto;
   padding-block: 53px 90px;
   background:$_white;
 

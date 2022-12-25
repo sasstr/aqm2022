@@ -1,35 +1,18 @@
 .project-slider {
   position: relative;
+  margin: 0 auto;
   padding: 0 16px 0;
   background: linear-gradient(180deg, rgba(0,49,55,1) 50%, rgba(225,241,227,1) 50%);
 
   @include main-container-padding;
 }
 
-// .project-slider__box {
-//   position: relative;
-
-//     &:after,
-//     &:before {
-//       position: absolute;
-//       content: "";
-//       width: 28px;
-//       height: 7px;
-//       right: 6px;
-//       top: 50%;
-//       z-index: 5;
-//       transform: translateY(-50%);
-//     }
-
-//     &:after {
-//     background-image: url("../img/project-arrow-mob.svg");
-//   }
-
-//     &:before {
-//     background-image: url("../img/project-arrow-mob-left.svg");
-//     left: 6px;
-//   }
-// }
+.project-slider__box {
+  @include media-desktop-extra-wide {
+    margin: 0 auto;
+    max-width: 1224px;
+  }
+}
 
 .project-slider__nav-list {
   @include list-style-reset;
