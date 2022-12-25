@@ -43,6 +43,8 @@
 }
 
 .project-2-description__container {
+  margin: 0 auto;
+  max-width: 1224px;
   background-color: $_main_dark;
 
   @include media-tablet {
