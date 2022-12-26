@@ -23,7 +23,6 @@
       background-repeat: no-repeat;
       background-size: 93vw;
       background-clip: content-box;
-      /* background-color: $_main_dark; */
       background-color: transparent;
     }
   }
@@ -48,6 +47,8 @@
 
     &::before {
       margin-left: 240px;
+      width: 85%;
+      left: 4%;
     }
   }
 
@@ -74,6 +75,11 @@
 
   @include media-desktop-wide {
     padding: 84px 80px 100px;
+  }
+
+  @include media-desktop-extra-wide {
+    margin: 0 auto;
+    max-width: 1920px;
   }
 }
 
