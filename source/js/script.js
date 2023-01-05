@@ -93,8 +93,11 @@ function OnWinScroll()
 function MyShow(el)
 {
     el.find("> *").css("opacity",0);
+    el.find(" h1,  h2,  h3,  p").css("margin-top","+150px");
+    el.find(" h1,  h2,  h3,  p").css("margin-top","-150px");
     el.animate({opacity: 1}, 100);
-    el.find("> *").animate({opacity: 1}, 700);
+    el.find("> *").animate({opacity: 1}, 1700);
+    //el.find(" h1,  h2,  h3,  p").animate({"margin-top":"-150px"},500);
 }
 
 function onmyscreen(el)
@@ -103,7 +106,6 @@ function onmyscreen(el)
     var window_top = $(window).scrollTop();
     var offset = el.offset().top;
     if (offset <= window_top+$(window).height())  return true;
-
     return false;
 }
 
@@ -197,7 +199,6 @@ defer (PreFormatAnimation);
 const animateCounter2 = function(elem)
 {
  animate1number(elem,500);
- console.log(elem);
  
 
 } 
