@@ -7,6 +7,56 @@
   justify-content: space-between;
 }
 
+.small-work-card {
+
+  @include media-tablet {
+    width: 43%;
+  }
+
+  @include media-desktop {
+    width: 31%;
+  }
+}
+
+.small-work-card--1 {
+  order: 1;
+}
+
+.small-work-card--2 {
+  order: 2;
+}
+
+.small-work-card--3 {
+  order: 3;
+  @include media-tablet {
+    order: 4;
+  }
+
+  @include media-desktop {
+    order: 3;
+  }
+}
+
+.small-work-card--4 {
+  order: 4;
+
+  @include media-tablet {
+    order: 3;
+  }
+
+  @include media-desktop {
+    order: 4;
+  }
+}
+
+.small-work-card--5 {
+  order: 5;
+}
+
+.small-work-card--6 {
+  order: 6;
+}
+
 .small-work-card__desc {
   margin: 0;
   padding: 5px 0 0;
@@ -42,6 +92,7 @@
 .small-work-card__link {
   position: relative;
   display:block;
+  width: 100%;
   overflow:hidden;
 
   font-family: $_f__common;
@@ -52,12 +103,10 @@
   color: $_main_dark;
 }
 
-.small-work-card__link:hover small-work-card__image {
-  transition-duration: 0.3s;
-  filter: blur(17px);
-}
-
 .small-work-card__image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
@@ -68,7 +117,7 @@
     z-index: 100;
     border: 1px solid $_white;
     cursor: pointer;
-    // visibility: hidden;
+    visibility: hidden;
     left: 0;
     right: 0;
     margin-inline: auto;
@@ -76,6 +125,11 @@
 
 .small-work-card__link:hover .small-work-card__button {
   visibility: visible;
+}
+
+.small-work-card__link:hover .small-work-card__image {
+  transition-duration: 0.3s;
+  filter: blur(17px);
 }
 
 .small-work-card__address {

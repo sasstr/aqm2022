@@ -1,5 +1,5 @@
 
-var jQueryScript = document.createElement('script');
+const jQueryScript = document.createElement('script');
 jQueryScript.setAttribute('src', 'https://code.jquery.com/jquery-3.6.1.min.js');
 document.head.appendChild(jQueryScript);
 
@@ -14,7 +14,7 @@ if(document.querySelector('.work__list') && document.querySelectorAll('.work__it
     const workItems = workList.querySelectorAll('.work__item');
 
     const isMouseOnElement= function (e) {
-        if(e.target.classList.contains('work__item')) {
+        if(e.target.classList.contains('work__item') || e.target.classList.contains('work__list')) {
             workItems.forEach(it => it.style.opacity = 0.5)
             e.target.style.opacity = 1;
         }
@@ -41,22 +41,21 @@ const onKeyupEsc = function (evt) {
 }
 // Открыетие и закрытие меню гамбургер
 const onClickBtnHeaderMenu = function (evt) {
-    evt.preventDefalt;
+    evt.preventDefault;
     navigation.classList.toggle('hidden');
+
     if(navigation.classList.contains('hidden')) {
+        burgerMenu.classList.remove('hidden');
         burgerMenuClose.classList.add('hidden');
         $('body').unbind('touchmove');
         enableScrolling();
         $(".header").css("background-color","");
-        burgerMenu.classList.remove('hidden');
-        document.querySelector('.header__logo').classList.remove('hidden');
     } else {
         burgerMenu.classList.add('hidden');
         burgerMenuClose.classList.remove('hidden');
         $('body').bind('touchmove', function(e){e.preventDefault()})
         disableScrolling();
         $(".header").css("background-color","#003137");
-        document.querySelector('.header__logo').classList.add('hidden');
     }
 };
 
@@ -108,6 +107,7 @@ function onmyscreen(el)
 }
 
 // Анимация цифорок в блоке на главной странице achievement
+
 const time = 3000;
 const step = 1;
 let achievement = document.querySelector('.achievement');
@@ -157,33 +157,26 @@ function animate1digit(element, to, speed)
      $(element).children().first().animate({'margin-top':-$(element).height()*to},speed*to)
     else
     {
-     $(element).children().first().animate({'margin-top':-$(element).height()*10},{speed:speed*10,complete:function(){animate1digit(element,to-10,speed)}});
+        $(element).children().each(function(index,value)
+        {
+            //index = 0 -> 3 ... 300/1
+            // index=1 -> 38 .. 300/3
+            // index=2 ->85 ..  300/8
+        total=$(value).parent().attr("data-animation");
+        //total%100^(3-)
+        total=parseInt(total/(10**(2-index)));
+            if(total>40) total=40+total%10;
+            if(total>10) speed=300/(total%10); else speed=300;
+        animate1digit(value,total,speed);
+
+        })
+        //animate1digit($(element).children().last(),$(element).attr("data-animation")%100,speed);
+
     }
-}
-function animate1number(element,speed)
-{
-    $(element).children().each(function(index,value)
+    function animateALLnumbers()
     {
-        //index = 0 -> 3 ... 300/1
-        // index=1 -> 38 .. 300/3
-        // index=2 ->85 ..  300/8
-      total=$(value).parent().attr("data-animation");
-      //total%100^(3-)
-      total=parseInt(total/(10**(2-index)));
-      if(total>40) total=40+total%10;
-      if(total>10) speed=300/(total%10); else speed=300;
-      console.log(total)      ;
-      console.log(speed)      ;
-      animate1digit(value,total,speed);
-        
-    })
-    //animate1digit($(element).children().last(),$(element).attr("data-animation")%100,speed);
-    
-}
-function animateALLnumbers()
-{
-     $(".achievement__number").each(function(){animate1number($(this))});;
-}
+        $(".achievement__number").each(function(){animate1number($(this))});;
+    }
 
 const onScrollNumberAnimate = function () {
     let numberTop = achievement.getBoundingClientRect().top
@@ -203,3 +196,9 @@ const animateCounter2 = function(elem)
 } 
 
 
+
+    // Запускаем анимацию чисел
+    window.addEventListener('scroll',onScrollNumberAnimate)
+} else {
+  defer();
+}

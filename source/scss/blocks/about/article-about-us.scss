@@ -33,4 +33,8 @@
     font-size: 18px;
     line-height: 25px;
   }
+
+  @include media-desktop-extra-wide {
+    max-width: 600px;
+  }
 }

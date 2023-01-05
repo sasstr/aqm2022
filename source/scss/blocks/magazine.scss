@@ -3,6 +3,7 @@
 }
 
 .magazine__container {
+  margin: 0 auto;
   @include main-container-padding;
   padding-block: 72px 147px;
 

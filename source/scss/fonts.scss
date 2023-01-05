@@ -16,11 +16,11 @@
   url("../fonts/AkkuratLLCyr-Regular.woff") format("woff");
 }
 
-// @font-face {
-//   font-family: "Akkurat LL";
-//   font-style: bold;
-//   font-weight: 700;
-//   font-display: swap;
-//   src: url("./fonts/AkkuratLL-Regular.woff2") format("woff2"),
-//   ("./fonts/AkkuratLL-Regular.woff") format("woff");
-// }
+@font-face {
+  font-family: "AkkuratLL";
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/AkkuratLL-Regular.woff2") format("woff2"),
+  ("./fonts/AkkuratLL-Regular.woff") format("woff");
+}

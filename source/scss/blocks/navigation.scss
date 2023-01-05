@@ -58,4 +58,8 @@
     color: $_white;
     font-weight: 400;
   }
+
+  &--active {
+    color: $_main_light;
+  }
 }

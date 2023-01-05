@@ -3,6 +3,7 @@
 }
 
 .about-us__container {
+  margin: 0 auto;
   @include main-container-padding;
 }
 
@@ -60,10 +61,45 @@
   line-height: 24px;
   color: $_main_light;
 
+  &::before {
+    content: "";
+    position: absolute;
+    right: -16px;
+    background-image: url("data:image/svg+xml, %3Csvg fill='none' stroke='%235D9F93' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0.9 0.9 24.2 24.2'%3E%3Cg stroke-width='0.07' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' vector-effect='non-scaling-stroke' stroke-width='2px'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-position: bottom right;
+    width: 100vw;
+    height: 700px;
+    background-repeat:no-repeat;
+    bottom: 140px;
+    background-size: min(200vw, 900px) min(200vw,900px);
+
+      @include media-tablet {
+      bottom:180px;
+      right:-30px;
+      width:877px;
+      height:877px;
+      background-size:cover;
+    }
+
+    @include media-desktop {
+      right:-30px;
+      width:1329px;
+      height:1329px;
+      background-size:cover;
+    }
+
+    @include media-desktop-wide {
+      right: -150px;
+    }
+
+    @include media-desktop-extra-wide {
+      right: -10px;
+    }
+  }
+
   @include media-tablet  {
     font-size: 28px;
     line-height: 128%;
-    //width:538px;
     margin-left:24vw;
     padding-bottom: 250px;
   }
@@ -75,50 +111,6 @@
 
   @include media-desktop-wide  {
     font-size: 32px;
+    margin-left: 21.4vw;
   }
-    &::before {
-      content: "";
-      position: absolute;
-      right: -16px;
-      background-image: url("data:image/svg+xml, %3Csvg fill='none' stroke='%235D9F93' xmlns='http://www.w3.org/2000/svg' id='icon-plus' viewBox='0.9 0.9 24.2 24.2'%3E%3Cg stroke-width='0.07' fill-rule='evenodd'%3E%3Cg id='Learn' transform='translate(-249.000000, -3678.000000)'%3E%3Cg id='Group-6' transform='translate(250.000000, 3679.000000)'%3E%3Cpath d='M24,24 L12.0006916,24 C5.40141779,24 0,18.5999654 0,12.0006916 C0,5.40141779 5.40141779,0 12.0006916,0 C18.5999654,0 24,5.40141779 24,12.0006916 L24,24 Z' vector-effect='non-scaling-stroke' stroke-width='2px'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      background-position: bottom right;
-      width: 100vw;
-      height: 700px;
-      background-repeat:no-repeat;
-      bottom: 140px;
-      background-size: min(200vw, 900px) min(200vw,900px);
-
-        @include media-tablet  {
-        bottom:180px;
-        right:-30px;
-        width:877px;
-        height:877px;
-        background-size:cover;
-      }
-
-      @include media-desktop  {
-        right:-30px;
-        width:1329px;
-        height:1329px;
-        background-size:cover;
-      }
-
-      @include media-desktop-wide  {
-        right: -150px;
-      }
-    }
 }
-
-
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   right: 0px;
-    //   width: min(180vw,700px);
-    //   height: min(180vw,700px);
-    //   background-image: url(../img/aqm_logo_full.svg);
-    //   bottom: -50px;
-    //   background-position: bottom right;
-    //   background-size: 100% 100%;
-    // }

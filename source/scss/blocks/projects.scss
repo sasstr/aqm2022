@@ -1,6 +1,7 @@
 .projects {
   position:relative;
   @include main-container-padding;
+  margin: 0 auto;
   padding-block: 53px 90px;
   background:$_white;
 
@@ -59,32 +60,4 @@
     justify-content: end;
     margin-top: -50px;
   }
-}
-
-.card__link:hover .card__image {
-  transition-duration: 0.3s;
-  filter: blur(17px);
-}
-
-.card__link {
-  display:block;
-  overflow:hidden;
-  position:relative;
-}
-
-.card__button {
-  background:transparent;
-  position:absolute;
-  top:calc(50% - 25px);
-  z-index:100;
-  border: 1px solid $_white;
-  cursor:pointer;
-  visibility:hidden;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-}
-
-.card__link:hover .card__button {
-  visibility:visible;
 }

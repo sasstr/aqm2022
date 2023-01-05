@@ -3,7 +3,13 @@
 }
 
 .project-2__container {
+  margin: 0 auto;
+  max-width: 1224px;
   @include main-container-padding;
+
+  @include media-desktop-extra-wide {
+    max-width: 1920px;
+  }
 }
 
 .project-2__wrapper {

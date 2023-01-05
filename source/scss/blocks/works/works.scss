@@ -8,20 +8,22 @@
 }
 
 .works__container {
+  margin: 0 auto;
   @include main-container-padding;
-  padding-block: 81px 0px;
+  padding-block: 26px 70px;
 }
 
 .works__articles-box {
   @include media-tablet {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 80px;
   }
 
   @include media-desktop {
-    gap: 24px;
+    gap: 2.2%;
   }
 }
 

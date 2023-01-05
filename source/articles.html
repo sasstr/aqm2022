@@ -61,10 +61,13 @@
 
       </nav>
       <button class="header__toggle">
-        <svg width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="burger-menu" width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="1" x2="35" y2="1" stroke="white" stroke-width="2"/>
           <line y1="11" x2="35" y2="11" stroke="white" stroke-width="2"/>
           <line y1="21" x2="35" y2="21" stroke="white" stroke-width="2"/>
+        </svg>
+        <svg class="burger-menu-close hidden" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L32 32M32 1L1 32" stroke="white" stroke-width="2"/>
         </svg>
       </button>
     </div>
@@ -74,27 +77,28 @@
 
     <section class="main__wrapper articles__container">
       <h1 class="articles__title">Articles</h1>
-      <div class="articles__box">
-        <article class="article article--big">
+      <article class="article article--big">
+        <a class="article__link article__link--big" href="./article.html">
+          <picture>
+            <source srcset="./img/articles_biome-desktop-wide-1x.jpg 1x" media="(min-width: 1440px)">
+            <source srcset="./img/articles_biome-desktop-1x.jpg 1x" media="(min-width: 1024px)">
+            <source srcset="./img/articles_biome-tablet-1x.jpg 1x" media="(min-width: 768px)">
+            <img class="article__image" src="./img/articles_biome-mob-1x.jpg" alt="Come inside a Biome">
+          </picture>
+        </a>
+        <div class="article__box article__box--big">
           <a class="article__link article__link--big" href="./article.html">
-            <picture>
-              <source srcset="./img/articles_biome-desktop-wide-1x.jpg 1x" media="(min-width: 1440px)">
-              <source srcset="./img/articles_biome-desktop-1x.jpg 1x" media="(min-width: 1024px)">
-              <source srcset="./img/articles_biome-tablet-1x.jpg 1x" media="(min-width: 768px)">
-              <img class="article__image" src="./img/articles_biome-mob-1x.jpg" alt="Come inside a Biome">
-            </picture>
+          <h2 class="article__title article__title--big">Come inside a Biome</h2>
           </a>
-          <div class="article__box article__box--big">
-            <a class="article__link article__link--big" href="./article.html">
-            <h2 class="article__title article__title--big">Come inside a Biome</h2>
-            </a>
-            <p class="article__tags article__tags--big">– tag 1, tag 2, tag 3, tag 4, tag 5, tag 6</p>
-            <p class="article__text article__text--big">The sustainable future of entertainment precincts</p>
-            <a class="article__btn-link article__link--big" href="#">↳ Read more</a>
-          </div>
-        </article>
+          <p class="article__tags article__tags--big">– tag 1, tag 2, tag 3, tag 4, tag 5, tag 6</p>
+          <p class="article__text article__text--big">The sustainable future of entertainment precincts</p>
+          <a class="article__btn-link article__link--big" href="#">↳ Read more</a>
+        </div>
+      </article>
 
-        <article class="article">
+      <div class="articles__box">
+
+        <article class="article article--japan-1">
           <a class="article__link" href="./article.html">
             <h2 class="article__title">It's in the trees</h2>
           </a>
@@ -106,7 +110,7 @@
           <a class="article__btn-link" href="#">↳ Read more</a>
         </article>
 
-        <article class="article article--earth">
+        <article class="article article--earth-1">
           <a class="article__link" href="./article.html">
             <h2 class="article__title">Earth – Our planet.
             Our Home.</h2>
@@ -116,7 +120,7 @@
           <a class="article__btn-link" href="#">↳ Read more</a>
         </article>
 
-        <article class="article article--wide">
+        <article class="article article--projects">
           <a class="article__link" href="./article.html">
             <h2 class="article__title">Projects as problem solving</h2>
           </a>
@@ -129,7 +133,7 @@
           <a class="article__btn-link" href="#">↳ Read more</a>
         </article>
 
-        <article class="article article--up">
+        <article class="article article--nature-1">
           <a class="article__link" href="./article.html">
             <h2 class="article__title">Nature’s Biomes – our inspiration</h2>
           </a>
@@ -153,7 +157,19 @@
           <a class="article__btn-link" href="#">↳ Read more</a>
         </article>
 
-        <article class="article">
+        <article class="article article--japan-2">
+          <a class="article__link" href="./article.html">
+            <h2 class="article__title">It's in the trees</h2>
+          </a>
+          <a class="article__link" href="./article.html">
+            <img class="article__image" src="./img/articles_earth_our_planet.jpg" alt="It's in the trees">
+          </a>
+          <p class="article__tags">– tag 1, tag 2</p>
+          <p class="article__text">What we can learn from the Japanese practice of shinrin-yoku (forest bathing) and why it’s now celebrated as an antidote to the modern urban lifestyle and its associated stressors.</p>
+          <a class="article__btn-link" href="#">↳ Read more</a>
+        </article>
+
+        <article class="article article--earth-2">
           <a class="article__link" href="./article.html">
             <h2 class="article__title">Earth – Our planet.
             Our Home.</h2>
@@ -163,7 +179,7 @@
           <a class="article__btn-link" href="#">↳ Read more</a>
         </article>
 
-        <article class="article">
+        <article class="article article--nature-2">
           <a class="article__link" href="./article.html">
             <h2 class="article__title">Nature’s Biomes – our inspiration</h2>
           </a>
@@ -174,6 +190,7 @@
           <p class="article__text">Learn a little about some of Earth’s incredible natural environments and you’ll see why we’ve made sharing this knowledge our life’s work.</p>
           <a class="article__btn-link" href="#">↳ Read more</a>
         </article>
+
       </div>
     </section>
 
