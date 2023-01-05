@@ -75,13 +75,12 @@ btnHeaderMenu.addEventListener('click', onClickBtnHeaderMenu);
 
 function defer(method){
     if ( window.jQuery){
-
         $("section, .footer,  .projects__card, .projects__title").not('.main__wrapper.projects').css('opacity','0');
         $(window).scroll(function() {OnWinScroll()});
         OnWinScroll();
         method();
     }
-    else{window.setTimeout("defer("+method+");",100);}
+    else{window.setTimeout("defer("+method+");",500);}
 }
 
 
@@ -108,53 +107,55 @@ function onmyscreen(el)
 }
 
 // Анимация цифорок в блоке на главной странице achievement
-if (document.querySelectorAll('.achievement__number').length) {
-    const time = 3000;
-    const step = 1;
-    let achievement = document.querySelector('.achievement');
-    let elemNumber = achievement.querySelectorAll('.achievement__number');
 
-    const animateCounter = function (elem) {
-        const num = parseInt( elem.textContent);
-        let counter = 0;
-        const timeInt = Math.round(time / (num / step));
+const time = 3000;
+const step = 1;
+let achievement = document.querySelector('.achievement');
+if(document.querySelector('.achievement__number'))
+  elemNumber = achievement.querySelectorAll('.achievement__number');
 
-        let interval = setInterval(()=> {
-                counter += step;
-                if (counter === num) {
-                    clearInterval(interval);
-                }
-                elem.textContent = counter;
-            }, timeInt);
-    };
+const animateCounter = function (elem) {
+    const num = parseInt( elem.textContent);
+    let counter = 0;
+    const timeInt = Math.round(time / (num / step));
 
-    function PreFormatAnimation()
-    {
-        $('[data-animation]').each(
-            function()
-            {
-                $(this).html("<span>0</span>".repeat($(this).attr('data-animation').length));
-                //$(this).css("height",$(this).height()+"px");
-                $(this).css("width",$(this).width()+"px");
-                $(this).find("span").each(function(){
-                    $(this).css("width",$(this).width()+"px").css("height",$(this).height()+"px");
-                    $(this).html("<div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>0</div>");
-                });
+    let interval = setInterval(()=> {
+            counter += step;
+            if (counter === num) {
+                clearInterval(interval);
             }
-        );
-    }
-    function animate1digit(element, to, speed)
-    {
-        if(to>0)
-        $(element).children().first().css('margin-top',-$(element).height()+'px');
-        if(to<10)
-        $(element).children().first().animate({'margin-top':-$(element).height()*to},speed*to)
-        else
-        {
-        $(element).children().first().animate({'margin-top':-$(element).height()*10},{speed:speed*10,complete:function(){animate1digit(element,to-10,speed)}});
+            elem.textContent = counter;
+        }, timeInt);
+};
+
+function PreFormatAnimation()
+{
+    window.addEventListener('scroll',onScrollNumberAnimate);
+    
+    $('[data-animation]').each( 
+        function()
+        {  
+            $(this).html("<span>0</span>".repeat($(this).attr('data-animation').length));
+            //$(this).css("height",$(this).height()+"px");
+            $(this).css("width",$(this).width()+"px");
+            $(this).find("span").each(function(){
+                $(this).css("width",$(this).width()+"px").css("height",$(this).height()+"px");
+                $(this).html("<div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>0</div>");
+            });
+            
         }
-    }
-    function animate1number(element,speed)
+    );    
+
+
+      
+}
+function animate1digit(element, to, speed)
+{
+    if(to>0)
+     $(element).children().first().css('margin-top',-$(element).height()+'px');
+    if(to<10)
+     $(element).children().first().animate({'margin-top':-$(element).height()*to},speed*to)
+    else
     {
         $(element).children().each(function(index,value)
         {
@@ -177,23 +178,24 @@ if (document.querySelectorAll('.achievement__number').length) {
         $(".achievement__number").each(function(){animate1number($(this))});;
     }
 
-    const onScrollNumberAnimate = function () {
-
-
-
-        let numberTop = achievement.getBoundingClientRect().top
-
-        if (window.pageYOffset > (numberTop - window.innerHeight)/2) {
-            this.removeEventListener('scroll', onScrollNumberAnimate);
-            elemNumber.forEach((it) => animateCounter2(it));
-        }
+const onScrollNumberAnimate = function () {
+    let numberTop = achievement.getBoundingClientRect().top
+    if (window.pageYOffset > (numberTop - window.innerHeight)/2) {
+        this.removeEventListener('scroll', onScrollNumberAnimate);
+        elemNumber.forEach((it) => animateCounter2(it));
     }
+}
 
-    defer (PreFormatAnimation);
-    const animateCounter2 = function(elem)
-    {
+defer (PreFormatAnimation);
+const animateCounter2 = function(elem)
+{
+ animate1number(elem,500);
+ console.log(elem);
+ 
 
-    }
+} 
+
+
 
     // Запускаем анимацию чисел
     window.addEventListener('scroll',onScrollNumberAnimate)
