@@ -160,7 +160,6 @@
 }
 
 .work__item:hover {
-  cursor: pointer;
   border-bottom: 1px solid rgba(93, 159, 147, .5);
 
   &:work__item--no-border-bottom {
@@ -183,7 +182,7 @@
 }
 
 .work__item:hover .work__item-image {
-  @include media-desktop-wide {
+  @include media-desktop {
     display: block;
     position: absolute;
     right: 217px;

@@ -41,7 +41,7 @@ const onKeyupEsc = function (evt) {
 }
 // Открыетие и закрытие меню гамбургер
 const onClickBtnHeaderMenu = function (evt) {
-    evt.preventDefalt;
+    evt.preventDefault;
     navigation.classList.toggle('hidden');
 
     if(navigation.classList.contains('hidden')) {
@@ -200,8 +200,3 @@ if (document.querySelectorAll('.achievement__number').length) {
 } else {
   defer();
 }
-
-
-
-
-

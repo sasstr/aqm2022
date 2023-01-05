@@ -11,6 +11,10 @@
   @include media-tablet {
     padding-top: 90px;
   }
+
+  @include media-desktop-extra-wide {
+    margin: 0 auto;
+  }
 }
 
 .about-history__box {

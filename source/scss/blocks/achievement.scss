@@ -122,6 +122,9 @@ padding: 0;
 }
 
 .achievement__amount {
+  display: flex;
+  align-items: flex-start;
+
   font-family: $_f__common;
   font-style: normal;
   font-weight: 300;
@@ -137,7 +140,7 @@ padding: 0;
 
   @include media-desktop {
     font-size: 140px;
-    line-height: 168px;
+    line-height: 140px;
     letter-spacing: -6.264px;
   }
 }
