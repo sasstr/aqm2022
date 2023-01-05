@@ -112,7 +112,7 @@ function onmyscreen(el)
 const time = 3000;
 const step = 1;
 let achievement = document.querySelector('.achievement');
-if(document.querySelector('.achievement__number'))
+if(achievement) if(document.querySelector('.achievement__number'))
   elemNumber = achievement.querySelectorAll('.achievement__number');
 
 const animateCounter = function (elem) {
@@ -196,5 +196,5 @@ const onScrollNumberAnimate = function () {
 
 defer (PreFormatAnimation);
 const animateCounter2 = function(elem) {
-  animate1number(elem,500);
+    if(achievement)  animate1number(elem,500);
 }
