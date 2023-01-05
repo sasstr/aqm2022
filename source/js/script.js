@@ -76,13 +76,12 @@ btnHeaderMenu.addEventListener('click', onClickBtnHeaderMenu);
 
 function defer(method){
     if ( window.jQuery){
-
         $("section, .footer,  .projects__card, .projects__title").not('.main__wrapper.projects').css('opacity','0');
         $(window).scroll(function() {OnWinScroll()});
         OnWinScroll();
         method();
     }
-    else{window.setTimeout("defer("+method+");",100);}
+    else{window.setTimeout("defer("+method+");",500);}
 }
 
 
@@ -112,7 +111,8 @@ function onmyscreen(el)
 const time = 3000;
 const step = 1;
 let achievement = document.querySelector('.achievement');
-let elemNumber = achievement.querySelectorAll('.achievement__number');
+if(document.querySelector('.achievement__number'))
+  elemNumber = achievement.querySelectorAll('.achievement__number');
 
 const animateCounter = function (elem) {
     const num = parseInt( elem.textContent);
@@ -130,6 +130,8 @@ const animateCounter = function (elem) {
 
 function PreFormatAnimation()
 {
+    window.addEventListener('scroll',onScrollNumberAnimate);
+    
     $('[data-animation]').each( 
         function()
         {  
@@ -143,6 +145,7 @@ function PreFormatAnimation()
             
         }
     );    
+
 
       
 }
@@ -183,12 +186,7 @@ function animateALLnumbers()
 }
 
 const onScrollNumberAnimate = function () {
-
-
-
     let numberTop = achievement.getBoundingClientRect().top
-    console.log(numberTop);
-
     if (window.pageYOffset > (numberTop - window.innerHeight)/2) {
         this.removeEventListener('scroll', onScrollNumberAnimate);
         elemNumber.forEach((it) => animateCounter2(it));
@@ -198,10 +196,10 @@ const onScrollNumberAnimate = function () {
 defer (PreFormatAnimation);
 const animateCounter2 = function(elem)
 {
+ animate1number(elem,500);
+ console.log(elem);
+ 
 
 } 
-
-// Запускаем анимацию чисел
-window.addEventListener('scroll',onScrollNumberAnimate)
 
 
