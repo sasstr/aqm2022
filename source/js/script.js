@@ -93,11 +93,10 @@ function OnWinScroll()
 function MyShow(el)
 {
     el.find("> *").css("opacity",0);
-    el.find(" h1,  h2,  h3,  p").css("margin-top","+150px");
-    el.find(" h1,  h2,  h3,  p").css("margin-top","-150px");
+    //el.find(" h1,  h2,  h3,  p").css("margin-top","+=150px");
     el.animate({opacity: 1}, 100);
-    el.find("> *").animate({opacity: 1}, 1700);
-    //el.find(" h1,  h2,  h3,  p").animate({"margin-top":"-150px"},500);
+    el.find("> *").animate({opacity: 1}, 500);
+//    el.find(" h1,  h2,  h3,  p").animate({"margin-top":"-=150px"},700);
 }
 
 function onmyscreen(el)
@@ -105,7 +104,7 @@ function onmyscreen(el)
     if(el.css("opacity")!=0) return false;
     var window_top = $(window).scrollTop();
     var offset = el.offset().top;
-    if (offset <= window_top+$(window).height())  return true;
+    if (offset +100 <= window_top+$(window).height())  return true;
     return false;
 }
 
