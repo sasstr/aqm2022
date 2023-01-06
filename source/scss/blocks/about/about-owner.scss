@@ -1,14 +1,16 @@
 .about-owner {
   /**/ background-color: #bebbad;
-  background-image: url('../img/about_owner_img_bg.png');
-  background-size: cover;
+  background-image: url('../img/about-traviss-moss-01.jpg');
+  background-size: auto 440px;
+  background-position: bottom left;
   background-repeat: no-repeat;
+  padding-bottom: 380px;
 
   @include media-tablet {
     display: flex;
-    background-image: url('../img/about-tablet-nicholas-traviss-bg-transparent.png');
     background-position: left bottom;
     background-size: contain;
+    padding-bottom: 0;
   }
 }
 
@@ -131,11 +133,18 @@
 }
 
 .about-owner__image-wrapper {
+  @include media-tablet {
+    min-height: 500px;
+    width: 100%;
+  }
+}
+
+/* .about-owner__image-wrapper {
   min-height: 500px;
   width: 100%;
   background-image: url('../img/about-traviss-moss-01.jpg');
 
-  /* about-mob-nicholas-traviss-bg.png */
+  about-mob-nicholas-traviss-bg.png
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -144,11 +153,7 @@
     width: 50%;
     display: flex;
     align-items: flex-end;
-    /* background-image: none; */
-  }
-
-  @include media-desktop {
-
+    background-image: none;
   }
 }
 
@@ -160,4 +165,4 @@
     width: 100%;
     height: auto;
   }
-}
+}*/

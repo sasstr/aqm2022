@@ -167,22 +167,20 @@ padding: 0;
   }
 }
 
-.achievement__number
- {
+.achievement__number {
   overflow:hidden;
   display:block;
- }
-.achievement__number span
- {
+}
+
+.achievement__number span {
   display:inline-block;
   overflow:hidden;
   line-height:100%;
- }
- .achievement__number span span
- {
- line-height:100%;
- }
-  .achievement__number div
-  {
+}
+
+.achievement__number span span {
+  line-height:100%;
+}
+  .achievement__number div {
   position:relative;
-  }
+}
