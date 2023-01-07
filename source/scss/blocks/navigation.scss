@@ -60,6 +60,18 @@
   }
 
   &--active {
+    display: inline-block;
+    min-height: 35px;
+    font-family: $_f__common;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 70px;
     color: $_main_light;
+    font-weight: 300;
+  }
+
+  &--active:hover {
+    cursor: default;
   }
 }

@@ -158,14 +158,14 @@
 
   border-bottom: 1px solid $_font_grass;
 }
-
+/*
 .work__item:hover {
   border-bottom: 1px solid rgba(93, 159, 147, .5);
 
   &:work__item--no-border-bottom {
     border-bottom: none;
   }
-}
+}*/
 
 .work__item:last-child {
   border-bottom: none;
@@ -180,7 +180,7 @@
 .work__item-image {
   display: none;
 }
-
+/*
 .work__item:hover .work__item-image {
   @include media-desktop {
     display: block;
@@ -191,4 +191,4 @@
     height: auto;
     z-index: 10;
   }
-}
+}*/

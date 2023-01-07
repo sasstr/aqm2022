@@ -49,7 +49,6 @@
     background-color: $_button_dark;
     background-repeat: no-repeat;
     opacity: 0.8;
-    cursor: pointer;
 
     &--active {
       position: relative;
@@ -528,7 +527,6 @@
     width: 20px;
     height: 20px;
     border-radius: 50% 50% 0 50%;
-    cursor: pointer;
 
     background: $_main_light;
     transform: rotate(45deg);
@@ -650,6 +648,7 @@
 
     z-index: 5;
     overflow: hidden;
+    cursor: pointer;
 
     &:hover {
       display: block;
