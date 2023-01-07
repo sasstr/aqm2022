@@ -42,7 +42,6 @@
   }
 
   @include media-desktop-wide {
-    padding-block: 48px;
     min-width: $desktop-wide;
     max-width: $desktop-wide-container-max;
   }
