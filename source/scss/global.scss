@@ -49,6 +49,8 @@ a {
   overflow: hidden;
 }
 
-section
+section > * > *, .footer > * > *,  .projects__card > * > *, .projects__title > * > *
 {
 opacity:0;}
+
+.main__wrapper.projects > * > * {opacity:1;}
