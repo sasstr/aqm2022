@@ -9,6 +9,7 @@
   &::before {
     @include media-desktop {
       position: absolute;
+      display: none;
       content: '';
       bottom: 0;
       left: 0;
@@ -17,6 +18,14 @@
       z-index: 5;
       background:
       linear-gradient(to top, #003137 6.48%, rgba(0, 49, 55, 0) 62.62%);
+    }
+  }
+}
+
+.articles-about-us--gradient-visible {
+  &::before {
+    @include media-desktop {
+      display: block;
     }
   }
 }
