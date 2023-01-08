@@ -164,7 +164,7 @@ function animate1digit(element, to, speed) {
 function animate1number(element,speed)
 {
     $(element).children().each(function(index,value)
-    
+
         {
             total=$(value).parent().attr("data-animation");
             total=parseInt(total/(10**(2-index)));
@@ -187,3 +187,36 @@ defer (PreFormatAnimation);
 const animateCounter2 = function(elem) {
     if(achievement)  animate1number(elem,500);
 }
+
+// Замена картинок брошюр по наведению мышки
+if (document.querySelector('.magazine__list-box')) {
+  const magazineListBiomes = document.querySelector('.magazine__list--biomes');
+  const magazineBrochureBiomesImg = document.querySelector('.magazine__brochure-image--biomes');
+  const listLiBiomes = magazineListBiomes.querySelectorAll('li');
+
+  const magazineListAqm = document.querySelector('.magazine__list--aqm');
+  const magazineBrochureAqmImg = document.querySelector('.magazine__brochure-image--aqm');
+  const listLiAqm = magazineListAqm.querySelectorAll('li');
+
+  const setImgAqm = (evt) => {
+    if (evt.target.classList.contains('magazine__item')) {
+      listLiAqm.forEach((it)=> it.classList.remove('magazine__item--active'));
+      evt.target.classList.add('magazine__item--active');
+      magazineBrochureAqmImg.src = `./img/aqm-brochure-${evt.target.dataset.lang}.jpeg`;
+      magazineBrochureAqmImg.alt = `Aquamarine projects company brochure in ${evt.target.dataset.lang}`;
+    }
+  }
+  magazineListAqm.addEventListener('mouseover', setImgAqm);
+
+  const setImgBiomes = (evt) => {
+    if (evt.target.classList.contains('magazine__item')) {
+      listLiBiomes.forEach((it)=> it.classList.remove('magazine__item--active'));
+      evt.target.classList.add('magazine__item--active');
+      magazineBrochureBiomesImg.src = `./img/biomes-brochure-${evt.target.dataset.lang}.jpeg`;
+      magazineBrochureBiomesImg.alt = `Aquamarine Biomes company brochure in ${evt.target.dataset.lang}`;
+    }
+  }
+
+  magazineListBiomes.addEventListener('mouseover', setImgBiomes);
+
+} // magazine__item-name

@@ -75,7 +75,7 @@ exports.scripts = scripts;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,jpeg,svg}")
     .pipe(squoosh())
     .pipe(gulp.dest("build/img"))
 }
@@ -83,7 +83,7 @@ const optimizeImages = () => {
 exports.images = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,jpeg,svg}")
     .pipe(gulp.dest("build/img"))
 }
 
@@ -92,7 +92,7 @@ exports.images = copyImages;
 // WebP
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("source/img/**/*.{jpg,jpeg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"))
 }
@@ -165,7 +165,7 @@ const watcher = () => {
   gulp.watch("source/scss/**/*.scss", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
-  gulp.watch("source/img/**/*.{png,jpg,svg}", gulp.series(copyImages));
+  gulp.watch("source/img/**/*.{png,jpg,jpeg,svg}", gulp.series(copyImages));
 }
 
 // Build
