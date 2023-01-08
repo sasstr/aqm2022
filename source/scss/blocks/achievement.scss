@@ -146,7 +146,7 @@ padding: 0;
 }
 
 .achievement__text {
-  padding-top: 17px;
+  padding-top: 10px;
   margin-left: 10px;
 
   font-family: $_f__common;
@@ -157,13 +157,13 @@ padding: 0;
   color: $_secondary_dark;
 
   @include media-tablet  {
-    padding-top: 27px;
+    padding-top: 12px;
     font-size: 22px;
     line-height: 88%;
   }
 
   @include media-desktop {
-    padding-top: 30px;
+    padding-top: 15px;
   }
 }
 
