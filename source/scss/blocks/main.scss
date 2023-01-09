@@ -48,11 +48,9 @@
 }
 
 .main__banner {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100vw / 1.8);
+  max-height: 100vh;
   border-width: 0;
   outline-width: 0;
 }
