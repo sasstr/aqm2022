@@ -10,6 +10,10 @@
   @include media-tablet {
     padding-block: 127px 166px;
   }
+
+  @include media-desktop {
+    padding-block: 130px;
+  }
 }
 
 .magazine__title {
@@ -38,7 +42,7 @@
   @include list-style-reset;
 
   @include media-tablet {
-    width: 70%;
+    width: 58%;
   }
 }
 
@@ -124,7 +128,7 @@
 .magazine__list-box {
   @include media-tablet {
     display: flex;
-    gap: 12%;
+    gap: 8%;
   }
 
 }
@@ -139,5 +143,5 @@
 }
 
 .magazine__list-box--biomes {
-  margin-bottom: 200px;
+  margin-bottom: 108px;
 }

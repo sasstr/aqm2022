@@ -11,22 +11,17 @@
 }
 
 .main__wrapper {
-  /* margin: 0 auto; */
-  min-width: $mobile;
   max-width: $mobile-container-max;
 
   @include media-tablet  {
-    min-width: $tablet;
     max-width: $tablet-container-max;
   }
 
   @include media-desktop {
-    min-width: $desktop;
     max-width: $desktop-container-max;
   }
 
   @include media-desktop-wide {
-    min-width: $desktop-wide;
     max-width: $desktop-wide-container-max;
   }
 }
@@ -72,6 +67,13 @@
 
   @include media-desktop {
     height: calc(100vw / 1.80);
+  }
+}
+
+.main__play-sing,
+.main__picture {
+  @include media-tablet {
+    display: none;
   }
 }
 

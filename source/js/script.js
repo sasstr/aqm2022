@@ -219,4 +219,53 @@ if (document.querySelector('.magazine__list-box')) {
 
   magazineListBiomes.addEventListener('mouseover', setImgBiomes);
 
-} // magazine__item-name
+}
+
+if ( document.querySelector('.main__video')) {
+  // 2. This code loads the IFrame Player API code asynchronously.
+  if(window.innerWidth >= 768) {
+    let tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    let firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    let player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        videoId: 'pgtnqYTuwl0',
+        playerVars: {
+          'autoplay': 1, // запускает видео при загрузуке страницы
+          'controls': 0, // убирает контролы управления
+          'loop': 1, // зацикливает воспроизведение видео
+          'playlist': 'pgtnqYTuwl0',
+          'showinfo': 0, // убирает демонстрацию доп инфы
+          'rel': 0,
+          'playsinline': 1,
+          'disablekb': 1, // отключает управление с клавиатуры
+          'fs': 0,
+          'iv_load_policy': 3,
+          'modestbranding': 1,
+        },
+        events: {
+          'onReady': onPlayerReady,
+        }
+      });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+      player.mute();
+      player.playVideo();
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    // let done = false;
+  } else {
+    document.querySelector('.main__banner iframe').remove();
+  }
+}
