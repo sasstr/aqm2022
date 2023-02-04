@@ -363,6 +363,18 @@ function setMapHover()
         if(window.myhoverY1>y1) window.myhoverY1=y1;
         if(window.myhoverY2<y2) window.myhoverY2=y2;
     });
+    if(window.myhoverX1==10000)
+        window.myhoverX1=window.myhoverX2-$(this).width()*2;
+    if(window.myhoverY1==10000)
+        window.myhoverY1=window.myhoverY2-$(this).height()*2;
+    if(window.myhoverX2==0)
+        window.myhoverX2=window.myhoverX1+$(this).width()*2;
+    if(window.myhoverY2==0)
+        window.myhoverY2=window.myhoverY1+$(this).height()*2;
+    window.myhoverY2+=2;
+    window.myhoverX2+=2;
+    window.myhoverY1-=2;
+    window.myhoverX1-=2;
     $(".global-about-us__map" ).mousemove(function( event ) {
         if((event.pageX<window.myhoverX1)||
            (event.pageX>window.myhoverX2)||
