@@ -6,7 +6,7 @@
     width: 50%;
   }
 
-  &::before {
+  &:not(.tothebottom)::before {
     @include media-desktop {
       position: absolute;
       display: none;
