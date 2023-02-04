@@ -73,16 +73,80 @@ function enableScrolling(){
 document.addEventListener('keyup', onKeyupEsc);
 btnHeaderMenu.addEventListener('click', onClickBtnHeaderMenu);
 
+function SetAppearAnimation()
+{
+    $("section, .footer,  .projects__card, .projects__title").not('.main__wrapper.projects').children().children().css('opacity','0');
+    $(window).scroll(function() {OnWinScroll()});
+    OnWinScroll();
+}
+
 function defer(method){
     if ( window.jQuery){
-        //$("section, .footer,  .projects__card, .projects__title").not('.main__wrapper.projects').children().css('opacity','0');
-        $("section, .footer,  .projects__card, .projects__title").not('.main__wrapper.projects').children().children().css('opacity','0');
-        $(window).scroll(function() {OnWinScroll()});
-        OnWinScroll();
         method();
     }
     else{window.setTimeout("defer("+method+");",100);}
 }
+
+defer(SetAppearAnimation);
+
+// скролл  в About ------------------------------------------------------
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+function preventDefaultScroll(e) {
+  if(window.scrollY>0) return;  // если не докрутили до верха
+  //console.log(e);
+  if(e.deltaY<0) // прокрутить контейнер вверх
+    $(".articles-about-us__container").finish().animate({
+    scrollTop: e.deltaY+"px"
+  },100)
+  else
+  {
+    if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").height()+1>$(".articles-about-us__container").innerHeight())
+     return;
+    $(".articles-about-us__container").finish().animate({
+    scrollTop: "+"+e.deltaY+"px"},100);      
+  }
+  e.preventDefault();
+}
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefaultScroll(e);
+    return false;
+  }
+}
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; } 
+  }));
+} catch(e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// call this to Disable
+function disableScrollAbout() {
+  window.addEventListener('DOMMouseScroll', preventDefaultScroll, false); // older FF
+  window.addEventListener(wheelEvent, preventDefaultScroll, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefaultScroll, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+// call this to Enable
+function enableScrollAbout() {
+  window.removeEventListener('DOMMouseScroll', preventDefaultScroll, false);
+  window.removeEventListener(wheelEvent, preventDefaultScroll, wheelOpt); 
+  window.removeEventListener('touchmove', preventDefaultScroll, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+function SetAboutScroll()
+{
+    if($(".articles-about-us__container").length==0) return;
+    disableScrollAbout();
+    
+}
+defer(SetAboutScroll);
+
+// Конец скролла с about -----------------------------
 
 function OnWinScroll()
 {
@@ -164,7 +228,7 @@ function animate1digit(element, to, speed) {
 function animate1number(element,speed)
 {
     $(element).children().each(function(index,value)
-    
+
         {
             total=$(value).parent().attr("data-animation");
             total=parseInt(total/(10**(2-index)));
