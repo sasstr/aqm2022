@@ -92,32 +92,37 @@ defer(SetAppearAnimation);
 // скролл  в About ------------------------------------------------------
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 function preventDefaultScroll(e) {
-  if(window.scrollY>0) return;  // если не докрутили до верха
-  //console.log(e);
-  if(e.deltaY<0) // прокрутить контейнер вверх
-    $(".articles-about-us__container").finish().animate({
-    scrollTop: e.deltaY+"px"
-  },200)
-  else
-  {
-    if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").height()+1>$(".articles-about-us__container").innerHeight()){ e.preventDefault();enableScrollAbout(); return;}
-    $(".articles-about-us__container").finish().animate({
-    scrollTop: "+"+e.deltaY+"px"},200);
-  }
-  e.preventDefault();
+    if(window.scrollY>0) return;  // если не докрутили до верха
+    //console.log(e);
+    if(e.deltaY<0) // прокрутить контейнер вверх
+        {
+        $(".articles-about-us__container").finish().animate({
+                scrollTop: e.deltaY+"px"
+            },200);
+        $(".articles-about-us__container").removeClass("tothebottom");
+
+    }
+    else
+        {
+        if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").innerHeight()+50>$(".articles-about-us__container")[0].scrollHeight)  $(".articles-about-us__container").addClass("tothebottom");
+        if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").innerHeight()+1>$(".articles-about-us__container")[0].scrollHeight){ e.preventDefault();enableScrollAbout(); return;}
+        $(".articles-about-us__container").finish().animate({
+                scrollTop: $(".articles-about-us__container").scrollTop()+e.deltaY+"px"},200);
+    }
+    e.preventDefault();
 }
 function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefaultScroll(e);
-    return false;
-  }
+    if (keys[e.keyCode]) {
+        preventDefaultScroll(e);
+        return false;
+    }
 }
 // modern Chrome requires { passive: false } when adding event
 var supportsPassive = false;
 try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; }
-  }));
+    window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+                get: function () { supportsPassive = true; }
+        }));
 } catch(e) {}
 
 var wheelOpt = supportsPassive ? { passive: false } : false;
@@ -125,17 +130,17 @@ var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewh
 
 // call this to Disable
 function disableScrollAbout() {
-  window.addEventListener('DOMMouseScroll', preventDefaultScroll, false); // older FF
-  window.addEventListener(wheelEvent, preventDefaultScroll, wheelOpt); // modern desktop
-  window.addEventListener('touchmove', preventDefaultScroll, wheelOpt); // mobile
-  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+    window.addEventListener('DOMMouseScroll', preventDefaultScroll, false); // older FF
+    window.addEventListener(wheelEvent, preventDefaultScroll, wheelOpt); // modern desktop
+    window.addEventListener('touchmove', preventDefaultScroll, wheelOpt); // mobile
+    window.addEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 // call this to Enable
 function enableScrollAbout() {
-  window.removeEventListener('DOMMouseScroll', preventDefaultScroll, false);
-  window.removeEventListener(wheelEvent, preventDefaultScroll, wheelOpt);
-  window.removeEventListener('touchmove', preventDefaultScroll, wheelOpt);
-  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+    window.removeEventListener('DOMMouseScroll', preventDefaultScroll, false);
+    window.removeEventListener(wheelEvent, preventDefaultScroll, wheelOpt);
+    window.removeEventListener('touchmove', preventDefaultScroll, wheelOpt);
+    window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 function SetAboutScroll()
 {
@@ -254,82 +259,82 @@ const animateCounter2 = function(elem) {
 
 // Замена картинок брошюр по наведению мышки
 if (document.querySelector('.magazine__list-box')) {
-  const magazineListBiomes = document.querySelector('.magazine__list--biomes');
-  const magazineBrochureBiomesImg = document.querySelector('.magazine__brochure-image--biomes');
-  const listLiBiomes = magazineListBiomes.querySelectorAll('li');
+    const magazineListBiomes = document.querySelector('.magazine__list--biomes');
+    const magazineBrochureBiomesImg = document.querySelector('.magazine__brochure-image--biomes');
+    const listLiBiomes = magazineListBiomes.querySelectorAll('li');
 
-  const magazineListAqm = document.querySelector('.magazine__list--aqm');
-  const magazineBrochureAqmImg = document.querySelector('.magazine__brochure-image--aqm');
-  const listLiAqm = magazineListAqm.querySelectorAll('li');
+    const magazineListAqm = document.querySelector('.magazine__list--aqm');
+    const magazineBrochureAqmImg = document.querySelector('.magazine__brochure-image--aqm');
+    const listLiAqm = magazineListAqm.querySelectorAll('li');
 
-  const setImgAqm = (evt) => {
-    if (evt.target.classList.contains('magazine__item')) {
-      listLiAqm.forEach((it)=> it.classList.remove('magazine__item--active'));
-      evt.target.classList.add('magazine__item--active');
-      magazineBrochureAqmImg.src = `./img/aqm-brochure-${evt.target.dataset.lang}.jpeg`;
-      magazineBrochureAqmImg.alt = `Aquamarine projects company brochure in ${evt.target.dataset.lang}`;
+    const setImgAqm = (evt) => {
+        if (evt.target.classList.contains('magazine__item')) {
+            listLiAqm.forEach((it)=> it.classList.remove('magazine__item--active'));
+            evt.target.classList.add('magazine__item--active');
+            magazineBrochureAqmImg.src = `./img/aqm-brochure-${evt.target.dataset.lang}.jpeg`;
+            magazineBrochureAqmImg.alt = `Aquamarine projects company brochure in ${evt.target.dataset.lang}`;
+        }
     }
-  }
-  magazineListAqm.addEventListener('mouseover', setImgAqm);
+    magazineListAqm.addEventListener('mouseover', setImgAqm);
 
-  const setImgBiomes = (evt) => {
-    if (evt.target.classList.contains('magazine__item')) {
-      listLiBiomes.forEach((it)=> it.classList.remove('magazine__item--active'));
-      evt.target.classList.add('magazine__item--active');
-      magazineBrochureBiomesImg.src = `./img/biomes-brochure-${evt.target.dataset.lang}.jpeg`;
-      magazineBrochureBiomesImg.alt = `Aquamarine Biomes company brochure in ${evt.target.dataset.lang}`;
+    const setImgBiomes = (evt) => {
+        if (evt.target.classList.contains('magazine__item')) {
+            listLiBiomes.forEach((it)=> it.classList.remove('magazine__item--active'));
+            evt.target.classList.add('magazine__item--active');
+            magazineBrochureBiomesImg.src = `./img/biomes-brochure-${evt.target.dataset.lang}.jpeg`;
+            magazineBrochureBiomesImg.alt = `Aquamarine Biomes company brochure in ${evt.target.dataset.lang}`;
+        }
     }
-  }
 
-  magazineListBiomes.addEventListener('mouseover', setImgBiomes);
+    magazineListBiomes.addEventListener('mouseover', setImgBiomes);
 
 }
 
 if ( document.querySelector('.main__video')) {
-  // 2. This code loads the IFrame Player API code asynchronously.
-  if(window.innerWidth >= 768) {
-    let tag = document.createElement('script');
+    // 2. This code loads the IFrame Player API code asynchronously.
+    if(window.innerWidth >= 768) {
+        let tag = document.createElement('script');
 
-    tag.src = "https://www.youtube.com/iframe_api";
-    let firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        tag.src = "https://www.youtube.com/iframe_api";
+        let firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    // 3. This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
-    let player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        videoId: 'pgtnqYTuwl0',
-        playerVars: {
-          'autoplay': 1, // запускает видео при загрузуке страницы
-          'controls': 0, // убирает контролы управления
-          'loop': 1, // зацикливает воспроизведение видео
-          'playlist': 'pgtnqYTuwl0',
-          'showinfo': 0, // убирает демонстрацию доп инфы
-          'rel': 0,
-          'playsinline': 1,
-          'disablekb': 1, // отключает управление с клавиатуры
-          'fs': 0,
-          'iv_load_policy': 3,
-          'modestbranding': 1,
-        },
-        events: {
-          'onReady': onPlayerReady,
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        let player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                    videoId: 'pgtnqYTuwl0',
+                    playerVars: {
+                        'autoplay': 1, // запускает видео при загрузуке страницы
+                        'controls': 0, // убирает контролы управления
+                        'loop': 1, // зацикливает воспроизведение видео
+                        'playlist': 'pgtnqYTuwl0',
+                        'showinfo': 0, // убирает демонстрацию доп инфы
+                        'rel': 0,
+                        'playsinline': 1,
+                        'disablekb': 1, // отключает управление с клавиатуры
+                        'fs': 0,
+                        'iv_load_policy': 3,
+                        'modestbranding': 1,
+                    },
+                    events: {
+                        'onReady': onPlayerReady,
+                    }
+            });
         }
-      });
-    }
 
-    // 4. The API will call this function when the video player is ready.
-    function onPlayerReady(event) {
-      player.mute();
-      player.playVideo();
-    }
+        // 4. The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+            player.mute();
+            player.playVideo();
+        }
 
-    // 5. The API calls this function when the player's state changes.
-    //    The function indicates that when playing a video (state=1),
-    //    the player should play for six seconds and then stop.
-    // let done = false;
-  } else {
-    document.querySelector('.main__banner iframe').remove();
-  }
+        // 5. The API calls this function when the player's state changes.
+        //    The function indicates that when playing a video (state=1),
+        //    the player should play for six seconds and then stop.
+        // let done = false;
+    } else {
+        document.querySelector('.main__banner iframe').remove();
+    }
 }
