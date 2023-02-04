@@ -629,7 +629,10 @@
     }
   }
 }
-
+.about-map__point:not(.about-map__point--active) .about-map__box-photo
+{
+ display:none;
+}
 .about-map__box-photo {
   @include media-tablet {
     position: absolute;
