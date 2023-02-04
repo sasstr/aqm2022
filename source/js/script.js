@@ -100,7 +100,7 @@ function preventDefaultScroll(e) {
   },200)
   else
   {
-    if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").height()+1>$(".articles-about-us__container").innerHeight()){EnableScrollAbout(); return;}
+    if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").height()+1>$(".articles-about-us__container").innerHeight()){ e.preventDefault();enableScrollAbout(); return;}
     $(".articles-about-us__container").finish().animate({
     scrollTop: "+"+e.deltaY+"px"},200);
   }
