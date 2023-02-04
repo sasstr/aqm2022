@@ -99,12 +99,12 @@ function preventDefaultScroll(e) {
         $(".articles-about-us__container").finish().animate({
                 scrollTop: e.deltaY+"px"
             },200);
-        $(".articles-about-us__container").removeClass("tothebottom");
+        $(".articles-about-us").addClass("articles-about-us--gradient-visible");
 
     }
     else
         {
-        if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").innerHeight()+50>$(".articles-about-us__container")[0].scrollHeight)  $(".articles-about-us__container").addClass("tothebottom");
+        if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").innerHeight()+50>$(".articles-about-us__container")[0].scrollHeight)  $(".articles-about-us").removeClass("articles-about-us--gradient-visible");
         if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").innerHeight()+1>$(".articles-about-us__container")[0].scrollHeight){ e.preventDefault();enableScrollAbout(); return;}
         $(".articles-about-us__container").finish().animate({
                 scrollTop: $(".articles-about-us__container").scrollTop()+e.deltaY+"px"},200);
