@@ -97,13 +97,12 @@ function preventDefaultScroll(e) {
   if(e.deltaY<0) // прокрутить контейнер вверх
     $(".articles-about-us__container").finish().animate({
     scrollTop: e.deltaY+"px"
-  },100)
+  },200)
   else
   {
-    if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").height()+1>$(".articles-about-us__container").innerHeight())
-     return;
+    if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").height()+1>$(".articles-about-us__container").innerHeight()){EnableScrollAbout(); return;}
     $(".articles-about-us__container").finish().animate({
-    scrollTop: "+"+e.deltaY+"px"},100);      
+    scrollTop: "+"+e.deltaY+"px"},200);
   }
   e.preventDefault();
 }
@@ -117,7 +116,7 @@ function preventDefaultForScrollKeys(e) {
 var supportsPassive = false;
 try {
   window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; } 
+    get: function () { supportsPassive = true; }
   }));
 } catch(e) {}
 
@@ -134,15 +133,16 @@ function disableScrollAbout() {
 // call this to Enable
 function enableScrollAbout() {
   window.removeEventListener('DOMMouseScroll', preventDefaultScroll, false);
-  window.removeEventListener(wheelEvent, preventDefaultScroll, wheelOpt); 
+  window.removeEventListener(wheelEvent, preventDefaultScroll, wheelOpt);
   window.removeEventListener('touchmove', preventDefaultScroll, wheelOpt);
   window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 function SetAboutScroll()
 {
     if($(".articles-about-us__container").length==0) return;
+    $(window).scroll(function(){if(window.scrollX==0) disableScrollAbout();})
     disableScrollAbout();
-    
+
 }
 defer(SetAboutScroll);
 

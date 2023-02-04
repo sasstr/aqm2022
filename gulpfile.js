@@ -7,9 +7,9 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const sync = require("browser-sync").create();
 const htmlmin = require("gulp-htmlmin");
-const babel = require('gulp-babel');
+// const babel = require('gulp-babel');
 const rename = require("gulp-rename");
-const terser = require("gulp-terser");
+// const terser = require("gulp-terser");
 const squoosh = require("gulp-libsquoosh");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
@@ -118,7 +118,7 @@ const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.svg",
+    "source/img/*.{png,jpg,jpeg,svg}",
     "!source/img/icons/*.svg",
     //"source/manifest.webmanifest",
   ], {
