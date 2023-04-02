@@ -518,6 +518,31 @@
   z-index: 5;
 }
 
+/* Animation map baloon  */
+@keyframes fadeIn {
+  from {
+    opacity: 0.0;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+}
+/*
+@keyframes fadeOut {
+  from {
+    opacity: 0.8;
+    width: 175px;
+    height: 175px;
+  }
+
+  to {
+    opacity: 0.0;
+    width: 20px;
+    height: 20px;
+  }
+}*/
+
 .about-map__pin {
   @include media-tablet {
     position: absolute;
@@ -549,10 +574,15 @@
 
   @include media-desktop {
     &:hover {
-      opacity: 0.8;
       width: 175px;
       height: 175px;
+      animation-duration: 0.6s;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      animation-name: fadeIn;
     }
+
 
     &--1:hover { /* Afrika */
       top: 236px;
@@ -597,6 +627,7 @@
     }
   }
 
+
   @include media-desktop-wide {
     &--1:hover { /* Afrika */
       top: 343px;
@@ -629,10 +660,12 @@
     }
   }
 }
+
 .about-map__point:not(.about-map__point--active) .about-map__box-photo
 {
  display:none;
 }
+
 .about-map__box-photo {
   @include media-tablet {
     position: absolute;
@@ -657,14 +690,21 @@
       display: block;
       width: 36px;
       height: 36px;
-      background-image: url('../img/about-mini-button-tablet.svg'),
-      url('../img/about-mini-bcg-tablet.jpg');
+      background-image: url('../img/about-mini-button-tablet.svg')
+      ,url('../img/about-mini-bcg-tablet.jpg');
+      backdrop-filter: blur(4px);
       background-size: 27px 27px, 36px 36px;
       background-repeat: no-repeat;
       background-position: center;
       border-radius: 50%;
       border: none;
       z-index: 10;
+
+      animation-duration: 0.5s;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      animation-name: image-box;
     }
 
     &--1 {
@@ -754,4 +794,29 @@
 
 .about-map__link:hover {
   background-image: url('../img/about-mini-bcg-tablet.jpg');
+}
+
+.about-map__point--1:hover {
+  width: 108px;
+  height: 108px;
+  transform: translate(-50%, -50%);
+  animation-duration: 0.4s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-name: mapPhoto;
+}
+
+@keyframes mapPhoto {
+  from {
+    opacity: 0.4;
+    width: 15px;
+    height: 15px;
+  }
+
+  to {
+    opacity: 1;
+    width: 108px;
+    height: 108px;
+  }
 }

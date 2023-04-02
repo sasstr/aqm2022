@@ -33,19 +33,7 @@
 
 .main__image {
   display: block;
-  /* width:100vw; создает горизонтальный скролл*/
   aspect-ratio:16 / 9;
-}
-
-.main__banner {
-  overflow: hidden;
-  position: relative;
-  z-index: 5;
-  height: 100vh;
-
-  @include media-desktop {
-    background: linear-gradient(180deg, rgba(0, 49, 55, 0.4) 0%, rgba(0, 49, 55, 0) 90.32%);
-  }
 }
 
 .main__banner-picture {
@@ -55,6 +43,9 @@
 }
 
 .main__banner {
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
   width: 100%;
   height: calc(100vw / 1.83);
   max-height: 100vh;
@@ -67,10 +58,20 @@
 
   @include media-desktop {
     height: calc(100vw / 1.80);
+    background: linear-gradient(180deg, rgba(0, 49, 55, 0.4) 0%, rgba(0, 49, 55, 0) 90.32%);
   }
 }
 
-.main__play-sing,
+.main__banner::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 38vh;
+  background: linear-gradient(180deg, rgba(0, 49, 55, 0.4) 0%, rgba(0, 49, 55, 0) 90.32%);
+  background-repeat: no-repeat;
+
+}
+
 .main__picture {
   @include media-tablet {
     display: none;
@@ -84,6 +85,7 @@
   width:45px;
   height:45px;
   cursor: pointer;
+
     @include media-tablet {
       top: calc(50% - 45px);
       left: calc(50% - 45px);
