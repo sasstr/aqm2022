@@ -6,6 +6,19 @@
   @include main-container-padding;
 }
 
+.project-content__main-box {
+
+  @include media-desktop-wide {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  @include media-desktop-extra-wide {
+    max-width: 1224px;
+    margin: 0 auto;
+  }
+}
+
 .project-content__box {
   display: flex;
   justify-content: center;

@@ -24,6 +24,19 @@
   }
 }
 
+.project-text__box {
+display: block;
+
+  @include media-tablet {
+    display: flex;
+    gap: 128px;
+  }
+  @include media-desktop-extra-wide {
+    max-width: 1224px;
+    margin: 0 auto;
+  }
+}
+
 
 .project-text__content {
   margin: 0 0 40px;
@@ -45,13 +58,17 @@
     font-size: 18px;
     line-height: 24px;
   }
+
+  @include media-desktop-wide {
+    min-width: 496px;
+  }
 }
 
 .project-text__image {
   display: block;
 
   @include media-tablet {
-    min-width: 56vw;
+    min-width: 50vw;
     height: auto;
 
     order: 1;
@@ -62,6 +79,12 @@
   }
 
   @include media-desktop-wide {
-    min-width: 34vw;
+    min-width: 30vw;
+    max-width: 496px;
+  }
+
+  @include media-desktop-extra-wide {
+    min-width: 18vw;
+    max-width: 496px;
   }
 }
