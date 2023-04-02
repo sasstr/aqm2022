@@ -99,12 +99,12 @@ function preventDefaultScroll(e) {
         $(".articles-about-us__container").finish().animate({
                 scrollTop: e.deltaY+"px"
             },200);
-        $(".articles-about-us__container").removeClass("tothebottom");
+        $(".articles-about-us").addClass("articles-about-us--gradient-visible");
 
     }
     else
         {
-        if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").innerHeight()+50>$(".articles-about-us__container")[0].scrollHeight)  $(".articles-about-us__container").addClass("tothebottom");
+        if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").innerHeight()+50>$(".articles-about-us__container")[0].scrollHeight)  $(".articles-about-us").removeClass("articles-about-us--gradient-visible");
         if($(".articles-about-us__container").scrollTop()+$(".articles-about-us__container").innerHeight()+1>$(".articles-about-us__container")[0].scrollHeight){ e.preventDefault();enableScrollAbout(); return;}
         $(".articles-about-us__container").finish().animate({
                 scrollTop: $(".articles-about-us__container").scrollTop()+e.deltaY+"px"},200);
@@ -147,6 +147,7 @@ function SetAboutScroll()
     if($(".articles-about-us__container").length==0) return;
     $(window).scroll(function(){if(window.scrollX==0) disableScrollAbout();})
     disableScrollAbout();
+    setMapHover();
 
 }
 defer(SetAboutScroll);
@@ -337,4 +338,52 @@ if ( document.querySelector('.main__video')) {
     } else {
         document.querySelector('.main__banner iframe').remove();
     }
+}
+
+
+// about map
+//about-map__point--active
+function setMapHover()
+{
+  $(".about-map__point").on("mouseover touch",function(){
+    $(".about-map__point").removeClass("about-map__point--active");
+    $(this).addClass("about-map__point--active");
+    window.myhoverX1=10000;
+    window.myhoverX2=0;
+    window.myhoverY1=10000;
+    window.myhoverY2=0;
+    $(this).find(".about-map__box-photo").each(function()
+    {
+        x1=$(this).offset().left;
+        x2=$(this).offset().left+$(this).width();
+        y1=$(this).offset().top;
+        y2=$(this).offset().top+$(this).height();
+        if(window.myhoverX1>x1) window.myhoverX1=x1;
+        if(window.myhoverX2<x2) window.myhoverX2=x2;
+        if(window.myhoverY1>y1) window.myhoverY1=y1;
+        if(window.myhoverY2<y2) window.myhoverY2=y2;
+    });
+    if(window.myhoverX1==10000)
+        window.myhoverX1=window.myhoverX2-$(this).width()*2;
+    if(window.myhoverY1==10000)
+        window.myhoverY1=window.myhoverY2-$(this).height()*2;
+    if(window.myhoverX2==0)
+        window.myhoverX2=window.myhoverX1+$(this).width()*2;
+    if(window.myhoverY2==0)
+        window.myhoverY2=window.myhoverY1+$(this).height()*2;
+    window.myhoverY2+=2;
+    window.myhoverX2+=2;
+    window.myhoverY1-=2;
+    window.myhoverX1-=2;
+    $(".global-about-us__map" ).mousemove(function( event ) {
+        if((event.pageX<window.myhoverX1)||
+           (event.pageX>window.myhoverX2)||
+           (event.pageY<window.myhoverY1)||
+           (event.pageY>window.myhoverY2))
+           {
+               $(".about-map__point").removeClass("about-map__point--active");
+               $(".global-about-us__map" ).off();
+           }
+    });
+  });
 }
