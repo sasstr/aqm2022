@@ -2,6 +2,12 @@
   box-sizing: inherit;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
 html {
   margin: 0;
   padding: 0;
